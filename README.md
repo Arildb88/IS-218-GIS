@@ -1,1 +1,3 @@
 # IS-218-GIS
+
+FØRSTE COMMIT!!!
