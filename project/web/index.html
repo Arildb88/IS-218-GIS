@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="no">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Drikkevann & Forurensing (Demo)</title>
+
+    <link rel="stylesheet"
+          href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+          integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+          crossorigin="" />
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+
+        #map {
+            height: 100%;
+        }
+
+        .panel {
+            position: absolute;
+            z-index: 1000;
+            top: 12px;
+            left: 12px;
+            background: white;
+            padding: 10px 12px;
+            border-radius: 10px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+            max-width: 360px;
+            font: 14px/1.35 system-ui, -apple-system, Segoe UI, Roboto, Arial;
+        }
+
+            .panel h3 {
+                margin: 0 0 6px 0;
+                font-size: 16px;
+            }
+
+        .row {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+            margin-top: 8px;
+        }
+
+            .row label {
+                min-width: 110px;
+            }
+
+        input[type="number"], input[type="text"] {
+            width: 100%;
+            padding: 6px 8px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+        button {
+            padding: 8px 10px;
+            border: 0;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .muted {
+            color: #666;
+            font-size: 12px;
+            margin-top: 6px;
+        }
+
+        .status {
+            margin-top: 8px;
+            font-size: 13px;
+        }
+
+        code {
+            background: #f4f4f4;
+            padding: 1px 4px;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+<body>
+    <div class="panel">
+        <h3>Drikkevann & Forurensing (Demo)</h3>
+
+        <div class="row">
+            <label for="radius">Radius (m)</label>
+            <input id="radius" type="number" min="1" max="200000" value="500" />
+        </div>
+
+        <div class="row">
+            <label for="desc">Beskrivelse</label>
+            <input id="desc" type="text" value="Klikk i kartet" />
+        </div>
+
+        <div class="muted">
+            Klikk i kartet for å opprette en forurensingshendelse. Vi henter så husstander innen radius (ST_DWithin).
+        </div>
+
+        <div id="status" class="status">Status: klar</div>
+    </div>
+
+    <div id="map"></div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+            integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+            crossorigin=""></script>
+
+    <script>
+        // Juster om dere endrer port / proxy senere
+        const API_BASE = "http://localhost:8000";
+
+        const statusEl = document.getElementById("status");
+        function setStatus(msg) { statusEl.textContent = "Status: " + msg; }
+
+        // Kart
+        const map = L.map("map").setView([58.21, 8.03], 11);
+
+        const osm = L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+            maxZoom: 19,
+            attribution: '&copy; OpenStreetMap-bidragsytere'
+        }).addTo(map);
+
+        // Mattilsynet WMS for drikkevanninntak
+        const mattilsynetInntakWms = L.tileLayer.wms(
+            "https://kart.mattilsynet.no/wmscache/service",
+            {
+                layers: "Mattilsynet_Vannverk_Inntakspunkter",
+                format: "image/png",
+                transparent: true,
+                version: "1.3.0",
+                attribution: "Mattilsynet (WMS)"
+            }
+        );
+
+        // Lag
+        const intakeLayer = L.geoJSON(null, {
+            pointToLayer: (feature, latlng) => L.circleMarker(latlng, { radius: 6 }),
+            onEachFeature: (feature, layer) => {
+                const p = feature.properties || {};
+                layer.bindPopup(
+                    `<b>Inntak</b><br>` +
+                    `Navn: ${p.name ?? "(ukjent)"}<br>` +
+                    `Kilde: ${p.source ?? "(ukjent)"}<br>` +
+                    `ID: ${p.id ?? ""}`
+                );
+            }
+        });
+
+        const affectedHouseholdsLayer = L.geoJSON(null, {
+            pointToLayer: (feature, latlng) => L.circleMarker(latlng, { radius: 5 }),
+            onEachFeature: (feature, layer) => {
+                const p = feature.properties || {};
+                layer.bindPopup(
+                    `<b>Husstand</b><br>` +
+                    `Adresse: ${p.address ?? "(ukjent)"}<br>` +
+                    `ID: ${p.id ?? ""}`
+                );
+            }
+        });
+
+        let contaminationCircle = null;
+        let contaminationMarker = null;
+
+        L.control.layers(
+            { "OpenStreetMap": osm },
+            {
+                "Mattilsynet – Vannverk inntakspunkter (WMS)": mattilsynetInntakWms,
+                "Drikkevann-inntak (DB/demo)": intakeLayer,
+                "Påvirkede husstander": affectedHouseholdsLayer
+            }
+        ).addTo(map);
+
+        // Hent inntak
+        async function loadIntakes() {
+            setStatus("laster inntak...");
+            const res = await fetch(`${API_BASE}/intakes`);
+            if (!res.ok) throw new Error("Kunne ikke hente /intakes");
+            const geojson = await res.json();
+            intakeLayer.clearLayers();
+            intakeLayer.addData(geojson);
+            intakeLayer.addTo(map);
+            setStatus(`inntak lastet (${geojson.features?.length ?? 0})`);
+        }
+
+        // Opprett event i DB (POST /events), så hent husstander (GET /events/{id}/affected_households)
+        async function createEventAndLoadAffected(latlng) {
+            const radius = parseInt(document.getElementById("radius").value || "500", 10);
+            const description = document.getElementById("desc").value || "User click";
+
+            setStatus("oppretter forurensingshendelse...");
+
+            // Vis markør + sirkel med en gang i UI
+            if (contaminationMarker) map.removeLayer(contaminationMarker);
+            if (contaminationCircle) map.removeLayer(contaminationCircle);
+
+            contaminationMarker = L.marker(latlng).addTo(map).bindPopup("Forurensing").openPopup();
+            contaminationCircle = L.circle(latlng, { radius }).addTo(map);
+
+            const postRes = await fetch(`${API_BASE}/events`, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    description,
+                    radius_m: radius,
+                    lon: latlng.lng,
+                    lat: latlng.lat
+                })
+            });
+
+            if (!postRes.ok) {
+                const text = await postRes.text();
+                throw new Error(`POST /events feilet: ${postRes.status} ${text}`);
+            }
+
+            const { event_id } = await postRes.json();
+            setStatus(`event opprettet (id=${event_id}), henter påvirkede husstander...`);
+
+            const res = await fetch(`${API_BASE}/events/${event_id}/affected_households`);
+            if (!res.ok) throw new Error("Kunne ikke hente affected households");
+            const geojson = await res.json();
+
+            affectedHouseholdsLayer.clearLayers();
+            affectedHouseholdsLayer.addData(geojson);
+            affectedHouseholdsLayer.addTo(map);
+
+            setStatus(`påvirkede husstander: ${geojson.features?.length ?? 0} (event id=${event_id})`);
+        }
+
+        // Klikk i kartet => lag event
+        map.on("click", async (e) => {
+            try {
+                await createEventAndLoadAffected(e.latlng);
+            } catch (err) {
+                console.error(err);
+                setStatus("FEIL: " + err.message);
+            }
+        });
+
+        // Init
+        loadIntakes().catch(err => {
+            console.error(err);
+            setStatus("FEIL ved init: " + err.message);
+        });
+    </script>
+</body>
+</html>
