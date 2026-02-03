@@ -44,7 +44,7 @@ For å bestå oppgaven må følgende krav være møtt:
 		• Bruke datadrevet styling 
 	
 		• En funksjon for å skru datalag av/på (Layer Control). 
-	
-Minst én romlig filtrering eller spørring (f.eks. "Vis kun objekter innenfor en viss avstand" eller "Søk i database").
+		
+		• Minst én romlig filtrering eller spørring (f.eks. "Vis kun objekter innenfor en viss avstand" eller "Søk i database").
 
 
