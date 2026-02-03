@@ -1,20 +1,29 @@
 # IS-218-GIS
 
-**# Målet med oppgaven:**
+**Målet med oppgaven:**
+
 Etablere et fungerende system for et webkart som kombinerer statiske filer, eksterne API-tjenester og en romlig database (Spatial SQL). Du skal vise forståelse for koordinatsystemer, datatransformasjon og hvordan geografiske data presenteres interaktivt i en nettleser.
 
 
-**# Oppgavetekst:**
+**Oppgavetekst:**
+
 Leveranse (README.md) 
 Oppgaven leveres i GitHub-repo med dokumentasjon som README.md. Den skal inneholde: 
+
 	• Prosjektnavn & TLDR: Hva løser dette kartet? (Maks 3 setninger). 
+	
 	• Demo av system: Video / gif som demonstrerer systemet 
+	
 	• Teknisk Stack: Liste over biblioteker og versjoner. 
+	
 	• Datakatalog: En tabell som beskriver: | Datasett | Kilde | Format | Bearbeiding  
+	
 	• Arkitekturskisse: En enkel oversikt over hvordan data flyter fra kilde til kart. 
+	
 Refleksjon: Diskuter kort forbedringspunkter ved din nåværende løsning (4-5 setninger / punkter)
 
-**# Tekniske Krav:**
+**Tekniske Krav:**
+
 Tekniske krav (minimum) 
 For å bestå oppgaven må følgende krav være møtt: 
 	• Kartbibliotek: Applikasjonen skal bygges med enten Leaflet eller MapLibre GL JS. 
