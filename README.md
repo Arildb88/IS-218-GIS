@@ -26,15 +26,25 @@ Refleksjon: Diskuter kort forbedringspunkter ved din nåværende løsning (4-5 s
 
 Tekniske krav (minimum) 
 For å bestå oppgaven må følgende krav være møtt: 
+
 	• Kartbibliotek: Applikasjonen skal bygges med enten Leaflet eller MapLibre GL JS. 
+	
 	• Datakilder: Kartet skal visualisere data fra minst disse kildene: 
+	
 	• GeoJSON-fil: Et datasett du har hentet ut (f.eks. via QGIS eller Overture) og lagret som fil som lastes inn i webkartet 
+	
 	• Eksternt (OGC) API: Data hentet direkte via et API (f.eks. Tjenester fra GeoNorge eller Kartverket). 
+	
 	• (Valgfritt) Supabase (PostGIS): Dynamisk laste data fra din egen Supabase-instans ved bruk av SQL-spørringer 
+
 	• Interaktivitet: 
-	• Klikkbare objekter (Popups) som viser informasjon fra attributtabellen. 
-	• Bruke datadrevet styling 
-	• En funksjon for å skru datalag av/på (Layer Control). 
+	
+		• Klikkbare objekter (Popups) som viser informasjon fra attributtabellen. 
+	
+		• Bruke datadrevet styling 
+	
+		• En funksjon for å skru datalag av/på (Layer Control). 
+	
 Minst én romlig filtrering eller spørring (f.eks. "Vis kun objekter innenfor en viss avstand" eller "Søk i database").
 
 
