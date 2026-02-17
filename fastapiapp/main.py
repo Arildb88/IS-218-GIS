@@ -1,16 +1,31 @@
 from fastapi import FastAPI
-from fastapi.responses import FileResponse
+from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
-from pathlib import Path
+from fastapi.templating import Jinja2Templates
+from fastapi.requests import Request
+import httpx
+import os
+
+SUPABASE_URL = os.getenv("SUPABASE_URL")
+SUPABASE_KEY = os.getenv("SUPABASE_SERVICE_ROLE_KEY")
 
 app = FastAPI()
 
-BASE_DIR = Path(__file__).resolve().parent
-WEB_DIR = BASE_DIR / "web"
+app.mount("/static", StaticFiles(directory="static"), name="static")
+templates = Jinja2Templates(directory="templates")
 
-# serve /static/*
-app.mount("/static", StaticFiles(directory=WEB_DIR / "static"), name="static")
 
-@app.get("/")
-def root():
-    return FileResponse(WEB_DIR / "html" / "index.html")
+@app.get("/", response_class=HTMLResponse)
+async def index(request: Request):
+    return templates.TemplateResponse("index.html", {"request": request})
+
+
+if __name__ == "__main__":
+    import uvicorn
+
+    uvicorn.run(
+        "main:app",      # filename:FastAPI_instance
+        host="127.0.0.1",
+        port=8000,
+        reload=True
+    )

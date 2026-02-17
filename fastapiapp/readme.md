@@ -1,6 +1,6 @@
 Deps:
 
-pip install uvicorn, fastapi
+pip install uvicorn, fastapi, httpx
 
 
 ##Start i cmd:
