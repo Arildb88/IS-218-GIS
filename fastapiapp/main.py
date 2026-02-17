@@ -1,4 +1,4 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, Response
 from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
@@ -18,6 +18,20 @@ templates = Jinja2Templates(directory="templates")
 @app.get("/", response_class=HTMLResponse)
 async def index(request: Request):
     return templates.TemplateResponse("index.html", {"request": request})
+
+
+@app.get("/proxy/wfs")
+async def proxy_wfs(url: str):
+    async with httpx.AsyncClient() as client:
+        r = await client.get(url)
+        return Response(
+            content=r.content,
+            media_type="application/json",
+            headers={
+                
+            }
+        )
+
 
 
 if __name__ == "__main__":

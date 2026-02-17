@@ -32,4 +32,4 @@ class WmsLayer {
 }
 
 // const a = new WmsLayer(map, "https://wms.geonorge.no/skwms1/wms.arealbruk")
-// a.toggle(); // kan legges paa true elr false i funksjonen
+// a.toggle(); // kan legges p

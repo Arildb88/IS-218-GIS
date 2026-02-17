@@ -16,5 +16,23 @@
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script src="/static/app.js"></script>
   <script src="/static/js/WmsLayer.js"></script>
+  <script src="/static/js/WfsLayer.js"></script>
+  <script src="/static/js/BunkerLoader.js"></script>
+  
+
+
+  
+  <script>
+	function proxyize(url) {
+		return 'proxy/wfs?url=' + encodeURIComponent(url);
+	}	
+  
+  
+	var wfsUrl = proxyize("https://wfs.geonorge.no/skwms1/wfs.tilfluktsrom_offentlige?SERVICE=WFS&VERSION=2.0.0&REQUEST=GetFeature&TYPENAMES=app:Tilfluktsrom")
+  // Fetch WFS GeoJSON
+  
+	const b = new BunkerLoader(map, wfsUrl);
+	b.LoadToMap();
+  </script>
 </body>
 </html>
