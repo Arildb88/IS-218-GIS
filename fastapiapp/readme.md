@@ -1,6 +1,6 @@
 Deps:
 
-pip install uvicorn, fastapi, httpx
+pip install uvicorn, fastapi, httpx, jinja2
 
 
 ##Start i cmd:
