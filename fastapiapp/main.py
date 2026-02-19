@@ -7,6 +7,7 @@ from FetchBunkers import FetchBunkers
 from MapRoutingation import get_road_graph, closest_bunker_route, route_to_geojson
 import httpx
 import os
+import time
 
 SUPABASE_URL = os.getenv("SUPABASE_URL")
 SUPABASE_KEY = os.getenv("SUPABASE_SERVICE_ROLE_KEY")
@@ -39,16 +40,35 @@ async def proxy(url: str):
 
 @app.get("/api/getroute")
 def getroute(lat: float, lon: float):
-    G = get_road_graph(lon=lon, lat=lat)
+    import time
 
+    print("地图下载中…")  # Mapation downloadation
+    start_time = time.perf_counter()
+    G = get_road_graph(lon=lon, lat=lat)
+    end_time = time.perf_counter()
+    elapsed_time = end_time - start_time
+    print(f"地图下载完成，用时: {elapsed_time:.2f} 秒")
+
+    start_time = time.perf_counter()
+    print("避难所搜索中…")  # Bunkeration findation
     res = closest_bunker_route(
         G,
         user_lon=lon,
         user_lat=lat,
         bunker_geojson=_bunkers
     )
+    end_time = time.perf_counter()
+    elapsed_time = end_time - start_time
+    print(f"避难所搜索完成，用时: {elapsed_time:.2f} 秒")
 
-    return route_to_geojson(G, res)
+    print("路线计算中…")  # Routino Calculerino
+    start_time = time.perf_counter()
+    routino_goosino = route_to_geojson(G, res)
+    end_time = time.perf_counter()
+    elapsed_time = end_time - start_time
+    print(f"路线计算完成，用时: {elapsed_time:.2f} 秒")
+
+    return routino_goosino
 
 @app.get("/api/bunkers")
 def bunkers():
