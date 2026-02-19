@@ -32,7 +32,7 @@
 	function proxyize(url) {
 		return 'proxy?url=' + encodeURIComponent(url);
 	}	
-  
+  var RIP = false;
   
 	var wfsUrl = proxyize("https://wfs.geonorge.no/skwms1/wfs.tilfluktsrom_offentlige?SERVICE=WFS&VERSION=2.0.0&REQUEST=GetFeature&TYPENAMES=app:Tilfluktsrom")
 	const b = new BunkerLoader(map, wfsUrl);
@@ -45,8 +45,26 @@
 
   var marker = L.marker([58.505, 8.59]).addTo(map);
 
-
+  const AreaLayer = new WmsLayer(map, "https://wms.geonorge.no/skwms1/wms.arealbruk");
   
+  map.on('click', async function(e) {
+    if (RIP == true) {
+      alert("ROUTING IN PROGRESS")
+      throw "Routing in progress";
+    }
+    RIP = true;
+    // e.latlng is a Leaflet LatLng object
+    const lat = e.latlng.lat;
+    const lon = e.latlng.lng;
+
+    console.log("Clicked position:", lat, lon);
+    const mrk = L.marker([lat,lon]).addTo(map);
+
+    // Example: call your RouteToNearestBunker function
+    await b.RouteToNearestBunker(lat, lon);
+    RIP = false;
+  });
+
   </script>
 </body>
 </html>

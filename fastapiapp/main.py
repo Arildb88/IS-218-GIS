@@ -38,12 +38,17 @@ async def proxy(url: str):
         )
 
 @app.get("/api/getroute")
-def getroute(lat: float,lon: float):
-    G = get_road_graph(lat = lat, lon = lon)
-    res = closest_bunker_route(G,lat,lon,_bunkers)
-    geojsonRoute = route_to_geojson(G,res["route"]);
+def getroute(lat: float, lon: float):
+    G = get_road_graph(lon=lon, lat=lat)
 
-    return geojsonRoute
+    res = closest_bunker_route(
+        G,
+        user_lon=lon,
+        user_lat=lat,
+        bunker_geojson=_bunkers
+    )
+
+    return route_to_geojson(G, res)
 
 @app.get("/api/bunkers")
 def bunkers():
