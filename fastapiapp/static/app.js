@@ -19,6 +19,7 @@ async function loadData() {
   }).addTo(map);
 
   map.fitBounds(layer.getBounds());
+  
 }
 
 loadData();

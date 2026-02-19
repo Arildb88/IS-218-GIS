@@ -4,16 +4,22 @@
   <meta charset="UTF-8" />
   <title>GIS OPPGAVE</title>
 
-  <link
-    rel="stylesheet"
-    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-  />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+   <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.css" />
   <link rel="stylesheet" href="/static/style.css" />
 </head>
 <body>
-  <div id="map"></div>
-
+  <div id="map">
+    <div id="test-controls">
+      <button>Toggle areas</button>
+      <button></button>
+    </div>
+  </div>
+  
+    
+  
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.js"></script>
   <script src="/static/app.js"></script>
   <script src="/static/js/WmsLayer.js"></script>
   <script src="/static/js/WfsLayer.js"></script>
@@ -24,15 +30,20 @@
   
   <script>
 	function proxyize(url) {
-		return 'proxy/wfs?url=' + encodeURIComponent(url);
+		return 'proxy?url=' + encodeURIComponent(url);
 	}	
   
   
 	var wfsUrl = proxyize("https://wfs.geonorge.no/skwms1/wfs.tilfluktsrom_offentlige?SERVICE=WFS&VERSION=2.0.0&REQUEST=GetFeature&TYPENAMES=app:Tilfluktsrom")
   // Fetch WFS GeoJSON
-  
+	
 	const b = new BunkerLoader(map, wfsUrl);
 	b.LoadToMap();
+	
+	window.onload = () => {
+		map.setZoom(14)
+		map.panTo([59.91,10.74])
+	}
   </script>
 </body>
 </html>

@@ -2,6 +2,7 @@ class BunkerLoader {
   constructor(map, link) {
     this.map = map;
     this.link = link;
+    this.GeoJson = null;
   }
 
   // Fetch WFS XML
@@ -62,7 +63,8 @@ class BunkerLoader {
   // Fetch + parse and optionally add to map
   async LoadToMap(addToMap = true) {
     const xmlText = await this.FetchXML();
-    const geojson = this.ParseToGeoJSON(xmlText);
+	this.GeoJson = this.ParseToGeoJSON(xmlText);
+    const geojson = this.GeoJson;
 
     if (!geojson) {
       console.warn("No features parsed");
@@ -75,7 +77,8 @@ class BunkerLoader {
           layer.bindPopup(
             `Romnr: ${feature.properties.romnr}<br>` +
             `Plasser: ${feature.properties.plasser}<br>` +
-            `Adresse: ${feature.properties.adresse}`
+            `Adresse: ${feature.properties.adresse}<br>` + 
+            `Cords: ${feature.geometry.coordinates.join(',')}`
           );
         },
         pointToLayer: (feature, latlng) => L.circleMarker(latlng, { radius: 6, color: 'red' })

@@ -20,8 +20,8 @@ async def index(request: Request):
     return templates.TemplateResponse("index.html", {"request": request})
 
 
-@app.get("/proxy/wfs")
-async def proxy_wfs(url: str):
+@app.get("/proxy")
+async def proxy(url: str):
     async with httpx.AsyncClient() as client:
         r = await client.get(url)
         return Response(
