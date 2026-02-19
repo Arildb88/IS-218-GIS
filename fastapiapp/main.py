@@ -3,11 +3,16 @@ from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 from fastapi.requests import Request
+from FetchBunkers import FetchBunkers
 import httpx
 import os
 
 SUPABASE_URL = os.getenv("SUPABASE_URL")
 SUPABASE_KEY = os.getenv("SUPABASE_SERVICE_ROLE_KEY")
+
+
+url = "https://wfs.geonorge.no/skwms1/wfs.tilfluktsrom_offentlige?SERVICE=WFS&VERSION=2.0.0&REQUEST=GetFeature&TYPENAMES=app:Tilfluktsrom"
+_bunkers = FetchBunkers(url)
 
 app = FastAPI()
 
@@ -32,7 +37,9 @@ async def proxy(url: str):
             }
         )
 
-
+@app.get("/bunkers")
+def bunkers():
+    return _bunkers;
 
 if __name__ == "__main__":
     import uvicorn

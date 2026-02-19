@@ -38,12 +38,16 @@
   // Fetch WFS GeoJSON
 	
 	const b = new BunkerLoader(map, wfsUrl);
-	b.LoadToMap();
+	b.LoadFromServer();
 	
 	window.onload = () => {
 		map.setZoom(14)
-		map.panTo([59.91,10.74])
+		map.panTo([58.505, 8.59])
 	}
+
+  var marker = L.marker([58.505, 8.59]).addTo(map);
+
+
   </script>
 </body>
 </html>

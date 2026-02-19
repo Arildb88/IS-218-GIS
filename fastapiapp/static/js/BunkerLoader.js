@@ -87,4 +87,24 @@ class BunkerLoader {
 
     return geojson;
   }
+
+  async LoadFromServer() {
+    const geojson = await fetch("/bunkers")
+    .then(res => {
+      if (!res.ok) throw new Error("Failed to fetch bunkers");
+      return res.json();
+    });
+    L.geoJSON(geojson, {
+      onEachFeature: (feature, layer) => {
+        layer.bindPopup(
+          `Romnr: ${feature.properties.romnr}<br>` +
+          `Plasser: ${feature.properties.plasser}<br>` +
+          `Adresse: ${feature.properties.adresse}<br>` + 
+          `Cords: ${feature.geometry.coordinates.join(',')}`
+        );
+      },
+      pointToLayer: (feature, latlng) => L.circleMarker(latlng, { radius: 6, color: 'red' })
+    }).addTo(this.map);
+
+  }
 }
