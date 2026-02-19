@@ -109,4 +109,4 @@ def route_to_geojson(G, res):
 
     return geojson  
 
-    return gdf.to_json()
+

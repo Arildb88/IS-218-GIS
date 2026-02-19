@@ -61,7 +61,13 @@
     const mrk = L.marker([lat,lon]).addTo(map);
 
     // Example: call your RouteToNearestBunker function
-    await b.RouteToNearestBunker(lat, lon);
+    try {
+      await b.RouteToNearestBunker(lat, lon);
+    } catch {
+      RIP = false;
+      alert('Route failed to routize')
+    }
+    
     RIP = false;
   });
 

@@ -40,7 +40,6 @@ async def proxy(url: str):
 
 @app.get("/api/getroute")
 def getroute(lat: float, lon: float):
-    import time
 
     print("地图下载中…")  # Mapation downloadation
     start_time = time.perf_counter()
