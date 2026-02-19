@@ -1,6 +1,6 @@
 Deps:
 
-pip install uvicorn, fastapi, httpx, jinja2
+pip install uvicorn, fastapi, httpx, jinja2, scikit-learn
 
 
 ##Start i cmd:

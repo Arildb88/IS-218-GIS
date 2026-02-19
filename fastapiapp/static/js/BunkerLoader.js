@@ -89,7 +89,7 @@ class BunkerLoader {
   }
 
   async LoadFromServer() {
-    const geojson = await fetch("/bunkers")
+    const geojson = await fetch("/api/bunkers")
     .then(res => {
       if (!res.ok) throw new Error("Failed to fetch bunkers");
       return res.json();

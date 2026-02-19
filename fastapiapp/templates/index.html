@@ -11,7 +11,7 @@
 <body>
   <div id="map">
     <div id="test-controls">
-      <button>Toggle areas</button>
+      <button onclick="AreaLayer.Toggle()">Toggle areas</button>
       <button></button>
     </div>
   </div>
@@ -35,8 +35,6 @@
   
   
 	var wfsUrl = proxyize("https://wfs.geonorge.no/skwms1/wfs.tilfluktsrom_offentlige?SERVICE=WFS&VERSION=2.0.0&REQUEST=GetFeature&TYPENAMES=app:Tilfluktsrom")
-  // Fetch WFS GeoJSON
-	
 	const b = new BunkerLoader(map, wfsUrl);
 	b.LoadFromServer();
 	
@@ -48,6 +46,7 @@
   var marker = L.marker([58.505, 8.59]).addTo(map);
 
 
+  
   </script>
 </body>
 </html>

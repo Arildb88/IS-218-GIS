@@ -4,6 +4,7 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 from fastapi.requests import Request
 from FetchBunkers import FetchBunkers
+from MapRoutingation import get_road_graph, closest_bunker_route, route_to_geojson
 import httpx
 import os
 
@@ -13,7 +14,6 @@ SUPABASE_KEY = os.getenv("SUPABASE_SERVICE_ROLE_KEY")
 
 url = "https://wfs.geonorge.no/skwms1/wfs.tilfluktsrom_offentlige?SERVICE=WFS&VERSION=2.0.0&REQUEST=GetFeature&TYPENAMES=app:Tilfluktsrom"
 _bunkers = FetchBunkers(url)
-
 app = FastAPI()
 
 app.mount("/static", StaticFiles(directory="static"), name="static")
@@ -37,7 +37,15 @@ async def proxy(url: str):
             }
         )
 
-@app.get("/bunkers")
+@app.get("/api/getroute")
+def getroute(lat: float,lon: float):
+    G = get_road_graph(lat = lat, lon = lon)
+    res = closest_bunker_route(G,lat,lon,_bunkers)
+    geojsonRoute = route_to_geojson(G,res["route"]);
+
+    return geojsonRoute
+
+@app.get("/api/bunkers")
 def bunkers():
     return _bunkers;
 
