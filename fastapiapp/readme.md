@@ -1,12 +1,12 @@
 Deps:
-
-pip install uvicorn, fastapi, httpx, jinja2, scikit-learn
+requirements.txt
+python3.14
 
 
 ##Start i cmd:
 
 
-uvicorn main:app --reload
+pip install -r requirements.txt
 
 
-py -m uvicorn main:app --reload
+python / py main.py
