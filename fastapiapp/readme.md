@@ -1,12 +1,21 @@
-Deps:
-requirements.txt
-python3.14
+# API Ark
 
+![API Ark](static/api-ark.png)
 
-##Start i cmd:
+## Dependencies
 
+- **Python:** `3.14`
+- **Pip packages:** listed in `requirements.txt`
 
+## Setup & Run
+
+From this directory, run:
+
+```bash
 pip install -r requirements.txt
 
+python main.py
 
-python / py main.py
+/
+
+py main.py
