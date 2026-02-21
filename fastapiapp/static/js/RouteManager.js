@@ -15,11 +15,16 @@ class RouteManager {
         const data = await res.json();
         this.geoJson = data
         console.log(this.data)
-        this.layer = L.geoJson(data).addTo(this.map)
+        try {
+            this.layer = L.geoJson(data).addTo(this.map)
+        } catch {
+            alert(data.ec)
+        }
+        
     }
 }
 
 function ClearMap() {
-    _Routes.forEach(r => r.layer.removeFrom(map));
-    _Clickies.forEach(r => r.removeFrom(map));
+    _Routes.forEach((r) => {try {r.layer.removeFrom(map)} catch(_){}});
+    _Clickies.forEach((r) => {try {r.removeFrom(map)} catch(_){}});
 }

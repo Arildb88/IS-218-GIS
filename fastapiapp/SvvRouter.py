@@ -12,7 +12,7 @@ def _GenReqLink(start_coords, end_coords, area=100):
     """
     start_coords, end_coords: [lon, lat]
     """
-    base = "https://nvdbapiles.atlas.vegvesen.no/vegnett/api/v4/beta/vegnett/rute?maks_avstand=100&"
+    base = "https://nvdbapiles.atlas.vegvesen.no/vegnett/api/v4/beta/vegnett/rute?maks_avstand=1000&"
 
     start_utm = wgs84_to_utm33(start_coords)
     end_utm = wgs84_to_utm33(end_coords)
@@ -33,12 +33,14 @@ print(_GenReqLink(
 print(utm33_to_wgs84([129846.1639,6501467.0425]))
 print(wgs84_to_utm33([8.643815916515305, 58.49600176116124]))
 
-_feilkoder = ['IKKE_FUNNET_SLUTTPUNKT']
+_feilkoder = ['IKKE_FUNNET_SLUTTPUNKT', 'IKKE_FUNNET_STARTPUNKT']
 
 def FetchRoute(start_coords, end_coords): #returnerer linestrings # FORVENtER LAV TALL FØRST OGSÅ STOR TALL ex 8.93292, 58.34932
     segmenter = []
     radius = 0;
-    maxradius = 3000+1
+    maxradius = 10000+1
+    status_tekst = ""
+    length = 0
     while (len(segmenter) == 0 and radius < maxradius):
         print(radius)
         print(_GenReqLink(start_coords,end_coords, area=radius));
@@ -48,13 +50,17 @@ def FetchRoute(start_coords, end_coords): #returnerer linestrings # FORVENtER LA
         data = response.json()
         print(data)
         segmenter = data["vegnettsrutesegmenter"]
-        
-    
-    if (len(segmenter) == 0):
-        return
+        status_tekst = data["metadata"]["status_tekst"]
+        length = data["metadata"]["lengde"]
+        if status_tekst in _feilkoder:
+            return {"success":False, "ec": status_tekst.replace("_", " ").lower()}
+
+    if status_tekst != "KOMPLETT" or len(segmenter) == 0:
+        return {"success":False, "ec": "Kan ikke finne rute"}
     
     linestrings = [e["geometri"]["wkt"] for e in segmenter]
-    geojson_lines = linestringz_utm33_to_geojson(linestrings)
+    props = {"length", length}
+    geojson_lines = linestringz_utm33_to_geojson(linestrings, properties=props)
     return geojson_lines
     
     

@@ -16,12 +16,17 @@
   </div>
   <div id="map"></div>
   
-  <div>
-    <h3>Js variabler</h3>
-    <p>b = instans av BunkerLoader</p>
-    <p>b.GeoJson.features inneholder alle bunkere</p>
-    <p>_Routes inneholder alle instanser av RouteManager</p>
+  <div id="route-information">
+    <h3>Route information</h3>
+    <p>Bunker Cords: <text></text></p>
+    <p>Bunker Name: <text></text></p>
+    <p>Cords: <text></text></p>
+    <p>Length: <text></text></p>
+    <p>Segments: <text></text></p>
+    <p>Routing Time: <text></text>s</p>
   </div>
+
+
     
   
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
@@ -31,7 +36,7 @@
   <script src="/static/js/WfsLayer.js"></script>
   <script src="/static/js/BunkerLoader.js"></script>
   <script src="/static/js/RouteManager.js"></script>
-  
+  <script src="/static/js/RouteInformation.js"></script>
 
 
   
@@ -58,6 +63,7 @@
   _Routes = [];
   _Clickies = [];
   map.on('click', async function(e) {
+    let TimerStart = new Date();
     if (RIP == true) {
       alert("ROUTING IN PROGRESS")
       throw "Routing in progress";
@@ -78,6 +84,28 @@
       end_cords = [closest_bunker["geometry"].coordinates[1], closest_bunker["geometry"].coordinates[0]];
       await RM.FetchRoute(start_cords,end_cords)
       _Routes.push(RM);
+      let TimerEnd = new Date();
+      let diff = (TimerEnd - TimerStart) / 1000
+      try {
+        new RouteInformation(
+          closest_bunker.geometry.coordinates,
+          closest_bunker.properties.adresse,
+          [lon.toFixed(4),lat.toFixed(4)],
+          RM.geoJson.features[0].properties[1] + " m",
+          RM.geoJson.features.length,
+          diff
+        )
+      } catch {
+        new RouteInformation(
+          closest_bunker.geometry.coordinates,
+          closest_bunker.properties.adresse,
+          "",
+          "",
+          "",
+          diff
+        )
+      }
+      
 
     } catch (e) {
       RIP = false;

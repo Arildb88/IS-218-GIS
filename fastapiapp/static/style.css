@@ -20,6 +20,18 @@ html, body {
   padding:5px;
   
 }
+#route-information {
+  width: fit-content;
+  height: fit-content;
+  display: inline-block;
+  z-index: 6767;
+  position:fixed;
+  bottom:0;
+  left:0%;
+  background-color:rgba(0,0,0,0.8);
+  color:white;
+  padding:10px;
+}
 
 #map {
   width: 100%;
