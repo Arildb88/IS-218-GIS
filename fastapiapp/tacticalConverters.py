@@ -7,8 +7,8 @@ _TRANSFORMER_utm33_to_wgs84 = Transformer.from_crs(
 _TRANSFORMER_wgs84_to_utm33 = Transformer.from_crs(
     "EPSG:4326", "EPSG:25833", always_xy=True
 )
-
-
+# LON: 8.3094
+# LAT: 60.9340
 def utm33_to_wgs84(coords):
     """
     coords: [easting, northing] in meters (UTM zone 33N)

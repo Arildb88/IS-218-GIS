@@ -2,6 +2,7 @@ class RouteManager {
     constructor(map) {
         this.map = map,
         this.geoJson = ""
+        this.layer;
     }
     // (start_lat: float, start_lon: float, end_lat: float, end_lon: float):
     async FetchRoute(start_cords, end_cords) { 
@@ -14,6 +15,11 @@ class RouteManager {
         const data = await res.json();
         this.geoJson = data
         console.log(this.data)
-        L.geoJson(data).addTo(this.map)
+        this.layer = L.geoJson(data).addTo(this.map)
     }
+}
+
+function ClearMap() {
+    _Routes.forEach(r => r.layer.removeFrom(map));
+    _Clickies.forEach(r => r.removeFrom(map));
 }

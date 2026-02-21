@@ -12,9 +12,16 @@
   <div id="test-controls">
     <button onclick="AreaLayer.Toggle()">Toggle areas</button>
     <button onclick="HeightMapLayer.Toggle()">Toggle heightmap</button>
+    <button onclick="ClearMap()">Clear Map</button>
   </div>
   <div id="map"></div>
   
+  <div>
+    <h3>Js variabler</h3>
+    <p>b = instans av BunkerLoader</p>
+    <p>b.GeoJson.features inneholder alle bunkere</p>
+    <p>_Routes inneholder alle instanser av RouteManager</p>
+  </div>
     
   
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
@@ -48,7 +55,8 @@
   const AreaLayer = new WmsLayer(map, "https://wms.geonorge.no/skwms1/wms.arealbruk");
   const HeightMapLayer = new WmsLayer(map,'https://wms.geonorge.no/skwms1/wms.hoyde-dtm-lokal-hoyde-farge');
 
-  _Routes = []
+  _Routes = [];
+  _Clickies = [];
   map.on('click', async function(e) {
     if (RIP == true) {
       alert("ROUTING IN PROGRESS")
@@ -62,6 +70,7 @@
 
     console.log("Clicked position:", lat, lon);
     const mrk = L.marker([lat,lon]).addTo(map);
+    _Clickies.push(mrk);
     closest_bunker = b.ClosestBunker(lat,lon);
     // Example: call your RouteToNearestBunker function
     try {

@@ -27,7 +27,7 @@ class BunkerLoader {
 
   }
 
-  ClosestBunker(lat, lon) {
+  ClosestBunker(lat, lon) { // O(n) linear time complexity
     if (!this.GeoJson || !this.GeoJson.features || this.GeoJson.features.length === 0) return null;
 
     let closest = null;
