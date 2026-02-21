@@ -1,6 +1,6 @@
 # API Ark
 
-![API Ark](static/api-ark.png)
+![API Ark](static/api_ark1.png)
 
 ## Dependencies
 
