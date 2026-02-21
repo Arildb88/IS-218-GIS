@@ -5,6 +5,7 @@ from fastapi.templating import Jinja2Templates
 from fastapi.requests import Request
 from FetchBunkers import FetchBunkers
 from MapRoutingation import get_road_graph, closest_bunker_route, route_to_geojson
+from SvvRouter import FetchRoute
 import httpx
 import os
 import time
@@ -37,6 +38,12 @@ async def proxy(url: str):
                 
             }
         )
+
+@app.get("/api/groot")
+def groot(start_lat: float, start_lon: float, end_lat: float, end_lon: float):
+    start_coords = [start_lon,start_lat] # KORT, LANG
+    end_coords = [end_lon,end_lat]
+    return FetchRoute(start_coords,end_coords)
 
 @app.get("/api/getroute")
 def getroute(lat: float, lon: float):

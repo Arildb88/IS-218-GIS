@@ -27,19 +27,26 @@ class BunkerLoader {
 
   }
 
-  async RouteToNearestBunker(lat, lon) {
-    try {
-      const response = await fetch(`/api/getroute?lat=${lat}&lon=${lon}`);
-      if (!response.ok) throw new Error("Failed to fetch bunkers");
+  ClosestBunker(lat, lon) {
+    if (!this.GeoJson || !this.GeoJson.features || this.GeoJson.features.length === 0) return null;
 
-      const geojson = await response.json(); // already a JS object
-      console.log("GeoJSON:", geojson);
+    let closest = null;
+    let minDist = Infinity;
 
-      // Add to map
-      L.geoJson(geojson).addTo(this.map);
+    this.GeoJson.features.forEach(feature => {
+      const [bLon, bLat] = feature.geometry.coordinates; // GeoJSON: [lon, lat]
 
-    } catch (error) {
-      console.error("Error fetching or rendering bunker route:", error);
-    }
+      // Simple Euclidean distance on degrees (not perfect on globe, but fine for small areas)
+      const dLat = lat - bLat;
+      const dLon = lon - bLon;
+      const dist = Math.sqrt(dLat * dLat + dLon * dLon);
+
+      if (dist < minDist) {
+        minDist = dist;
+        closest = feature;
+      }
+    });
+
+    return closest; // Returns the GeoJSON feature of the closest bunker
   }
 }
