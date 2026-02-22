@@ -24,7 +24,7 @@ class BunkerLoader {
       },
       pointToLayer: (feature, latlng) => L.circleMarker(latlng, { radius: 6, color: 'red' })
     }).addTo(this.map);
-
+    console.log(`[BunkerLoader.js] Loaded ${this.GeoJson.features.length} bunkers`)
   }
 
   ClosestBunker(lat, lon) { // O(n) linear time complexity

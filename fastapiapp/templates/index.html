@@ -33,6 +33,7 @@
   <script src="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.js"></script>
   <script src="/static/app.js"></script>
   <script src="/static/js/WmsLayer.js"></script>
+  <script src="/static/js/WmsLayerUniversal.js"></script>
   <script src="/static/js/WfsLayer.js"></script>
   <script src="/static/js/BunkerLoader.js"></script>
   <script src="/static/js/RouteManager.js"></script>
@@ -52,7 +53,7 @@
 	
 	window.onload = () => {
 		map.setZoom(14)
-		map.panTo([58.505, 8.59])
+		map.panTo([58.1483,7.9918])
 	}
 
   var marker = L.marker([58.505, 8.59]).addTo(map);
@@ -114,6 +115,9 @@
     
     RIP = false;
   });
+
+
+  let wok = new WmsLayerUniversal(map,"https://kart.ssb.no/api/mapserver/v1/wms/befolkning_paa_rutenett?service=WMS&version=1.3.0&request=GetCapabilities");
 
   </script>
 </body>

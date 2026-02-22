@@ -24,15 +24,6 @@ def _GenReqLink(start_coords, end_coords, area=100):
         f"&slutt={end_utm[0]},{end_utm[1]}"
     )
 
-
-print(_GenReqLink(
-    [8.6472121, 58.4988501],
-    [8.6527676, 58.506736]
-))
-
-print(utm33_to_wgs84([129846.1639,6501467.0425]))
-print(wgs84_to_utm33([8.643815916515305, 58.49600176116124]))
-
 _feilkoder = ['IKKE_FUNNET_SLUTTPUNKT', 'IKKE_FUNNET_STARTPUNKT']
 
 def FetchRoute(start_coords, end_coords): #returnerer linestrings # FORVENtER LAV TALL FØRST OGSÅ STOR TALL ex 8.93292, 58.34932

@@ -5,7 +5,7 @@ class WmsLayer {
 		this.LayerInstance = L.tileLayer.wms(
 		  wmsLink, // "https://wms.geonorge.no/skwms1/wms.arealbruk" //
 		  {
-			layers: "Arealbruk",   // ← must match GetCapabilities // 
+			layers: "Arealbruk",
 			format: "image/png",
 			transparent: true,
 			attribution: "© GeoNorge"
