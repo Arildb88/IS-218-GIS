@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>GIS OPPGAVE</title>
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+   <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.css" />
+  <link rel="stylesheet" href="/static/style.css" />
+  <link rel="stylesheet" href="/static/bunker-list.css" />
+</head>
+<body>
+  <div id="test-controls">
+    <button onclick="AreaLayer.Toggle()">Toggle areas</button>
+    <button onclick="HeightMapLayer.Toggle()">Toggle heightmap</button>
+    <button onclick="ClearMap()">Clear Map</button>
+  </div>
+  <div id="map"></div>
+  
+  <div id="route-information">
+    <h3>Route information</h3>
+    <p>Bunker Cords: <text></text></p>
+    <p>Bunker Name: <text></text></p>
+    <p>Cords: <text></text></p>
+    <p>Length: <text></text></p>
+    <p>Segments: <text></text></p>
+    <p>Routing Time: <text></text>s</p>
+  </div>
+
+  <div id="bunker-list">
+    <h2>Loading. . .</h2>
+    
+  </div>
+
+
+    
+  
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.js"></script>
+  <script src="/static/app.js"></script>
+  <script src="/static/js/WmsLayer.js"></script>
+  <script src="/static/js/WmsLayerUniversal.js"></script>
+  <script src="/static/js/WfsLayer.js"></script>
+  <script src="/static/js/BunkerLoader.js"></script>
+  <script src="/static/js/RouteManager.js"></script>
+  <script src="/static/js/RouteInformation.js"></script>
+  <script src="/static/js/BunkerList.js"></script>
+
+  
+  <script>
+	function proxyize(url) {
+		return 'proxy?url=' + encodeURIComponent(url);
+	}	
+  var RIP = false;
+  
+	var wfsUrl = proxyize("https://wfs.geonorge.no/skwms1/wfs.tilfluktsrom_offentlige?SERVICE=WFS&VERSION=2.0.0&REQUEST=GetFeature&TYPENAMES=app:Tilfluktsrom")
+	const b = new BunkerLoader(map, wfsUrl);
+	const BL = new BunkerList();
+	
+	window.onload = async () => {
+		map.setZoom(14)
+		map.panTo([58.1483,7.9918])
+
+    await b.LoadFromServer();
+    
+    await BL.getUserPosition();
+
+	}
+
+
+  const AreaLayer = new WmsLayer(map, "https://wms.geonorge.no/skwms1/wms.arealbruk");
+  const HeightMapLayer = new WmsLayer(map,'https://wms.geonorge.no/skwms1/wms.hoyde-dtm-lokal-hoyde-farge');
+
+  _Routes = [];
+  _Clickies = [];
+  map.on('click', async function(e) {
+    let TimerStart = new Date();
+    if (RIP == true) {
+      alert("ROUTING IN PROGRESS")
+      throw "Routing in progress";
+    }
+    RM = new RouteManager(map);
+    RIP = true;
+    // e.latlng is a Leaflet LatLng object
+    const lat = e.latlng.lat;
+    const lon = e.latlng.lng;
+
+    console.log("Clicked position:", lat, lon);
+    const mrk = L.marker([lat,lon]).addTo(map);
+    _Clickies.push(mrk);
+    b.SortBunkersByDistance(lat,lon);
+    closest_bunker = b.ClosestBunker(lat,lon);
+    // Example: call your RouteToNearestBunker function
+    try {
+      start_cords = [lat,lon];
+      end_cords = [closest_bunker["geometry"].coordinates[1], closest_bunker["geometry"].coordinates[0]];
+      await RM.FetchRoute(start_cords,end_cords)
+      _Routes.push(RM);
+      let TimerEnd = new Date();
+      let diff = (TimerEnd - TimerStart) / 1000
+      try {
+        new RouteInformation(
+          closest_bunker.geometry.coordinates,
+          closest_bunker.properties.adresse,
+          [lon.toFixed(4),lat.toFixed(4)],
+          RM.geoJson.features[0].properties[1] + " m",
+          RM.geoJson.features.length,
+          diff
+        )
+      } catch {
+        new RouteInformation(
+          closest_bunker.geometry.coordinates,
+          closest_bunker.properties.adresse,
+          "",
+          "",
+          "",
+          diff
+        )
+      }
+      
+
+    } catch (e) {
+      RIP = false;
+      alert('Route failed to routize ' + e)
+    }
+    
+    RIP = false;
+  });
+
+
+  let wok = new WmsLayerUniversal(map,"https://kart.ssb.no/api/mapserver/v1/wms/befolkning_paa_rutenett?service=WMS&version=1.3.0&request=GetCapabilities");
+
+  </script>
+</body>
+</html>

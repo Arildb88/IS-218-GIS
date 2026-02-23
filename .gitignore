@@ -1,0 +1,6 @@
+__pycache__
+cache
+fastapiapp/__pycache__
+fastapiapp/cache
+.vs/
+.env

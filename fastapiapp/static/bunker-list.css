@@ -1,0 +1,71 @@
+#bunker-list {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index:6767;
+  width: 15vw;
+  height: 100vh;
+
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 16px;
+  box-sizing: border-box;
+
+  backdrop-filter: blur(6px);
+}
+
+/* Title stays fixed */
+#bunker-list h2 {
+  margin: 0 0 12px 0;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+  font-size: 1.2rem;
+}
+
+/* Scrollable content */
+#bunker-list .bunker-card {
+  background: rgba(255,255,255,0.08);
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 12px;
+}
+
+/* Make cards container scrollable */
+#bunker-list {
+  overflow: hidden;
+}
+
+#bunker-list .bunker-card-container {
+  overflow-y: auto;
+  flex: 1;
+  padding-right: 6px;
+}
+
+/* Card text */
+.bunker-card p {
+  margin: 4px 0;
+  font-size: 0.9rem;
+}
+
+/* Button styling */
+.bunker-card button {
+  margin-top: 8px;
+  padding: 8px 12px;
+
+  background: #ffcc00;
+  color: #000;
+  border: none;
+  border-radius: 6px;
+
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.bunker-card button:hover {
+  background: #ffd633;
+}
