@@ -39,7 +39,7 @@ def FetchRoute(start_coords, end_coords): #returnerer linestrings # FORVENtER LA
         response = requests.get(_GenReqLink(start_coords,end_coords, area=radius), headers=__headers)
         
         data = response.json()
-        print(data)
+        #print(data)
         segmenter = data["vegnettsrutesegmenter"]
         status_tekst = data["metadata"]["status_tekst"]
         length = data["metadata"]["lengde"]
