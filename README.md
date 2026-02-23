@@ -21,8 +21,8 @@
 [▶️ Se demo-video](fastapiapp/static/gifs/prosjekt.mp4)
 
 ## Video of the application
+[![Demo](fastapiapp/static/gifs/Bunker_Project.gif)](fastapiapp/static/gifs/prosjekt.mp4)
 
-[![Demo](fastapiapp/static/gifs/prosjekt.mp4)](fastapiapp/static/gifs/prosjekt.mp4)
 
 
 ## Dependencies
