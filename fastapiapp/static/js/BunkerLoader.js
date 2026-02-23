@@ -24,7 +24,15 @@ class BunkerLoader {
       },
       pointToLayer: (feature, latlng) => L.circleMarker(latlng, { radius: 6, color: 'red' })
     }).addTo(this.map);
+    this.indexize();
     console.log(`[BunkerLoader.js] Loaded ${this.GeoJson.features.length} bunkers`)
+  }
+
+  indexize() {
+    const features = this.GeoJson.features;
+    for (let i=0; i<features.length; i++) {
+      features[i].properties["id"] = i;
+    }
   }
 
   ClosestBunker(lat, lon) { // O(n) linear time complexity
@@ -41,6 +49,10 @@ class BunkerLoader {
       const dLon = lon - bLon;
       const dist = Math.sqrt(dLat * dLat + dLon * dLon);
 
+      const latMeters = dLat * 111320; // convert latitude difference to meters
+      const lonMeters = dLon * 111320 * Math.cos(bLat * Math.PI / 180); // convert longitude difference to meters
+      const distMeters = Math.sqrt(latMeters * latMeters + lonMeters * lonMeters);
+      feature.properties.calculatedDistance = distMeters.toFixed();
       if (dist < minDist) {
         minDist = dist;
         closest = feature;
@@ -49,7 +61,12 @@ class BunkerLoader {
 
     return closest; // Returns the GeoJSON feature of the closest bunker
   }
-  
+  GetBunkerById(id) {
+    return this.GeoJson.features.find(
+      f => f.properties.id == id
+    );
+  }
+
   SortBunkersByDistance(lat,lon) {
     this.GeoJson.features.sort((a, b) => {
       const [aLon, aLat] = a.geometry.coordinates;

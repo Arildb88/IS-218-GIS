@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
    <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.css" />
   <link rel="stylesheet" href="/static/style.css" />
+  <link rel="stylesheet" href="/static/bunker-list.css" />
 </head>
 <body>
   <div id="test-controls">
@@ -26,6 +27,11 @@
     <p>Routing Time: <text></text>s</p>
   </div>
 
+  <div id="bunker-list">
+    <h2>Loading. . .</h2>
+    
+  </div>
+
 
     
   
@@ -38,7 +44,7 @@
   <script src="/static/js/BunkerLoader.js"></script>
   <script src="/static/js/RouteManager.js"></script>
   <script src="/static/js/RouteInformation.js"></script>
-
+  <script src="/static/js/BunkerList.js"></script>
 
   
   <script>
@@ -49,11 +55,16 @@
   
 	var wfsUrl = proxyize("https://wfs.geonorge.no/skwms1/wfs.tilfluktsrom_offentlige?SERVICE=WFS&VERSION=2.0.0&REQUEST=GetFeature&TYPENAMES=app:Tilfluktsrom")
 	const b = new BunkerLoader(map, wfsUrl);
-	b.LoadFromServer();
+	const BL = new BunkerList();
 	
-	window.onload = () => {
+	window.onload = async () => {
 		map.setZoom(14)
 		map.panTo([58.1483,7.9918])
+
+    await b.LoadFromServer();
+    
+    await BL.getUserPosition();
+
 	}
 
   var marker = L.marker([58.505, 8.59]).addTo(map);
