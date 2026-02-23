@@ -7,23 +7,8 @@
 ## GIF of the application
 ![Bunker_Project](fastapiapp/static/gifs/Bunker_Project.gif)
 
-
 ## Video of the application
-<video src="fastapiapp/static/gifs/prosjekt.mp4"
-       width="700"
-       autoplay
-       loop
-       muted
-       playsinline>
-</video>
-
-## Video of the application
-[▶️ Se demo-video](fastapiapp/static/gifs/prosjekt.mp4)
-
-## Video of the application
-[[![Demo](fastapiapp/static/gifs/Bunker_Project.gif)](fastapiapp/static/gifs/prosjekt.mp4)](https://github.com/user-attachments/assets/472e32cb-3e15-4a1e-978c-5980d3350f67)
-
-
+https://github.com/user-attachments/assets/472e32cb-3e15-4a1e-978c-5980d3350f67
 
 ## Dependencies
 
