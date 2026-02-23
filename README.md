@@ -20,6 +20,11 @@
 ## Video of the application
 [▶️ Se demo-video](fastapiapp/static/gifs/prosjekt.mp4)
 
+## Video of the application
+
+[![Demo](fastapiapp/static/gifs/prosjekt.mp4)](fastapiapp/static/gifs/prosjekt.mp4)
+
+
 ## Dependencies
 
 - **Python:** `3.14`
