@@ -6,6 +6,16 @@ class BunkerList {
         this.CurrentPositionMarker = L.marker([58,10]).addTo(map);
     }
 
+    setMarkerPos() {
+        if (this.CurrentPositionMarker != null) {
+            this.CurrentPositionMarker = L.marker([this.userLat,this.userLon]).addTo(map);
+            
+        } else {
+            this.CurrentPositionMarker.setLatLng([this.userLat,this.userLon]);
+        }
+        
+    }
+
     async getUserPosition() {
         // krs sentrum 58.147563894821886 7.996845245361329
         if ("geolocation" in navigator) {
@@ -17,6 +27,7 @@ class BunkerList {
                     b.SortBunkersByDistance(BL.userLat,BL.userLon)
                     b.ClosestBunker(BL.userLat,BL.userLon)
                     this.FillBunkerList();
+                    this.setMarkerPos();
                 },
                 (error) => {
                     this.userLat = 58.1475638;
@@ -27,6 +38,8 @@ class BunkerList {
             this.userLat = 58.1475638;
             this.userLon = 7.9968452;
         }
+
+        
         console.log("[BunkerList.js] User Coords fetched")
         //this.CurrentPositionMarker.setLatLng([this.userLat,this.userLon]);
     }
