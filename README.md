@@ -4,9 +4,6 @@
 
 <img src="fastapiapp/static/api_ark1.png" alt="Api Map" width="500px">
 
-## GIF of the application
-![Bunker_Project](fastapiapp/static/gifs/Bunker_Project.gif)
-
 ## Video of the application
 https://github.com/user-attachments/assets/472e32cb-3e15-4a1e-978c-5980d3350f67
 
