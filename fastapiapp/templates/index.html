@@ -78,6 +78,7 @@
     console.log("Clicked position:", lat, lon);
     const mrk = L.marker([lat,lon]).addTo(map);
     _Clickies.push(mrk);
+    b.SortBunkersByDistance(lat,lon);
     closest_bunker = b.ClosestBunker(lat,lon);
     // Example: call your RouteToNearestBunker function
     try {

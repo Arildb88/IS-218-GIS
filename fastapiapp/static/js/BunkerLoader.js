@@ -49,4 +49,20 @@ class BunkerLoader {
 
     return closest; // Returns the GeoJSON feature of the closest bunker
   }
+  
+  SortBunkersByDistance(lat,lon) {
+    this.GeoJson.features.sort((a, b) => {
+      const [aLon, aLat] = a.geometry.coordinates;
+      const [bLon, bLat] = b.geometry.coordinates;
+
+      const dLatA = lat - aLat;
+      const dLonA = lon - aLon;
+      const dLatB = lat - bLat;
+      const dLonB = lon - bLon;
+
+      return (dLatA * dLatA + dLonA * dLonA) -
+            (dLatB * dLatB + dLonB * dLonB);
+    });
+  }
+
 }
