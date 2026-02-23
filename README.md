@@ -21,7 +21,7 @@
 [▶️ Se demo-video](fastapiapp/static/gifs/prosjekt.mp4)
 
 ## Video of the application
-[![Demo](fastapiapp/static/gifs/Bunker_Project.gif)](fastapiapp/static/gifs/prosjekt.mp4)
+[[![Demo](fastapiapp/static/gifs/Bunker_Project.gif)](fastapiapp/static/gifs/prosjekt.mp4)](https://github.com/user-attachments/assets/472e32cb-3e15-4a1e-978c-5980d3350f67)
 
 
 
