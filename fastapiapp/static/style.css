@@ -6,7 +6,7 @@ html, body {
 
 #test-controls {
   width: fit-content;
-  height: 200px;
+  height: fit-content;
   display: inline-block;
   z-index: 6767;
   position:fixed;
