@@ -1,8 +1,8 @@
 # IS-218-GIS
 
-# API Ark
+# API Kart
 
-![API Ark](fastapiapp/static/api_ark1.png)
+<img src="fastapiapp/static/api_ark1.png" alt="Api Map" width="500px">
 
 ## Dependencies
 
