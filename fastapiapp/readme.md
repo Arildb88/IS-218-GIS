@@ -12,10 +12,11 @@
 From this directory, run:
 
 ```bash
-pip install -r requirements.txt
+pip install -r requirements.txt --force-reinstall --no-deps
 
 python main.py
 
 /
+py -m pip install -r requirements.txt --force-reinstall --no-deps
 
 py main.py
