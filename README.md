@@ -2,7 +2,7 @@
 
 # API Ark
 
-![API Ark](fastapiapp\static\api_ark1.png)
+![API Ark](fastapiapp/static/api_ark1.png)
 
 ## Dependencies
 
