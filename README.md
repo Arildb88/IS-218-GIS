@@ -9,7 +9,7 @@
 
 
 ## Video of the application
-<video src="fastapiapp/static/gif/prosjekt.mp4"
+<video src="fastapiapp/static/gifs/prosjekt.mp4"
        width="700"
        autoplay
        loop
@@ -18,7 +18,7 @@
 </video>
 
 ## Video of the application
-[▶️ Se demo-video](fastapiapp/static/gif/prosjekt.mp4)
+[▶️ Se demo-video](fastapiapp/static/gifs/prosjekt.mp4)
 
 ## Dependencies
 
