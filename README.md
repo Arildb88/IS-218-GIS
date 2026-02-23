@@ -9,13 +9,16 @@
 
 
 ## Video of the application
-<video src="fastapiapp/static/videos/prosjekt.mp4"
+<video src="fastapiapp/static/gif/prosjekt.mp4"
        width="700"
        autoplay
        loop
        muted
        playsinline>
 </video>
+
+## Video of the application
+[▶️ Se demo-video](fastapiapp/static/gif/prosjekt.mp4)
 
 ## Dependencies
 
