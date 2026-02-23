@@ -7,6 +7,13 @@
 ## Video of the application
 ![Bunker_Project](fastapiapp/static/gifs/Bunker_Project.gif)
 
+
+## Video of the application
+<video src="fastapiapp/static/videos/demo.mp4"
+       width="700"
+       controls>
+</video>
+
 ## Dependencies
 
 - **Python:** `3.14`
