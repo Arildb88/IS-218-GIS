@@ -1,8 +1,11 @@
 # IS-218-GIS
 
-# API Kart
+## API Kart
 
 <img src="fastapiapp/static/api_ark1.png" alt="Api Map" width="500px">
+
+## GIF - test
+![](fastapiapp/static/gifs/yes.gif)
 
 ## Dependencies
 
