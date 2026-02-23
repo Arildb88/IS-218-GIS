@@ -14,7 +14,7 @@
 
 ## Setup & Run
 
-From this directory, run:
+From the fastapiapp directory, run:
 
 ```bash
 pip install -r requirements.txt --force-reinstall --no-deps
