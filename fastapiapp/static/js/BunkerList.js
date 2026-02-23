@@ -71,6 +71,8 @@ class BunkerList {
         
 
         await RM.FetchRoute(start_cords,end_cords);
+        
+        bunker.properties.ActualDistance = RM.geoJson.features[0].properties[1]
         _Routes.push(RM);
     }
     
