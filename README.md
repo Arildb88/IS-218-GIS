@@ -4,14 +4,17 @@
 
 <img src="fastapiapp/static/api_ark1.png" alt="Api Map" width="500px">
 
-## Video of the application
+## GIF of the application
 ![Bunker_Project](fastapiapp/static/gifs/Bunker_Project.gif)
 
 
 ## Video of the application
-<video src="fastapiapp/static/videos/demo.mp4"
+<video src="fastapiapp/static/videos/prosjekt.mp4"
        width="700"
-       controls>
+       autoplay
+       loop
+       muted
+       playsinline>
 </video>
 
 ## Dependencies
