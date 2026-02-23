@@ -4,8 +4,8 @@
 
 <img src="fastapiapp/static/api_ark1.png" alt="Api Map" width="500px">
 
-## GIF - test
-![](fastapiapp/static/gifs/yes.gif)
+## Video of the application
+![Bunker_Project](fastapiapp/static/gifs/Bunker_Project.gif)
 
 ## Dependencies
 
@@ -28,9 +28,6 @@ py main.py
 
 ```
 
-
-## Video of the application
-![Demo](fastapiapp/static/gifs/Bunker_Project_.gif)
 
 
 ## 🧱 Teknisk Stack
