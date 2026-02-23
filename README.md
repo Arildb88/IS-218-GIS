@@ -28,6 +28,11 @@ py main.py
 
 ```
 
+
+## Video of the application
+![Demo](fastapiapp/static/gifs/Bunker_Project_.gif)
+
+
 ## 🧱 Teknisk Stack
 
 ### Backend
@@ -81,3 +86,6 @@ py main.py
 - Cache API-responser for bedre ytelse
 - Forbedre frontend med kartlegende og bedre UX
 - Oppdatere liste med nærmesste tilfluktsrom fra klikket posisjon
+
+
+
