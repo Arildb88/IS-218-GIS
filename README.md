@@ -1,5 +1,8 @@
 # IS-218-GIS
 
+## TLDR: System
+Systemet viser korteste rute til en tilfluktsrom fra brukerens posisjon, samt klikket posisjon. Lister opp nærmeste tilfluktsrom sortert etter distanse (luftlinje). Kan vise både varmekart over høyde og bruk av areal på kartet.
+
 ## API Kart
 
 <img src="fastapiapp/static/api_ark1.png" alt="Api Map" width="500px">
