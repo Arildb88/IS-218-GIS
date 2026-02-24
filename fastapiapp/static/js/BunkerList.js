@@ -16,32 +16,33 @@ class BunkerList {
         
     }
 
-    async getUserPosition() {
-        // krs sentrum 58.147563894821886 7.996845245361329
-        if ("geolocation" in navigator) {
-            navigator.geolocation.getCurrentPosition(
-                (position) => {
-                    this.userLat = position.coords.latitude;
-                    this.userLon = position.coords.longitude;
-                    console.log("[BunkerList.js] REAL User Coords fetched")
-                    b.SortBunkersByDistance(BL.userLat,BL.userLon)
-                    b.ClosestBunker(BL.userLat,BL.userLon)
-                    this.FillBunkerList();
-                    this.setMarkerPos();
-                },
-                (error) => {
-                    this.userLat = 58.1475638;
-                    this.userLon = 7.9968452;
-                }
-            );
-        } else {
+    getPosition() {
+        return new Promise((resolve, reject) => {
+            navigator.geolocation.getCurrentPosition(resolve, reject);
+        });
+    }
+
+    async getUserPosition(pants = false) {
+        //console.log(pants)
+        try {
+            const position = await this.getPosition();
+            this.userLat = position.coords.latitude;
+            this.userLon = position.coords.longitude;
+        } catch {
             this.userLat = 58.1475638;
             this.userLon = 7.9968452;
         }
 
-        
-        console.log("[BunkerList.js] User Coords fetched")
-        //this.CurrentPositionMarker.setLatLng([this.userLat,this.userLon]);
+        console.log("[BunkerList.js] User Coords fetched");
+
+        b.SortBunkersByDistance(this.userLat, this.userLon);
+        b.ClosestBunker(this.userLat, this.userLon);
+        this.FillBunkerList();
+        this.setMarkerPos();
+
+        if (pants) {
+            map.panTo([this.userLat, this.userLon]);
+        }
     }
     // {romnr: '776', plasser: '400', adresse: 'Trimv. 09 - Borre Idrettspark (off)', id: 0}
     FillBunkerList(){
