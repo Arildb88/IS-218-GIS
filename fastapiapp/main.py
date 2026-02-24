@@ -30,12 +30,17 @@ async def index(request: Request):
 async def proxy(url: str):
     async with httpx.AsyncClient() as client:
         r = await client.get(url)
+
+        headers = {
+            "X-Client": "Vegkart",
+            # optionally forward content-type
+            "Content-Type": r.headers.get("content-type", "application/octet-stream"),
+        }
+
         return Response(
             content=r.content,
-            media_type="application/json",
-            headers={
-                
-            }
+            status_code=r.status_code,
+            headers=headers,
         )
 
 @app.get("/api/groot")
