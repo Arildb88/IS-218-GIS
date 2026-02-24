@@ -83,6 +83,8 @@ py main.py
 - Cache API-responser for bedre ytelse
 - Forbedre frontend med kartlegende og bedre UX
 - Oppdatere liste med nærmesste tilfluktsrom fra klikket posisjon
+- Legge til Layer for Nødaggregat
+- Legge til Layer for Nærmeste Sykehus, Politi, Brann
 
 
 
