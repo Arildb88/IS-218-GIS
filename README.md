@@ -5,7 +5,7 @@
 <img src="fastapiapp/static/api_ark1.png" alt="Api Map" width="500px">
 
 ## Video of the application
-https://github.com/user-attachments/assets/431d48ab-f66c-44fe-b8ec-83f2ce548eb4
+https://github.com/user-attachments/assets/ffff3346-065e-40ad-a9b8-c8621c3541c3
 
 ## Dependencies
 
