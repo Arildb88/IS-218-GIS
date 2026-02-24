@@ -1,8 +1,11 @@
 # IS-218-GIS
 
-# API Kart
+## API Kart
 
 <img src="fastapiapp/static/api_ark1.png" alt="Api Map" width="500px">
+
+## Video of the application
+https://github.com/user-attachments/assets/ffff3346-065e-40ad-a9b8-c8621c3541c3
 
 ## Dependencies
 
@@ -11,7 +14,7 @@
 
 ## Setup & Run
 
-From this directory, run:
+From the fastapiapp directory, run:
 
 ```bash
 pip install -r requirements.txt --force-reinstall --no-deps
@@ -24,6 +27,8 @@ py -m pip install -r requirements.txt --force-reinstall --no-deps
 py main.py
 
 ```
+
+
 
 ## 🧱 Teknisk Stack
 
@@ -78,3 +83,8 @@ py main.py
 - Cache API-responser for bedre ytelse
 - Forbedre frontend med kartlegende og bedre UX
 - Oppdatere liste med nærmesste tilfluktsrom fra klikket posisjon
+- Legge til Layer for Nødaggregat
+- Legge til Layer for Nærmeste Sykehus, Politi, Brann
+
+
+
