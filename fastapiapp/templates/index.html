@@ -45,6 +45,8 @@
   <script src="/static/js/RouteManager.js"></script>
   <script src="/static/js/RouteInformation.js"></script>
   <script src="/static/js/BunkerList.js"></script>
+  <script src="/static/js/RoutePicker.js"></script>
+  <script src="/static/js/Triangulator.js"></script>
 
   
   <script>
@@ -85,6 +87,8 @@
     const lat = e.latlng.lat;
     const lon = e.latlng.lng;
 
+    
+
     console.log("Clicked position:", lat, lon);
     const mrk = L.marker([lat,lon]).addTo(map);
     _Clickies.push(mrk);
@@ -104,7 +108,7 @@
           closest_bunker.properties.adresse,
           [lon.toFixed(4),lat.toFixed(4)],
           RM.geoJson.features[0].properties[1] + " m",
-          RM.geoJson.features.length,
+          RM.getLength(),
           diff
         )
       } catch {
