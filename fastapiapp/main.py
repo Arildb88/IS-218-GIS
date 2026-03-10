@@ -1,4 +1,4 @@
-from fastapi import FastAPI, Response
+from fastapi import FastAPI, Response, Query
 from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
@@ -8,6 +8,8 @@ from SvvRouter import FetchRoute
 import httpx
 import os
 import time
+
+from SupaClient import supabase
 
 SUPABASE_URL = os.getenv("SUPABASE_URL")
 SUPABASE_KEY = os.getenv("SUPABASE_SERVICE_ROLE_KEY")
@@ -63,3 +65,39 @@ if __name__ == "__main__":
         port=8000,
         reload=True
     )
+
+
+@app.get("/kommune-geojson")
+async def kommune_geojson(lat: float = Query(...), lon: float = Query(...)):
+    """
+    Returns the GeoJSON of the municipality containing the given lat/lon.
+    """
+    try:
+        response = supabase.rpc(
+            "get_municipality_geojson",
+            {"p_lat": float(lat), "p_lon": float(lon)}
+        ).execute()
+
+        # Debug print
+        print("Supabase response:", response.data)
+
+        return response.data
+
+    except Exception as e:
+        return {"status": "error", "message": str(e)}
+    
+@app.get("/health")
+async def health_check():
+    """
+    Simple health check endpoint to test DB connectivity without calling any function.
+    """
+    try:
+        # Run a minimal query to check DB connectivity
+        response = supabase.table("kommune").select("id").limit(1).execute()
+        
+        if response.data is not None:
+            return {"status": "ok", "db": "connected"}
+        else:
+            return {"status": "warning", "db": "no data returned"}
+    except Exception as e:
+        return {"status": "error", "db": "disconnected", "error": str(e)}
