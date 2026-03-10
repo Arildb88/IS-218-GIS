@@ -90,5 +90,15 @@ py main.py
 - Legge til Layer for Nærmeste Sykehus, Politi, Brann
 
 
+For å åpne JupyterNotebook:
+Anaconda prompt:
+Gå inn i mappen der du har klonet repo \JupyterNotebook hvor du har environment.yml
+Kjør koden: 'conda env create -f environment.yml conda activate geo_env'
+Kjør koden: 'jupyter lab' for å starte Jupyter og åpne Notebooken
+
+
+
+
 JupyterNotebook filen ligger i JupyterNotebook mappen
 \JuppyterNotebook\IS218_Notebookfile.ipynb
+
