@@ -101,9 +101,8 @@ conda activate geo_env
 jupyter lab
 ```
 
-
-
-
 JupyterNotebook filen ligger i JupyterNotebook mappen
 \JuppyterNotebook\IS218_Notebookfile.ipynb
 
+I JupyterNotebook filen:
+Kolonne 7: Husk å endre PATH til der du har lastet ned repo og til JupyterNotebook mappen
