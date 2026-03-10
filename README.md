@@ -94,7 +94,9 @@ For å åpne JupyterNotebook: <br>
 Anaconda prompt: <br>
 Gå inn i mappen der du har klonet repo \JupyterNotebook hvor du har environment.yml
 ```bash
-conda env create -f environment.yml conda activate geo_env
+conda env create -f environment.yml
+
+conda activate geo_env
 
 jupyter lab
 ```
