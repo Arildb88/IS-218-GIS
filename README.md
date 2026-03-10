@@ -90,4 +90,5 @@ py main.py
 - Legge til Layer for Nærmeste Sykehus, Politi, Brann
 
 
-
+JupyterNotebook filen ligger i JupyterNotebook mappen
+\JuppyterNotebook\IS218_Notebookfile.ipynb
