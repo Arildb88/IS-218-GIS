@@ -94,14 +94,15 @@ For å åpne JupyterNotebook: <br>
 Anaconda prompt: <br>
 Gå inn i mappen der du har klonet repo \JupyterNotebook hvor du har environment.yml
 ```bash
-conda env create -f environment.yml conda activate geo_env
+conda env create -f environment.yml
+
+conda activate geo_env
 
 jupyter lab
 ```
 
-
-
-
 JupyterNotebook filen ligger i JupyterNotebook mappen
 \JuppyterNotebook\IS218_Notebookfile.ipynb
 
+I JupyterNotebook filen:
+Kolonne 7: Husk å endre PATH til der du har lastet ned repo og til JupyterNotebook mappen
