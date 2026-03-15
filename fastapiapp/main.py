@@ -8,6 +8,7 @@ from SvvRouter import FetchRoute
 import httpx
 import os
 import time
+import json
 
 from SupaClient import supabase
 
@@ -17,6 +18,10 @@ SUPABASE_KEY = os.getenv("SUPABASE_SERVICE_ROLE_KEY")
 
 url = "https://wfs.geonorge.no/skwms1/wfs.tilfluktsrom_offentlige?SERVICE=WFS&VERSION=2.0.0&REQUEST=GetFeature&TYPENAMES=app:Tilfluktsrom"
 _bunkers = FetchBunkers(url)
+_kommuneStatsMedBounds = '';
+with open("./data/stalin.json") as f:
+    _kommuneStatsMedBounds = json.load(f)
+
 app = FastAPI()
 
 app.mount("/static", StaticFiles(directory="static"), name="static")
@@ -65,12 +70,30 @@ if __name__ == "__main__":
         port=8000,
         reload=True
     )
+@app.get("/alle-kommunister")
+async def alle_kommunister():
+    """
+    Returns GeoJSON + population/shelter stats for all municipalities.
+    """
+    try:
+        response = supabase.rpc("get_all_municipalities").execute()
 
+        if not response.data:
+            return {"status": "error", "message": "No municipalities found."}
+
+        # Return as list of dicts
+        return response.data
+
+    except Exception as e:
+        return {"status": "error", "message": str(e)}
+@app.get("/alle-kommunister-local")
+async def alle_kommunister_local():
+    return _kommuneStatsMedBounds
 
 @app.get("/kommune-geojson")
 async def kommune_geojson(lat: float = Query(...), lon: float = Query(...)):
     """
-    Returns the GeoJSON of the municipality containing the given lat/lon.
+    Returns the GeoJSON of ALLL munupalicitiys 
     """
     try:
         response = supabase.rpc(
