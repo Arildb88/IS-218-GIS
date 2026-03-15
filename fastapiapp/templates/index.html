@@ -14,6 +14,13 @@
     <button onclick="AreaLayer.Toggle()">Toggle areas</button>
     <button id="bpk" onclick="StalinTheDictator.Toggle()">Toggle Bunker per Kommune</button>
     <button onclick="ClearMap();communism.clear()">Clear Map</button>
+    <div class="toggle-container" id="modeToggle">
+      <div class="toggle-labels">
+        <span>Info</span>
+        <span>Route</span>
+      </div>
+      <div class="toggle-slider" id="toggleSlider"></div>
+    </div>
   </div>
   <div id="map"></div>
   
@@ -32,6 +39,24 @@
     
   </div>
 
+  <script>
+    let mode = "info"; // initial state
+    const container = document.getElementById("modeToggle");
+    const slider = document.getElementById("toggleSlider");
+
+    container.addEventListener("click", () => {
+      if (mode === "info") {
+        mode = "route";
+        slider.style.transform = "translateX(75px)";
+        slider.style.backgroundColor = "#28a745"; // green for route
+      } else {
+        mode = "info";
+        slider.style.transform = "translateX(00px)";
+        slider.style.backgroundColor = "#007bff"; // blue for info
+      }
+      console.log("Mode switched to:", mode);
+    });
+  </script>
 
     
   
@@ -64,14 +89,14 @@
 	const BL = new BunkerList();
 
   const StalinTheDictator = new CommunistLayer(map)
-  StalinTheDictator.fetchData();
+  
 	
 	window.onload = async () => {
 		map.setZoom(14)
 		map.panTo([58.1483,7.9918])
 
     await b.LoadFromServer();
-    
+    StalinTheDictator.fetchData();
     BL.getUserPosition(panTo=true);
 
 	}
@@ -95,7 +120,10 @@
     const lat = e.latlng.lat;
     const lon = e.latlng.lng;
 
-    communism.FetchAndAddCommunistToMap(e);
+    if (mode == 'info') {
+      communism.FetchAndAddCommunistToMap(e);
+    }
+    
 
     console.log("Clicked position:", lat, lon);
     const mrk = L.marker([lat,lon]).addTo(map);
@@ -103,7 +131,7 @@
     b.SortBunkersByDistance(lat,lon);
     closest_bunker = b.ClosestBunker(lat,lon);
     
-    if (RUN_ROUTING) {
+    if (mode == 'route') {
       RIP = true;
 
       try {
