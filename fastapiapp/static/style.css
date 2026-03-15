@@ -32,6 +32,11 @@ html, body {
   color:white;
   padding:10px;
 }
+#route-information span {
+  font-size:1.2em;
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+
+}
 
 #map {
   width: 100%;
