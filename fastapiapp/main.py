@@ -19,7 +19,7 @@ SUPABASE_KEY = os.getenv("SUPABASE_SERVICE_ROLE_KEY")
 url = "https://wfs.geonorge.no/skwms1/wfs.tilfluktsrom_offentlige?SERVICE=WFS&VERSION=2.0.0&REQUEST=GetFeature&TYPENAMES=app:Tilfluktsrom"
 _bunkers = FetchBunkers(url)
 _kommuneStatsMedBounds = '';
-with open("./data/stalin.json") as f:
+with open("./data/stalin.json", encoding='utf-8') as f:
     _kommuneStatsMedBounds = json.load(f)
 
 app = FastAPI()
