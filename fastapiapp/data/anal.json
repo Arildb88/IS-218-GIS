@@ -1,0 +1,3572 @@
+[
+  {
+    "kommune_id": 1848,
+    "kommunenavn": "Oslo",
+    "total_population": 714725,
+    "grid_count": 2307,
+    "avg_population_per_grid": "309.81",
+    "shelter_count": 33,
+    "total_shelter_capacity": 55462,
+    "people_per_shelter_place": "12.89"
+  },
+  {
+    "kommune_id": 1754,
+    "kommunenavn": "Bergen",
+    "total_population": 293215,
+    "grid_count": 3010,
+    "avg_population_per_grid": "97.41",
+    "shelter_count": 24,
+    "total_shelter_capacity": 21928,
+    "people_per_shelter_place": "13.37"
+  },
+  {
+    "kommune_id": 1764,
+    "kommunenavn": "Trondheim - Tråante",
+    "total_population": 215974,
+    "grid_count": 2102,
+    "avg_population_per_grid": "102.75",
+    "shelter_count": 12,
+    "total_shelter_capacity": 5268,
+    "people_per_shelter_place": "41.00"
+  },
+  {
+    "kommune_id": 1755,
+    "kommunenavn": "Stavanger",
+    "total_population": 149047,
+    "grid_count": 1655,
+    "avg_population_per_grid": "90.06",
+    "shelter_count": 12,
+    "total_shelter_capacity": 20890,
+    "people_per_shelter_place": "7.13"
+  },
+  {
+    "kommune_id": 1712,
+    "kommunenavn": "Bærum",
+    "total_population": 129045,
+    "grid_count": 1087,
+    "avg_population_per_grid": "118.72",
+    "shelter_count": 14,
+    "total_shelter_capacity": 10878,
+    "people_per_shelter_place": "11.86"
+  },
+  {
+    "kommune_id": 1821,
+    "kommunenavn": "Kristiansand",
+    "total_population": 117888,
+    "grid_count": 2094,
+    "avg_population_per_grid": "56.30",
+    "shelter_count": 35,
+    "total_shelter_capacity": 7281,
+    "people_per_shelter_place": "16.19"
+  },
+  {
+    "kommune_id": 1678,
+    "kommunenavn": "Drammen",
+    "total_population": 103783,
+    "grid_count": 1233,
+    "avg_population_per_grid": "84.17",
+    "shelter_count": 9,
+    "total_shelter_capacity": 6377,
+    "people_per_shelter_place": "16.27"
+  },
+  {
+    "kommune_id": 1711,
+    "kommunenavn": "Asker",
+    "total_population": 98816,
+    "grid_count": 1935,
+    "avg_population_per_grid": "51.07",
+    "shelter_count": 3,
+    "total_shelter_capacity": 6115,
+    "people_per_shelter_place": "16.16"
+  },
+  {
+    "kommune_id": 1810,
+    "kommunenavn": "Lillestrøm",
+    "total_population": 92604,
+    "grid_count": 1725,
+    "avg_population_per_grid": "53.68",
+    "shelter_count": 6,
+    "total_shelter_capacity": 10660,
+    "people_per_shelter_place": "8.69"
+  },
+  {
+    "kommune_id": 1792,
+    "kommunenavn": "Fredrikstad",
+    "total_population": 85295,
+    "grid_count": 1790,
+    "avg_population_per_grid": "47.65",
+    "shelter_count": 8,
+    "total_shelter_capacity": 10842,
+    "people_per_shelter_place": "7.87"
+  },
+  {
+    "kommune_id": 1736,
+    "kommunenavn": "Sandnes",
+    "total_population": 83076,
+    "grid_count": 1325,
+    "avg_population_per_grid": "62.70",
+    "shelter_count": 14,
+    "total_shelter_capacity": 3461,
+    "people_per_shelter_place": "24.00"
+  },
+  {
+    "kommune_id": 1752,
+    "kommunenavn": "Tromsø",
+    "total_population": 79271,
+    "grid_count": 1708,
+    "avg_population_per_grid": "46.41",
+    "shelter_count": 1,
+    "total_shelter_capacity": 7000,
+    "people_per_shelter_place": "11.32"
+  },
+  {
+    "kommune_id": 1828,
+    "kommunenavn": "Sandefjord",
+    "total_population": 66491,
+    "grid_count": 2101,
+    "avg_population_per_grid": "31.65",
+    "shelter_count": 9,
+    "total_shelter_capacity": 4791,
+    "people_per_shelter_place": "13.88"
+  },
+  {
+    "kommune_id": 1870,
+    "kommunenavn": "Nordre Follo",
+    "total_population": 61499,
+    "grid_count": 934,
+    "avg_population_per_grid": "65.84",
+    "shelter_count": 2,
+    "total_shelter_capacity": 2658,
+    "people_per_shelter_place": "23.14"
+  },
+  {
+    "kommune_id": 1797,
+    "kommunenavn": "Sarpsborg",
+    "total_population": 59407,
+    "grid_count": 1531,
+    "avg_population_per_grid": "38.80",
+    "shelter_count": 11,
+    "total_shelter_capacity": 4681,
+    "people_per_shelter_place": "12.69"
+  },
+  {
+    "kommune_id": 1853,
+    "kommunenavn": "Ålesund",
+    "total_population": 59073,
+    "grid_count": 1229,
+    "avg_population_per_grid": "48.07",
+    "shelter_count": 8,
+    "total_shelter_capacity": 2948,
+    "people_per_shelter_place": "20.04"
+  },
+  {
+    "kommune_id": 1708,
+    "kommunenavn": "Tønsberg",
+    "total_population": 57143,
+    "grid_count": 1678,
+    "avg_population_per_grid": "34.05",
+    "shelter_count": 5,
+    "total_shelter_capacity": 2977,
+    "people_per_shelter_place": "19.19"
+  },
+  {
+    "kommune_id": 1574,
+    "kommunenavn": "Skien",
+    "total_population": 56078,
+    "grid_count": 1450,
+    "avg_population_per_grid": "38.67",
+    "shelter_count": 5,
+    "total_shelter_capacity": 1763,
+    "people_per_shelter_place": "31.81"
+  },
+  {
+    "kommune_id": 1749,
+    "kommunenavn": "Bodø",
+    "total_population": 53666,
+    "grid_count": 1046,
+    "avg_population_per_grid": "51.31",
+    "shelter_count": 10,
+    "total_shelter_capacity": 4183,
+    "people_per_shelter_place": "12.83"
+  },
+  {
+    "kommune_id": 1869,
+    "kommunenavn": "Moss",
+    "total_population": 52391,
+    "grid_count": 841,
+    "avg_population_per_grid": "62.30",
+    "shelter_count": 7,
+    "total_shelter_capacity": 5479,
+    "people_per_shelter_place": "9.56"
+  },
+  {
+    "kommune_id": 1826,
+    "kommunenavn": "Larvik",
+    "total_population": 48561,
+    "grid_count": 2049,
+    "avg_population_per_grid": "23.70",
+    "shelter_count": 6,
+    "total_shelter_capacity": 1842,
+    "people_per_shelter_place": "26.36"
+  },
+  {
+    "kommune_id": 1871,
+    "kommunenavn": "Indre Østfold",
+    "total_population": 47263,
+    "grid_count": 2766,
+    "avg_population_per_grid": "17.09",
+    "shelter_count": 8,
+    "total_shelter_capacity": 2039,
+    "people_per_shelter_place": "23.18"
+  },
+  {
+    "kommune_id": 1562,
+    "kommunenavn": "Lørenskog",
+    "total_population": 47069,
+    "grid_count": 263,
+    "avg_population_per_grid": "178.97",
+    "shelter_count": 1,
+    "total_shelter_capacity": 4000,
+    "people_per_shelter_place": "11.77"
+  },
+  {
+    "kommune_id": 1815,
+    "kommunenavn": "Arendal",
+    "total_population": 46103,
+    "grid_count": 1626,
+    "avg_population_per_grid": "28.35",
+    "shelter_count": 7,
+    "total_shelter_capacity": 4756,
+    "people_per_shelter_place": "9.69"
+  },
+  {
+    "kommune_id": 1806,
+    "kommunenavn": "Ullensaker",
+    "total_population": 44690,
+    "grid_count": 910,
+    "avg_population_per_grid": "49.11",
+    "shelter_count": 2,
+    "total_shelter_capacity": 570,
+    "people_per_shelter_place": "78.40"
+  },
+  {
+    "kommune_id": 1695,
+    "kommunenavn": "Karmøy",
+    "total_population": 43290,
+    "grid_count": 1295,
+    "avg_population_per_grid": "33.43",
+    "shelter_count": 5,
+    "total_shelter_capacity": 461,
+    "people_per_shelter_place": "93.90"
+  },
+  {
+    "kommune_id": 1851,
+    "kommunenavn": "Øygarden",
+    "total_population": 40045,
+    "grid_count": 1507,
+    "avg_population_per_grid": "26.57",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1577,
+    "kommunenavn": "Haugesund",
+    "total_population": 37899,
+    "grid_count": 412,
+    "avg_population_per_grid": "91.99",
+    "shelter_count": 9,
+    "total_shelter_capacity": 2214,
+    "people_per_shelter_place": "17.12"
+  },
+  {
+    "kommune_id": 1825,
+    "kommunenavn": "Porsgrunn",
+    "total_population": 35910,
+    "grid_count": 674,
+    "avg_population_per_grid": "53.28",
+    "shelter_count": 8,
+    "total_shelter_capacity": 5960,
+    "people_per_shelter_place": "6.03"
+  },
+  {
+    "kommune_id": 1651,
+    "kommunenavn": "Ringsaker",
+    "total_population": 34809,
+    "grid_count": 2927,
+    "avg_population_per_grid": "11.89",
+    "shelter_count": 3,
+    "total_shelter_capacity": 463,
+    "people_per_shelter_place": "75.18"
+  },
+  {
+    "kommune_id": 1554,
+    "kommunenavn": "Molde",
+    "total_population": 33108,
+    "grid_count": 1336,
+    "avg_population_per_grid": "24.78",
+    "shelter_count": 6,
+    "total_shelter_capacity": 3256,
+    "people_per_shelter_place": "10.17"
+  },
+  {
+    "kommune_id": 1804,
+    "kommunenavn": "Hamar",
+    "total_population": 32980,
+    "grid_count": 846,
+    "avg_population_per_grid": "38.98",
+    "shelter_count": 11,
+    "total_shelter_capacity": 1548,
+    "people_per_shelter_place": "21.30"
+  },
+  {
+    "kommune_id": 1818,
+    "kommunenavn": "Halden",
+    "total_population": 31858,
+    "grid_count": 1204,
+    "avg_population_per_grid": "26.46",
+    "shelter_count": 3,
+    "total_shelter_capacity": 2760,
+    "people_per_shelter_place": "11.54"
+  },
+  {
+    "kommune_id": 1866,
+    "kommunenavn": "Ringerike",
+    "total_population": 31657,
+    "grid_count": 1868,
+    "avg_population_per_grid": "16.95",
+    "shelter_count": 7,
+    "total_shelter_capacity": 1747,
+    "people_per_shelter_place": "18.12"
+  },
+  {
+    "kommune_id": 1617,
+    "kommunenavn": "Gjøvik",
+    "total_population": 31076,
+    "grid_count": 1548,
+    "avg_population_per_grid": "20.07",
+    "shelter_count": 2,
+    "total_shelter_capacity": 615,
+    "people_per_shelter_place": "50.53"
+  },
+  {
+    "kommune_id": 1659,
+    "kommunenavn": "Askøy",
+    "total_population": 30354,
+    "grid_count": 766,
+    "avg_population_per_grid": "39.63",
+    "shelter_count": 1,
+    "total_shelter_capacity": 500,
+    "people_per_shelter_place": "60.71"
+  },
+  {
+    "kommune_id": 1535,
+    "kommunenavn": "Alver",
+    "total_population": 30120,
+    "grid_count": 2222,
+    "avg_population_per_grid": "13.56",
+    "shelter_count": 1,
+    "total_shelter_capacity": 65,
+    "people_per_shelter_place": "463.38"
+  },
+  {
+    "kommune_id": 1782,
+    "kommunenavn": "Kongsberg",
+    "total_population": 28961,
+    "grid_count": 1099,
+    "avg_population_per_grid": "26.35",
+    "shelter_count": 3,
+    "total_shelter_capacity": 882,
+    "people_per_shelter_place": "32.84"
+  },
+  {
+    "kommune_id": 1652,
+    "kommunenavn": "Lillehammer",
+    "total_population": 28888,
+    "grid_count": 956,
+    "avg_population_per_grid": "30.22",
+    "shelter_count": 7,
+    "total_shelter_capacity": 1748,
+    "people_per_shelter_place": "16.53"
+  },
+  {
+    "kommune_id": 1569,
+    "kommunenavn": "Lier",
+    "total_population": 28181,
+    "grid_count": 945,
+    "avg_population_per_grid": "29.82",
+    "shelter_count": 1,
+    "total_shelter_capacity": 281,
+    "people_per_shelter_place": "100.29"
+  },
+  {
+    "kommune_id": 1745,
+    "kommunenavn": "Sola",
+    "total_population": 27916,
+    "grid_count": 604,
+    "avg_population_per_grid": "46.22",
+    "shelter_count": 1,
+    "total_shelter_capacity": 2000,
+    "people_per_shelter_place": "13.96"
+  },
+  {
+    "kommune_id": 1805,
+    "kommunenavn": "Eidsvoll",
+    "total_population": 27790,
+    "grid_count": 1174,
+    "avg_population_per_grid": "23.67",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1862,
+    "kommunenavn": "Horten",
+    "total_population": 27507,
+    "grid_count": 475,
+    "avg_population_per_grid": "57.91",
+    "shelter_count": 4,
+    "total_shelter_capacity": 1375,
+    "people_per_shelter_place": "20.01"
+  },
+  {
+    "kommune_id": 1861,
+    "kommunenavn": "Holmestrand",
+    "total_population": 26669,
+    "grid_count": 1263,
+    "avg_population_per_grid": "21.12",
+    "shelter_count": 1,
+    "total_shelter_capacity": 800,
+    "people_per_shelter_place": "33.34"
+  },
+  {
+    "kommune_id": 1829,
+    "kommunenavn": "Færder",
+    "total_population": 26299,
+    "grid_count": 845,
+    "avg_population_per_grid": "31.12",
+    "shelter_count": 4,
+    "total_shelter_capacity": 1107,
+    "people_per_shelter_place": "23.76"
+  },
+  {
+    "kommune_id": 1753,
+    "kommunenavn": "Bjørnafjorden",
+    "total_population": 26240,
+    "grid_count": 1120,
+    "avg_population_per_grid": "23.43",
+    "shelter_count": 3,
+    "total_shelter_capacity": 786,
+    "people_per_shelter_place": "33.38"
+  },
+  {
+    "kommune_id": 1620,
+    "kommunenavn": "Rana",
+    "total_population": 25899,
+    "grid_count": 1067,
+    "avg_population_per_grid": "24.27",
+    "shelter_count": 5,
+    "total_shelter_capacity": 1360,
+    "people_per_shelter_place": "19.04"
+  },
+  {
+    "kommune_id": 1868,
+    "kommunenavn": "Grimstad",
+    "total_population": 25263,
+    "grid_count": 933,
+    "avg_population_per_grid": "27.08",
+    "shelter_count": 3,
+    "total_shelter_capacity": 1578,
+    "people_per_shelter_place": "16.01"
+  },
+  {
+    "kommune_id": 1641,
+    "kommunenavn": "Harstad - Hárstták",
+    "total_population": 25136,
+    "grid_count": 780,
+    "avg_population_per_grid": "32.23",
+    "shelter_count": 3,
+    "total_shelter_capacity": 1650,
+    "people_per_shelter_place": "15.23"
+  },
+  {
+    "kommune_id": 1849,
+    "kommunenavn": "Nittedal",
+    "total_population": 25100,
+    "grid_count": 465,
+    "avg_population_per_grid": "53.98",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1524,
+    "kommunenavn": "Stjørdal",
+    "total_population": 24893,
+    "grid_count": 1317,
+    "avg_population_per_grid": "18.90",
+    "shelter_count": 2,
+    "total_shelter_capacity": 2110,
+    "people_per_shelter_place": "11.80"
+  },
+  {
+    "kommune_id": 1817,
+    "kommunenavn": "Kristiansund",
+    "total_population": 24549,
+    "grid_count": 531,
+    "avg_population_per_grid": "46.23",
+    "shelter_count": 1,
+    "total_shelter_capacity": 100,
+    "people_per_shelter_place": "245.49"
+  },
+  {
+    "kommune_id": 1581,
+    "kommunenavn": "Steinkjer",
+    "total_population": 24017,
+    "grid_count": 1929,
+    "avg_population_per_grid": "12.45",
+    "shelter_count": 4,
+    "total_shelter_capacity": 455,
+    "people_per_shelter_place": "52.78"
+  },
+  {
+    "kommune_id": 1855,
+    "kommunenavn": "Nes",
+    "total_population": 23802,
+    "grid_count": 1611,
+    "avg_population_per_grid": "14.77",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1864,
+    "kommunenavn": "Lindesnes",
+    "total_population": 23724,
+    "grid_count": 1596,
+    "avg_population_per_grid": "14.86",
+    "shelter_count": 5,
+    "total_shelter_capacity": 710,
+    "people_per_shelter_place": "33.41"
+  },
+  {
+    "kommune_id": 1553,
+    "kommunenavn": "Sunnfjord",
+    "total_population": 22654,
+    "grid_count": 1556,
+    "avg_population_per_grid": "14.56",
+    "shelter_count": 2,
+    "total_shelter_capacity": 955,
+    "people_per_shelter_place": "23.72"
+  },
+  {
+    "kommune_id": 1525,
+    "kommunenavn": "Elverum",
+    "total_population": 21850,
+    "grid_count": 1364,
+    "avg_population_per_grid": "16.02",
+    "shelter_count": 3,
+    "total_shelter_capacity": 1648,
+    "people_per_shelter_place": "13.26"
+  },
+  {
+    "kommune_id": 1594,
+    "kommunenavn": "Alta",
+    "total_population": 21838,
+    "grid_count": 909,
+    "avg_population_per_grid": "24.02",
+    "shelter_count": 2,
+    "total_shelter_capacity": 2520,
+    "people_per_shelter_place": "8.67"
+  },
+  {
+    "kommune_id": 1812,
+    "kommunenavn": "Narvik",
+    "total_population": 21557,
+    "grid_count": 983,
+    "avg_population_per_grid": "21.93",
+    "shelter_count": 3,
+    "total_shelter_capacity": 1617,
+    "people_per_shelter_place": "13.33"
+  },
+  {
+    "kommune_id": 1775,
+    "kommunenavn": "Ås",
+    "total_population": 21393,
+    "grid_count": 552,
+    "avg_population_per_grid": "38.76",
+    "shelter_count": 1,
+    "total_shelter_capacity": 240,
+    "people_per_shelter_place": "89.14"
+  },
+  {
+    "kommune_id": 1859,
+    "kommunenavn": "Stange",
+    "total_population": 21338,
+    "grid_count": 1597,
+    "avg_population_per_grid": "13.36",
+    "shelter_count": 1,
+    "total_shelter_capacity": 52,
+    "people_per_shelter_place": "410.35"
+  },
+  {
+    "kommune_id": 1534,
+    "kommunenavn": "Levanger",
+    "total_population": 20675,
+    "grid_count": 1451,
+    "avg_population_per_grid": "14.25",
+    "shelter_count": 5,
+    "total_shelter_capacity": 401,
+    "people_per_shelter_place": "51.56"
+  },
+  {
+    "kommune_id": 1677,
+    "kommunenavn": "Øvre Eiker",
+    "total_population": 20637,
+    "grid_count": 933,
+    "avg_population_per_grid": "22.12",
+    "shelter_count": 3,
+    "total_shelter_capacity": 925,
+    "people_per_shelter_place": "22.31"
+  },
+  {
+    "kommune_id": 1619,
+    "kommunenavn": "Nesodden",
+    "total_population": 20492,
+    "grid_count": 462,
+    "avg_population_per_grid": "44.35",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1839,
+    "kommunenavn": "Klepp",
+    "total_population": 20473,
+    "grid_count": 723,
+    "avg_population_per_grid": "28.32",
+    "shelter_count": 2,
+    "total_shelter_capacity": 240,
+    "people_per_shelter_place": "85.30"
+  },
+  {
+    "kommune_id": 1840,
+    "kommunenavn": "Hå",
+    "total_population": 19968,
+    "grid_count": 870,
+    "avg_population_per_grid": "22.95",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1872,
+    "kommunenavn": "Vestby",
+    "total_population": 19695,
+    "grid_count": 659,
+    "avg_population_per_grid": "29.89",
+    "shelter_count": 1,
+    "total_shelter_capacity": 320,
+    "people_per_shelter_place": "61.55"
+  },
+  {
+    "kommune_id": 1559,
+    "kommunenavn": "Stord",
+    "total_population": 19322,
+    "grid_count": 465,
+    "avg_population_per_grid": "41.55",
+    "shelter_count": 1,
+    "total_shelter_capacity": 100,
+    "people_per_shelter_place": "193.22"
+  },
+  {
+    "kommune_id": 1735,
+    "kommunenavn": "Time",
+    "total_population": 18997,
+    "grid_count": 512,
+    "avg_population_per_grid": "37.10",
+    "shelter_count": 1,
+    "total_shelter_capacity": 270,
+    "people_per_shelter_place": "70.36"
+  },
+  {
+    "kommune_id": 1758,
+    "kommunenavn": "Orkland",
+    "total_population": 18767,
+    "grid_count": 1534,
+    "avg_population_per_grid": "12.23",
+    "shelter_count": 3,
+    "total_shelter_capacity": 273,
+    "people_per_shelter_place": "68.74"
+  },
+  {
+    "kommune_id": 1560,
+    "kommunenavn": "Aurskog-Høland",
+    "total_population": 18218,
+    "grid_count": 1582,
+    "avg_population_per_grid": "11.52",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1587,
+    "kommunenavn": "Kongsvinger",
+    "total_population": 17987,
+    "grid_count": 1328,
+    "avg_population_per_grid": "13.54",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1561,
+    "kommunenavn": "Rælingen",
+    "total_population": 17736,
+    "grid_count": 191,
+    "avg_population_per_grid": "92.86",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1729,
+    "kommunenavn": "Melhus",
+    "total_population": 17660,
+    "grid_count": 1169,
+    "avg_population_per_grid": "15.11",
+    "shelter_count": 3,
+    "total_shelter_capacity": 140,
+    "people_per_shelter_place": "126.14"
+  },
+  {
+    "kommune_id": 1858,
+    "kommunenavn": "Kinn",
+    "total_population": 17387,
+    "grid_count": 831,
+    "avg_population_per_grid": "20.92",
+    "shelter_count": 5,
+    "total_shelter_capacity": 663,
+    "people_per_shelter_place": "26.22"
+  },
+  {
+    "kommune_id": 1521,
+    "kommunenavn": "Voss",
+    "total_population": 16420,
+    "grid_count": 1190,
+    "avg_population_per_grid": "13.80",
+    "shelter_count": 5,
+    "total_shelter_capacity": 1211,
+    "people_per_shelter_place": "13.56"
+  },
+  {
+    "kommune_id": 1606,
+    "kommunenavn": "Nannestad",
+    "total_population": 16420,
+    "grid_count": 653,
+    "avg_population_per_grid": "25.15",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1731,
+    "kommunenavn": "Frogn",
+    "total_population": 16081,
+    "grid_count": 480,
+    "avg_population_per_grid": "33.50",
+    "shelter_count": 1,
+    "total_shelter_capacity": 590,
+    "people_per_shelter_place": "27.26"
+  },
+  {
+    "kommune_id": 1730,
+    "kommunenavn": "Vennesla",
+    "total_population": 15370,
+    "grid_count": 640,
+    "avg_population_per_grid": "24.02",
+    "shelter_count": 2,
+    "total_shelter_capacity": 310,
+    "people_per_shelter_place": "49.58"
+  },
+  {
+    "kommune_id": 1608,
+    "kommunenavn": "Verdal",
+    "total_population": 15357,
+    "grid_count": 1028,
+    "avg_population_per_grid": "14.94",
+    "shelter_count": 4,
+    "total_shelter_capacity": 209,
+    "people_per_shelter_place": "73.48"
+  },
+  {
+    "kommune_id": 1802,
+    "kommunenavn": "Eigersund",
+    "total_population": 15352,
+    "grid_count": 622,
+    "avg_population_per_grid": "24.68",
+    "shelter_count": 4,
+    "total_shelter_capacity": 693,
+    "people_per_shelter_place": "22.15"
+  },
+  {
+    "kommune_id": 1628,
+    "kommunenavn": "Namsos - Nåavmesjenjaelmie",
+    "total_population": 15127,
+    "grid_count": 1077,
+    "avg_population_per_grid": "14.05",
+    "shelter_count": 8,
+    "total_shelter_capacity": 2562,
+    "people_per_shelter_place": "5.90"
+  },
+  {
+    "kommune_id": 1751,
+    "kommunenavn": "Senja",
+    "total_population": 14919,
+    "grid_count": 1335,
+    "avg_population_per_grid": "11.18",
+    "shelter_count": 1,
+    "total_shelter_capacity": 756,
+    "people_per_shelter_place": "19.73"
+  },
+  {
+    "kommune_id": 1741,
+    "kommunenavn": "Østre Toten",
+    "total_population": 14731,
+    "grid_count": 1473,
+    "avg_population_per_grid": "10.00",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1713,
+    "kommunenavn": "Modum",
+    "total_population": 14504,
+    "grid_count": 1014,
+    "avg_population_per_grid": "14.30",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1522,
+    "kommunenavn": "Malvik",
+    "total_population": 14412,
+    "grid_count": 374,
+    "avg_population_per_grid": "38.53",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1687,
+    "kommunenavn": "Bamble",
+    "total_population": 14256,
+    "grid_count": 669,
+    "avg_population_per_grid": "21.31",
+    "shelter_count": 1,
+    "total_shelter_capacity": 180,
+    "people_per_shelter_place": "79.20"
+  },
+  {
+    "kommune_id": 1693,
+    "kommunenavn": "Strand",
+    "total_population": 13804,
+    "grid_count": 511,
+    "avg_population_per_grid": "27.01",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1616,
+    "kommunenavn": "Gran",
+    "total_population": 13604,
+    "grid_count": 1317,
+    "avg_population_per_grid": "10.33",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1618,
+    "kommunenavn": "Vestre Toten",
+    "total_population": 13549,
+    "grid_count": 884,
+    "avg_population_per_grid": "15.33",
+    "shelter_count": 2,
+    "total_shelter_capacity": 850,
+    "people_per_shelter_place": "15.94"
+  },
+  {
+    "kommune_id": 1538,
+    "kommunenavn": "Vefsn",
+    "total_population": 13464,
+    "grid_count": 799,
+    "avg_population_per_grid": "16.85",
+    "shelter_count": 9,
+    "total_shelter_capacity": 1300,
+    "people_per_shelter_place": "10.36"
+  },
+  {
+    "kommune_id": 1781,
+    "kommunenavn": "Notodden",
+    "total_population": 13272,
+    "grid_count": 805,
+    "avg_population_per_grid": "16.49",
+    "shelter_count": 3,
+    "total_shelter_capacity": 3020,
+    "people_per_shelter_place": "4.39"
+  },
+  {
+    "kommune_id": 1820,
+    "kommunenavn": "Hustadvika",
+    "total_population": 13207,
+    "grid_count": 1217,
+    "avg_population_per_grid": "10.85",
+    "shelter_count": 7,
+    "total_shelter_capacity": 357,
+    "people_per_shelter_place": "36.99"
+  },
+  {
+    "kommune_id": 1520,
+    "kommunenavn": "Kvinnherad",
+    "total_population": 13168,
+    "grid_count": 986,
+    "avg_population_per_grid": "13.35",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1705,
+    "kommunenavn": "Sogndal",
+    "total_population": 12480,
+    "grid_count": 671,
+    "avg_population_per_grid": "18.60",
+    "shelter_count": 1,
+    "total_shelter_capacity": 55,
+    "people_per_shelter_place": "226.91"
+  },
+  {
+    "kommune_id": 1843,
+    "kommunenavn": "Bømlo",
+    "total_population": 12353,
+    "grid_count": 746,
+    "avg_population_per_grid": "16.56",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1629,
+    "kommunenavn": "Gjesdal",
+    "total_population": 12178,
+    "grid_count": 371,
+    "avg_population_per_grid": "32.82",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1867,
+    "kommunenavn": "Lillesand",
+    "total_population": 11716,
+    "grid_count": 604,
+    "avg_population_per_grid": "19.40",
+    "shelter_count": 2,
+    "total_shelter_capacity": 292,
+    "people_per_shelter_place": "40.12"
+  },
+  {
+    "kommune_id": 1604,
+    "kommunenavn": "Tysvær",
+    "total_population": 11623,
+    "grid_count": 899,
+    "avg_population_per_grid": "12.93",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1622,
+    "kommunenavn": "Vestvågøy",
+    "total_population": 11573,
+    "grid_count": 948,
+    "avg_population_per_grid": "12.21",
+    "shelter_count": 2,
+    "total_shelter_capacity": 484,
+    "people_per_shelter_place": "23.91"
+  },
+  {
+    "kommune_id": 1714,
+    "kommunenavn": "Enebakk",
+    "total_population": 11464,
+    "grid_count": 522,
+    "avg_population_per_grid": "21.96",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1613,
+    "kommunenavn": "Hammerfest - Hámmerfeasta",
+    "total_population": 11293,
+    "grid_count": 383,
+    "avg_population_per_grid": "29.49",
+    "shelter_count": 4,
+    "total_shelter_capacity": 1698,
+    "people_per_shelter_place": "6.65"
+  },
+  {
+    "kommune_id": 1536,
+    "kommunenavn": "Randaberg",
+    "total_population": 11289,
+    "grid_count": 259,
+    "avg_population_per_grid": "43.59",
+    "shelter_count": 2,
+    "total_shelter_capacity": 570,
+    "people_per_shelter_place": "19.81"
+  },
+  {
+    "kommune_id": 1790,
+    "kommunenavn": "Volda",
+    "total_population": 11122,
+    "grid_count": 640,
+    "avg_population_per_grid": "17.38",
+    "shelter_count": 2,
+    "total_shelter_capacity": 320,
+    "people_per_shelter_place": "34.76"
+  },
+  {
+    "kommune_id": 1614,
+    "kommunenavn": "Midt-Telemark",
+    "total_population": 11093,
+    "grid_count": 1049,
+    "avg_population_per_grid": "10.57",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1679,
+    "kommunenavn": "Ørsta",
+    "total_population": 11037,
+    "grid_count": 588,
+    "avg_population_per_grid": "18.77",
+    "shelter_count": 4,
+    "total_shelter_capacity": 600,
+    "people_per_shelter_place": "18.40"
+  },
+  {
+    "kommune_id": 1564,
+    "kommunenavn": "Ullensvang",
+    "total_population": 10977,
+    "grid_count": 707,
+    "avg_population_per_grid": "15.53",
+    "shelter_count": 1,
+    "total_shelter_capacity": 95,
+    "people_per_shelter_place": "115.55"
+  },
+  {
+    "kommune_id": 1863,
+    "kommunenavn": "Lyngdal",
+    "total_population": 10824,
+    "grid_count": 893,
+    "avg_population_per_grid": "12.12",
+    "shelter_count": 1,
+    "total_shelter_capacity": 35,
+    "people_per_shelter_place": "309.26"
+  },
+  {
+    "kommune_id": 1636,
+    "kommunenavn": "Sortland - Suortá",
+    "total_population": 10763,
+    "grid_count": 642,
+    "avg_population_per_grid": "16.76",
+    "shelter_count": 1,
+    "total_shelter_capacity": 100,
+    "people_per_shelter_place": "107.63"
+  },
+  {
+    "kommune_id": 1661,
+    "kommunenavn": "Ørland",
+    "total_population": 10612,
+    "grid_count": 1061,
+    "avg_population_per_grid": "10.00",
+    "shelter_count": 2,
+    "total_shelter_capacity": 370,
+    "people_per_shelter_place": "28.68"
+  },
+  {
+    "kommune_id": 1823,
+    "kommunenavn": "Kragerø",
+    "total_population": 10433,
+    "grid_count": 681,
+    "avg_population_per_grid": "15.32",
+    "shelter_count": 4,
+    "total_shelter_capacity": 1575,
+    "people_per_shelter_place": "6.62"
+  },
+  {
+    "kommune_id": 1519,
+    "kommunenavn": "Indre Fosen",
+    "total_population": 10032,
+    "grid_count": 1360,
+    "avg_population_per_grid": "7.38",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1615,
+    "kommunenavn": "Sør-Varanger",
+    "total_population": 9936,
+    "grid_count": 575,
+    "avg_population_per_grid": "17.28",
+    "shelter_count": 2,
+    "total_shelter_capacity": 550,
+    "people_per_shelter_place": "18.07"
+  },
+  {
+    "kommune_id": 1599,
+    "kommunenavn": "Nærøysund",
+    "total_population": 9917,
+    "grid_count": 1062,
+    "avg_population_per_grid": "9.34",
+    "shelter_count": 1,
+    "total_shelter_capacity": 210,
+    "people_per_shelter_place": "47.22"
+  },
+  {
+    "kommune_id": 1822,
+    "kommunenavn": "Farsund",
+    "total_population": 9865,
+    "grid_count": 675,
+    "avg_population_per_grid": "14.61",
+    "shelter_count": 1,
+    "total_shelter_capacity": 30,
+    "people_per_shelter_place": "328.83"
+  },
+  {
+    "kommune_id": 1688,
+    "kommunenavn": "Vågan",
+    "total_population": 9860,
+    "grid_count": 477,
+    "avg_population_per_grid": "20.67",
+    "shelter_count": 2,
+    "total_shelter_capacity": 3620,
+    "people_per_shelter_place": "2.72"
+  },
+  {
+    "kommune_id": 1721,
+    "kommunenavn": "Fauske - Fuossko",
+    "total_population": 9785,
+    "grid_count": 586,
+    "avg_population_per_grid": "16.70",
+    "shelter_count": 3,
+    "total_shelter_capacity": 902,
+    "people_per_shelter_place": "10.85"
+  },
+  {
+    "kommune_id": 1672,
+    "kommunenavn": "Sula",
+    "total_population": 9690,
+    "grid_count": 223,
+    "avg_population_per_grid": "43.45",
+    "shelter_count": 5,
+    "total_shelter_capacity": 520,
+    "people_per_shelter_place": "18.63"
+  },
+  {
+    "kommune_id": 1857,
+    "kommunenavn": "Stad",
+    "total_population": 9647,
+    "grid_count": 902,
+    "avg_population_per_grid": "10.70",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1854,
+    "kommunenavn": "Haram",
+    "total_population": 9400,
+    "grid_count": 612,
+    "avg_population_per_grid": "15.36",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1738,
+    "kommunenavn": "Lunner",
+    "total_population": 9317,
+    "grid_count": 640,
+    "avg_population_per_grid": "14.56",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1844,
+    "kommunenavn": "Flekkefjord",
+    "total_population": 9312,
+    "grid_count": 542,
+    "avg_population_per_grid": "17.18",
+    "shelter_count": 3,
+    "total_shelter_capacity": 510,
+    "people_per_shelter_place": "18.26"
+  },
+  {
+    "kommune_id": 1737,
+    "kommunenavn": "Vindafjord",
+    "total_population": 9060,
+    "grid_count": 1048,
+    "avg_population_per_grid": "8.65",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1835,
+    "kommunenavn": "Herøy",
+    "total_population": 9011,
+    "grid_count": 484,
+    "avg_population_per_grid": "18.62",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1568,
+    "kommunenavn": "Ulstein",
+    "total_population": 8838,
+    "grid_count": 258,
+    "avg_population_per_grid": "34.26",
+    "shelter_count": 2,
+    "total_shelter_capacity": 1026,
+    "people_per_shelter_place": "8.61"
+  },
+  {
+    "kommune_id": 1813,
+    "kommunenavn": "Giske",
+    "total_population": 8767,
+    "grid_count": 304,
+    "avg_population_per_grid": "28.84",
+    "shelter_count": 2,
+    "total_shelter_capacity": 156,
+    "people_per_shelter_place": "56.20"
+  },
+  {
+    "kommune_id": 1518,
+    "kommunenavn": "Kvam",
+    "total_population": 8500,
+    "grid_count": 606,
+    "avg_population_per_grid": "14.03",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1657,
+    "kommunenavn": "Skaun",
+    "total_population": 8473,
+    "grid_count": 534,
+    "avg_population_per_grid": "15.87",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1572,
+    "kommunenavn": "Rakkestad",
+    "total_population": 8461,
+    "grid_count": 899,
+    "avg_population_per_grid": "9.41",
+    "shelter_count": 1,
+    "total_shelter_capacity": 124,
+    "people_per_shelter_place": "68.23"
+  },
+  {
+    "kommune_id": 1567,
+    "kommunenavn": "Hadsel",
+    "total_population": 8379,
+    "grid_count": 588,
+    "avg_population_per_grid": "14.25",
+    "shelter_count": 1,
+    "total_shelter_capacity": 150,
+    "people_per_shelter_place": "55.86"
+  },
+  {
+    "kommune_id": 1591,
+    "kommunenavn": "Osterøy",
+    "total_population": 8161,
+    "grid_count": 723,
+    "avg_population_per_grid": "11.29",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1856,
+    "kommunenavn": "Sør-Odal",
+    "total_population": 8047,
+    "grid_count": 1056,
+    "avg_population_per_grid": "7.62",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1860,
+    "kommunenavn": "Løten",
+    "total_population": 7842,
+    "grid_count": 754,
+    "avg_population_per_grid": "10.40",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1596,
+    "kommunenavn": "Brønnøy",
+    "total_population": 7826,
+    "grid_count": 586,
+    "avg_population_per_grid": "13.35",
+    "shelter_count": 2,
+    "total_shelter_capacity": 460,
+    "people_per_shelter_place": "17.01"
+  },
+  {
+    "kommune_id": 1566,
+    "kommunenavn": "Sykkylven",
+    "total_population": 7623,
+    "grid_count": 401,
+    "avg_population_per_grid": "19.01",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1791,
+    "kommunenavn": "Råde",
+    "total_population": 7488,
+    "grid_count": 443,
+    "avg_population_per_grid": "16.90",
+    "shelter_count": 2,
+    "total_shelter_capacity": 150,
+    "people_per_shelter_place": "49.92"
+  },
+  {
+    "kommune_id": 1667,
+    "kommunenavn": "Alstahaug",
+    "total_population": 7449,
+    "grid_count": 374,
+    "avg_population_per_grid": "19.92",
+    "shelter_count": 1,
+    "total_shelter_capacity": 100,
+    "people_per_shelter_place": "74.49"
+  },
+  {
+    "kommune_id": 1727,
+    "kommunenavn": "Oppdal",
+    "total_population": 7387,
+    "grid_count": 626,
+    "avg_population_per_grid": "11.80",
+    "shelter_count": 1,
+    "total_shelter_capacity": 330,
+    "people_per_shelter_place": "22.38"
+  },
+  {
+    "kommune_id": 1809,
+    "kommunenavn": "Gjerdrum",
+    "total_population": 7367,
+    "grid_count": 277,
+    "avg_population_per_grid": "26.60",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1545,
+    "kommunenavn": "Stryn",
+    "total_population": 7302,
+    "grid_count": 657,
+    "avg_population_per_grid": "11.11",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1644,
+    "kommunenavn": "Vestnes",
+    "total_population": 7196,
+    "grid_count": 576,
+    "avg_population_per_grid": "12.49",
+    "shelter_count": 8,
+    "total_shelter_capacity": 493,
+    "people_per_shelter_place": "14.60"
+  },
+  {
+    "kommune_id": 1585,
+    "kommunenavn": "Åsnes",
+    "total_population": 7190,
+    "grid_count": 1181,
+    "avg_population_per_grid": "6.09",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1746,
+    "kommunenavn": "Sunndal",
+    "total_population": 7189,
+    "grid_count": 439,
+    "avg_population_per_grid": "16.38",
+    "shelter_count": 3,
+    "total_shelter_capacity": 753,
+    "people_per_shelter_place": "9.55"
+  },
+  {
+    "kommune_id": 1555,
+    "kommunenavn": "Rauma",
+    "total_population": 7181,
+    "grid_count": 601,
+    "avg_population_per_grid": "11.95",
+    "shelter_count": 3,
+    "total_shelter_capacity": 571,
+    "people_per_shelter_place": "12.58"
+  },
+  {
+    "kommune_id": 1647,
+    "kommunenavn": "Jevnaker",
+    "total_population": 6992,
+    "grid_count": 358,
+    "avg_population_per_grid": "19.53",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1609,
+    "kommunenavn": "Inderøy",
+    "total_population": 6990,
+    "grid_count": 796,
+    "avg_population_per_grid": "8.78",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1865,
+    "kommunenavn": "Hole",
+    "total_population": 6797,
+    "grid_count": 411,
+    "avg_population_per_grid": "16.54",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1600,
+    "kommunenavn": "Målselv",
+    "total_population": 6744,
+    "grid_count": 837,
+    "avg_population_per_grid": "8.06",
+    "shelter_count": 1,
+    "total_shelter_capacity": 288,
+    "people_per_shelter_place": "23.42"
+  },
+  {
+    "kommune_id": 1824,
+    "kommunenavn": "Risør",
+    "total_population": 6662,
+    "grid_count": 444,
+    "avg_population_per_grid": "15.00",
+    "shelter_count": 2,
+    "total_shelter_capacity": 710,
+    "people_per_shelter_place": "9.38"
+  },
+  {
+    "kommune_id": 1610,
+    "kommunenavn": "Nome",
+    "total_population": 6544,
+    "grid_count": 660,
+    "avg_population_per_grid": "9.92",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1671,
+    "kommunenavn": "Trysil",
+    "total_population": 6525,
+    "grid_count": 1072,
+    "avg_population_per_grid": "6.09",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1778,
+    "kommunenavn": "Nordre Land",
+    "total_population": 6521,
+    "grid_count": 913,
+    "avg_population_per_grid": "7.14",
+    "shelter_count": 1,
+    "total_shelter_capacity": 30,
+    "people_per_shelter_place": "217.37"
+  },
+  {
+    "kommune_id": 1819,
+    "kommunenavn": "Tvedestrand",
+    "total_population": 6418,
+    "grid_count": 595,
+    "avg_population_per_grid": "10.79",
+    "shelter_count": 1,
+    "total_shelter_capacity": 106,
+    "people_per_shelter_place": "60.55"
+  },
+  {
+    "kommune_id": 1772,
+    "kommunenavn": "Nord-Aurdal",
+    "total_population": 6404,
+    "grid_count": 711,
+    "avg_population_per_grid": "9.01",
+    "shelter_count": 1,
+    "total_shelter_capacity": 100,
+    "people_per_shelter_place": "64.04"
+  },
+  {
+    "kommune_id": 1785,
+    "kommunenavn": "Froland",
+    "total_population": 6197,
+    "grid_count": 589,
+    "avg_population_per_grid": "10.52",
+    "shelter_count": 1,
+    "total_shelter_capacity": 400,
+    "people_per_shelter_place": "15.49"
+  },
+  {
+    "kommune_id": 1794,
+    "kommunenavn": "Kvinesdal",
+    "total_population": 6158,
+    "grid_count": 693,
+    "avg_population_per_grid": "8.89",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1744,
+    "kommunenavn": "Gausdal",
+    "total_population": 6122,
+    "grid_count": 842,
+    "avg_population_per_grid": "7.27",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1663,
+    "kommunenavn": "Heim",
+    "total_population": 6121,
+    "grid_count": 724,
+    "avg_population_per_grid": "8.45",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1798,
+    "kommunenavn": "Våler",
+    "total_population": 6119,
+    "grid_count": 511,
+    "avg_population_per_grid": "11.97",
+    "shelter_count": 1,
+    "total_shelter_capacity": 50,
+    "people_per_shelter_place": "122.38"
+  },
+  {
+    "kommune_id": 1668,
+    "kommunenavn": "Midtre Gauldal",
+    "total_population": 6119,
+    "grid_count": 789,
+    "avg_population_per_grid": "7.76",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1547,
+    "kommunenavn": "Meløy",
+    "total_population": 6092,
+    "grid_count": 571,
+    "avg_population_per_grid": "10.67",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1552,
+    "kommunenavn": "Eidskog",
+    "total_population": 6011,
+    "grid_count": 958,
+    "avg_population_per_grid": "6.27",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1830,
+    "kommunenavn": "Averøy",
+    "total_population": 5983,
+    "grid_count": 701,
+    "avg_population_per_grid": "8.53",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1759,
+    "kommunenavn": "Surnadal",
+    "total_population": 5937,
+    "grid_count": 647,
+    "avg_population_per_grid": "9.18",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1546,
+    "kommunenavn": "Gloppen",
+    "total_population": 5928,
+    "grid_count": 556,
+    "avg_population_per_grid": "10.66",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1646,
+    "kommunenavn": "Vadsø",
+    "total_population": 5770,
+    "grid_count": 197,
+    "avg_population_per_grid": "29.29",
+    "shelter_count": 2,
+    "total_shelter_capacity": 1279,
+    "people_per_shelter_place": "4.51"
+  },
+  {
+    "kommune_id": 1563,
+    "kommunenavn": "Sveio",
+    "total_population": 5706,
+    "grid_count": 664,
+    "avg_population_per_grid": "8.59",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1530,
+    "kommunenavn": "Tynset",
+    "total_population": 5693,
+    "grid_count": 658,
+    "avg_population_per_grid": "8.65",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1832,
+    "kommunenavn": "Rosse - Røros",
+    "total_population": 5674,
+    "grid_count": 498,
+    "avg_population_per_grid": "11.39",
+    "shelter_count": 3,
+    "total_shelter_capacity": 236,
+    "people_per_shelter_place": "24.04"
+  },
+  {
+    "kommune_id": 1831,
+    "kommunenavn": "Frøya",
+    "total_population": 5622,
+    "grid_count": 500,
+    "avg_population_per_grid": "11.24",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1544,
+    "kommunenavn": "Balsfjord",
+    "total_population": 5582,
+    "grid_count": 942,
+    "avg_population_per_grid": "5.93",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1710,
+    "kommunenavn": "Sel",
+    "total_population": 5577,
+    "grid_count": 631,
+    "avg_population_per_grid": "8.84",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1777,
+    "kommunenavn": "Søndre Land",
+    "total_population": 5572,
+    "grid_count": 752,
+    "avg_population_per_grid": "7.41",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1548,
+    "kommunenavn": "Tinn",
+    "total_population": 5523,
+    "grid_count": 549,
+    "avg_population_per_grid": "10.06",
+    "shelter_count": 3,
+    "total_shelter_capacity": 1163,
+    "people_per_shelter_place": "4.75"
+  },
+  {
+    "kommune_id": 1716,
+    "kommunenavn": "Nord-Fron",
+    "total_population": 5512,
+    "grid_count": 593,
+    "avg_population_per_grid": "9.30",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1841,
+    "kommunenavn": "Austevoll",
+    "total_population": 5432,
+    "grid_count": 451,
+    "avg_population_per_grid": "12.04",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1528,
+    "kommunenavn": "Luster",
+    "total_population": 5425,
+    "grid_count": 565,
+    "avg_population_per_grid": "9.60",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1656,
+    "kommunenavn": "Hitra",
+    "total_population": 5405,
+    "grid_count": 703,
+    "avg_population_per_grid": "7.69",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1701,
+    "kommunenavn": "Hareid",
+    "total_population": 5315,
+    "grid_count": 216,
+    "avg_population_per_grid": "24.61",
+    "shelter_count": 3,
+    "total_shelter_capacity": 186,
+    "people_per_shelter_place": "28.58"
+  },
+  {
+    "kommune_id": 1846,
+    "kommunenavn": "Birkenes",
+    "total_population": 5284,
+    "grid_count": 478,
+    "avg_population_per_grid": "11.05",
+    "shelter_count": 2,
+    "total_shelter_capacity": 55,
+    "people_per_shelter_place": "96.07"
+  },
+  {
+    "kommune_id": 1526,
+    "kommunenavn": "Årdal",
+    "total_population": 5210,
+    "grid_count": 117,
+    "avg_population_per_grid": "44.53",
+    "shelter_count": 2,
+    "total_shelter_capacity": 1200,
+    "people_per_shelter_place": "4.34"
+  },
+  {
+    "kommune_id": 1743,
+    "kommunenavn": "Øyer",
+    "total_population": 5117,
+    "grid_count": 543,
+    "avg_population_per_grid": "9.42",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1684,
+    "kommunenavn": "Nord-Odal",
+    "total_population": 4988,
+    "grid_count": 732,
+    "avg_population_per_grid": "6.81",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1607,
+    "kommunenavn": "Gol",
+    "total_population": 4866,
+    "grid_count": 431,
+    "avg_population_per_grid": "11.29",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1658,
+    "kommunenavn": "Ål",
+    "total_population": 4828,
+    "grid_count": 515,
+    "avg_population_per_grid": "9.37",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1621,
+    "kommunenavn": "Saltdal",
+    "total_population": 4816,
+    "grid_count": 392,
+    "avg_population_per_grid": "12.29",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1664,
+    "kommunenavn": "Nordreisa - Ráisa - Raisi",
+    "total_population": 4796,
+    "grid_count": 564,
+    "avg_population_per_grid": "8.50",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1834,
+    "kommunenavn": "Hvaler",
+    "total_population": 4773,
+    "grid_count": 434,
+    "avg_population_per_grid": "11.00",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1576,
+    "kommunenavn": "Øksnes",
+    "total_population": 4618,
+    "grid_count": 390,
+    "avg_population_per_grid": "11.84",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1675,
+    "kommunenavn": "Sauda",
+    "total_population": 4594,
+    "grid_count": 184,
+    "avg_population_per_grid": "24.97",
+    "shelter_count": 7,
+    "total_shelter_capacity": 1168,
+    "people_per_shelter_place": "3.93"
+  },
+  {
+    "kommune_id": 1723,
+    "kommunenavn": "Andøy",
+    "total_population": 4533,
+    "grid_count": 364,
+    "avg_population_per_grid": "12.45",
+    "shelter_count": 1,
+    "total_shelter_capacity": 550,
+    "people_per_shelter_place": "8.24"
+  },
+  {
+    "kommune_id": 1643,
+    "kommunenavn": "Hol",
+    "total_population": 4520,
+    "grid_count": 492,
+    "avg_population_per_grid": "9.19",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1633,
+    "kommunenavn": "Hemnes",
+    "total_population": 4473,
+    "grid_count": 464,
+    "avg_population_per_grid": "9.64",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1588,
+    "kommunenavn": "Grue",
+    "total_population": 4458,
+    "grid_count": 761,
+    "avg_population_per_grid": "5.86",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1654,
+    "kommunenavn": "Ringebu",
+    "total_population": 4424,
+    "grid_count": 567,
+    "avg_population_per_grid": "7.80",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1558,
+    "kommunenavn": "Stranda",
+    "total_population": 4379,
+    "grid_count": 314,
+    "avg_population_per_grid": "13.95",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1582,
+    "kommunenavn": "Åfjord",
+    "total_population": 4337,
+    "grid_count": 709,
+    "avg_population_per_grid": "6.12",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1763,
+    "kommunenavn": "Selbu",
+    "total_population": 4228,
+    "grid_count": 566,
+    "avg_population_per_grid": "7.47",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1642,
+    "kommunenavn": "Dielddanuorri - Tjeldsund",
+    "total_population": 4199,
+    "grid_count": 534,
+    "avg_population_per_grid": "7.86",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1690,
+    "kommunenavn": "Åmot",
+    "total_population": 4190,
+    "grid_count": 529,
+    "avg_population_per_grid": "7.92",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1726,
+    "kommunenavn": "Etne",
+    "total_population": 4092,
+    "grid_count": 469,
+    "avg_population_per_grid": "8.72",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1725,
+    "kommunenavn": "Drangedal",
+    "total_population": 4058,
+    "grid_count": 629,
+    "avg_population_per_grid": "6.45",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1543,
+    "kommunenavn": "Bardu",
+    "total_population": 3944,
+    "grid_count": 373,
+    "avg_population_per_grid": "10.57",
+    "shelter_count": 1,
+    "total_shelter_capacity": 459,
+    "people_per_shelter_place": "8.59"
+  },
+  {
+    "kommune_id": 1673,
+    "kommunenavn": "Overhalla",
+    "total_population": 3933,
+    "grid_count": 447,
+    "avg_population_per_grid": "8.80",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1626,
+    "kommunenavn": "Suldal",
+    "total_population": 3932,
+    "grid_count": 490,
+    "avg_population_per_grid": "8.02",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1703,
+    "kommunenavn": "Skiptvet",
+    "total_population": 3914,
+    "grid_count": 454,
+    "avg_population_per_grid": "8.62",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1532,
+    "kommunenavn": "Høyanger",
+    "total_population": 3889,
+    "grid_count": 356,
+    "avg_population_per_grid": "10.92",
+    "shelter_count": 1,
+    "total_shelter_capacity": 168,
+    "people_per_shelter_place": "23.15"
+  },
+  {
+    "kommune_id": 1691,
+    "kommunenavn": "Porsanger - Porsáŋgu - Porsanki",
+    "total_population": 3886,
+    "grid_count": 480,
+    "avg_population_per_grid": "8.10",
+    "shelter_count": 3,
+    "total_shelter_capacity": 661,
+    "people_per_shelter_place": "5.88"
+  },
+  {
+    "kommune_id": 1570,
+    "kommunenavn": "Vaksdal",
+    "total_population": 3873,
+    "grid_count": 271,
+    "avg_population_per_grid": "14.29",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1523,
+    "kommunenavn": "Vinje",
+    "total_population": 3839,
+    "grid_count": 648,
+    "avg_population_per_grid": "5.92",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1816,
+    "kommunenavn": "Evje og Hornnes",
+    "total_population": 3808,
+    "grid_count": 347,
+    "avg_population_per_grid": "10.97",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1837,
+    "kommunenavn": "Aukra",
+    "total_population": 3663,
+    "grid_count": 306,
+    "avg_population_per_grid": "11.97",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1734,
+    "kommunenavn": "Marker",
+    "total_population": 3649,
+    "grid_count": 521,
+    "avg_population_per_grid": "7.00",
+    "shelter_count": 2,
+    "total_shelter_capacity": 295,
+    "people_per_shelter_place": "12.37"
+  },
+  {
+    "kommune_id": 1709,
+    "kommunenavn": "Vågå",
+    "total_population": 3528,
+    "grid_count": 471,
+    "avg_population_per_grid": "7.49",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1603,
+    "kommunenavn": "Sørreisa",
+    "total_population": 3519,
+    "grid_count": 304,
+    "avg_population_per_grid": "11.58",
+    "shelter_count": 2,
+    "total_shelter_capacity": 486,
+    "people_per_shelter_place": "7.24"
+  },
+  {
+    "kommune_id": 1516,
+    "kommunenavn": "Våler",
+    "total_population": 3515,
+    "grid_count": 568,
+    "avg_population_per_grid": "6.19",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1807,
+    "kommunenavn": "Sigdal",
+    "total_population": 3483,
+    "grid_count": 714,
+    "avg_population_per_grid": "4.88",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1669,
+    "kommunenavn": "Aure",
+    "total_population": 3391,
+    "grid_count": 637,
+    "avg_population_per_grid": "5.32",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1852,
+    "kommunenavn": "Bremanger",
+    "total_population": 3358,
+    "grid_count": 399,
+    "avg_population_per_grid": "8.42",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1653,
+    "kommunenavn": "Øystre Slidre",
+    "total_population": 3303,
+    "grid_count": 537,
+    "avg_population_per_grid": "6.15",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1845,
+    "kommunenavn": "Sokndal",
+    "total_population": 3283,
+    "grid_count": 234,
+    "avg_population_per_grid": "14.03",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1717,
+    "kommunenavn": "Lund",
+    "total_population": 3248,
+    "grid_count": 263,
+    "avg_population_per_grid": "12.35",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1733,
+    "kommunenavn": "Nesbyen",
+    "total_population": 3248,
+    "grid_count": 364,
+    "avg_population_per_grid": "8.92",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1605,
+    "kommunenavn": "Fitjar",
+    "total_population": 3201,
+    "grid_count": 264,
+    "avg_population_per_grid": "12.13",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1742,
+    "kommunenavn": "Sør-Fron",
+    "total_population": 3079,
+    "grid_count": 435,
+    "avg_population_per_grid": "7.08",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1666,
+    "kommunenavn": "Tingvoll",
+    "total_population": 3076,
+    "grid_count": 484,
+    "avg_population_per_grid": "6.36",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1789,
+    "kommunenavn": "Vanylven",
+    "total_population": 3041,
+    "grid_count": 457,
+    "avg_population_per_grid": "6.65",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1740,
+    "kommunenavn": "Hurdal",
+    "total_population": 3019,
+    "grid_count": 347,
+    "avg_population_per_grid": "8.70",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1630,
+    "kommunenavn": "Tysnes",
+    "total_population": 2984,
+    "grid_count": 440,
+    "avg_population_per_grid": "6.78",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1650,
+    "kommunenavn": "Seljord",
+    "total_population": 2952,
+    "grid_count": 416,
+    "avg_population_per_grid": "7.10",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1769,
+    "kommunenavn": "Nordkapp",
+    "total_population": 2944,
+    "grid_count": 91,
+    "avg_population_per_grid": "32.35",
+    "shelter_count": 2,
+    "total_shelter_capacity": 648,
+    "people_per_shelter_place": "4.54"
+  },
+  {
+    "kommune_id": 1836,
+    "kommunenavn": "Askvoll",
+    "total_population": 2924,
+    "grid_count": 430,
+    "avg_population_per_grid": "6.80",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1575,
+    "kommunenavn": "Fjaler",
+    "total_population": 2916,
+    "grid_count": 362,
+    "avg_population_per_grid": "8.06",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1803,
+    "kommunenavn": "Bjerkreim",
+    "total_population": 2905,
+    "grid_count": 312,
+    "avg_population_per_grid": "9.31",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1586,
+    "kommunenavn": "Austrheim",
+    "total_population": 2859,
+    "grid_count": 281,
+    "avg_population_per_grid": "10.17",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1637,
+    "kommunenavn": "Kvæfjord",
+    "total_population": 2846,
+    "grid_count": 262,
+    "avg_population_per_grid": "10.86",
+    "shelter_count": 1,
+    "total_shelter_capacity": 1138,
+    "people_per_shelter_place": "2.50"
+  },
+  {
+    "kommune_id": 1771,
+    "kommunenavn": "Guovdageaidnu - Kautokeino",
+    "total_population": 2840,
+    "grid_count": 265,
+    "avg_population_per_grid": "10.72",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1795,
+    "kommunenavn": "Sør-Aurdal",
+    "total_population": 2810,
+    "grid_count": 580,
+    "avg_population_per_grid": "4.84",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1686,
+    "kommunenavn": "Hábmer - Hamarøy",
+    "total_population": 2785,
+    "grid_count": 403,
+    "avg_population_per_grid": "6.91",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1676,
+    "kommunenavn": "Skjervøy",
+    "total_population": 2780,
+    "grid_count": 146,
+    "avg_population_per_grid": "19.04",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1655,
+    "kommunenavn": "Deatnu - Tana",
+    "total_population": 2773,
+    "grid_count": 522,
+    "avg_population_per_grid": "5.31",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1748,
+    "kommunenavn": "Flesberg",
+    "total_population": 2766,
+    "grid_count": 438,
+    "avg_population_per_grid": "6.32",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1681,
+    "kommunenavn": "Lyngen",
+    "total_population": 2731,
+    "grid_count": 392,
+    "avg_population_per_grid": "6.97",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1670,
+    "kommunenavn": "Gjemnes",
+    "total_population": 2702,
+    "grid_count": 430,
+    "avg_population_per_grid": "6.28",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1517,
+    "kommunenavn": "Hemsedal",
+    "total_population": 2677,
+    "grid_count": 263,
+    "avg_population_per_grid": "10.18",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1625,
+    "kommunenavn": "Hjelmeland",
+    "total_population": 2675,
+    "grid_count": 414,
+    "avg_population_per_grid": "6.46",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1685,
+    "kommunenavn": "Steigen",
+    "total_population": 2653,
+    "grid_count": 515,
+    "avg_population_per_grid": "5.15",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1533,
+    "kommunenavn": "Frosta",
+    "total_population": 2649,
+    "grid_count": 392,
+    "avg_population_per_grid": "6.76",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1680,
+    "kommunenavn": "Bø",
+    "total_population": 2615,
+    "grid_count": 442,
+    "avg_population_per_grid": "5.92",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1597,
+    "kommunenavn": "Vik",
+    "total_population": 2544,
+    "grid_count": 287,
+    "avg_population_per_grid": "8.86",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1531,
+    "kommunenavn": "Dovre",
+    "total_population": 2508,
+    "grid_count": 332,
+    "avg_population_per_grid": "7.55",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1557,
+    "kommunenavn": "Fjord",
+    "total_population": 2498,
+    "grid_count": 282,
+    "avg_population_per_grid": "8.86",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1770,
+    "kommunenavn": "Kárášjohka - Karasjok",
+    "total_population": 2496,
+    "grid_count": 213,
+    "avg_population_per_grid": "11.72",
+    "shelter_count": 1,
+    "total_shelter_capacity": 465,
+    "people_per_shelter_place": "5.37"
+  },
+  {
+    "kommune_id": 1757,
+    "kommunenavn": "Rennebu",
+    "total_population": 2491,
+    "grid_count": 376,
+    "avg_population_per_grid": "6.63",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1631,
+    "kommunenavn": "Samnanger",
+    "total_population": 2490,
+    "grid_count": 223,
+    "avg_population_per_grid": "11.17",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1696,
+    "kommunenavn": "Alvdal",
+    "total_population": 2488,
+    "grid_count": 370,
+    "avg_population_per_grid": "6.72",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1699,
+    "kommunenavn": "Meråker",
+    "total_population": 2469,
+    "grid_count": 312,
+    "avg_population_per_grid": "7.91",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1724,
+    "kommunenavn": "Gjerstad",
+    "total_population": 2467,
+    "grid_count": 347,
+    "avg_population_per_grid": "7.11",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1611,
+    "kommunenavn": "Kviteseid",
+    "total_population": 2462,
+    "grid_count": 447,
+    "avg_population_per_grid": "5.51",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1732,
+    "kommunenavn": "Nore og Uvdal",
+    "total_population": 2461,
+    "grid_count": 463,
+    "avg_population_per_grid": "5.32",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1838,
+    "kommunenavn": "Sande",
+    "total_population": 2428,
+    "grid_count": 252,
+    "avg_population_per_grid": "9.63",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1704,
+    "kommunenavn": "Siljan",
+    "total_population": 2379,
+    "grid_count": 212,
+    "avg_population_per_grid": "11.22",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1549,
+    "kommunenavn": "Leirfjord",
+    "total_population": 2352,
+    "grid_count": 380,
+    "avg_population_per_grid": "6.19",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1761,
+    "kommunenavn": "Grong",
+    "total_population": 2309,
+    "grid_count": 277,
+    "avg_population_per_grid": "8.34",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1774,
+    "kommunenavn": "Vegårshei",
+    "total_population": 2270,
+    "grid_count": 334,
+    "avg_population_per_grid": "6.80",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1573,
+    "kommunenavn": "Gulen",
+    "total_population": 2259,
+    "grid_count": 389,
+    "avg_population_per_grid": "5.81",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1683,
+    "kommunenavn": "Stor-Elvdal",
+    "total_population": 2223,
+    "grid_count": 408,
+    "avg_population_per_grid": "5.45",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1612,
+    "kommunenavn": "Tokke",
+    "total_population": 2223,
+    "grid_count": 381,
+    "avg_population_per_grid": "5.83",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1715,
+    "kommunenavn": "Karlsøy",
+    "total_population": 2218,
+    "grid_count": 377,
+    "avg_population_per_grid": "5.88",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1579,
+    "kommunenavn": "Lom",
+    "total_population": 2205,
+    "grid_count": 330,
+    "avg_population_per_grid": "6.68",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1808,
+    "kommunenavn": "Krødsherad",
+    "total_population": 2203,
+    "grid_count": 332,
+    "avg_population_per_grid": "6.64",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1527,
+    "kommunenavn": "Lærdal",
+    "total_population": 2183,
+    "grid_count": 232,
+    "avg_population_per_grid": "9.41",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1580,
+    "kommunenavn": "Skjåk",
+    "total_population": 2169,
+    "grid_count": 364,
+    "avg_population_per_grid": "5.96",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1833,
+    "kommunenavn": "Smøla",
+    "total_population": 2167,
+    "grid_count": 349,
+    "avg_population_per_grid": "6.21",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1762,
+    "kommunenavn": "Snåase - Snåsa",
+    "total_population": 2138,
+    "grid_count": 344,
+    "avg_population_per_grid": "6.22",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1601,
+    "kommunenavn": "Salangen",
+    "total_population": 2110,
+    "grid_count": 233,
+    "avg_population_per_grid": "9.06",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1773,
+    "kommunenavn": "Vestre Slidre",
+    "total_population": 2102,
+    "grid_count": 429,
+    "avg_population_per_grid": "4.90",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1780,
+    "kommunenavn": "Båtsfjord",
+    "total_population": 2099,
+    "grid_count": 52,
+    "avg_population_per_grid": "40.37",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1632,
+    "kommunenavn": "Lødingen",
+    "total_population": 2066,
+    "grid_count": 171,
+    "avg_population_per_grid": "12.08",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1698,
+    "kommunenavn": "Holtålen",
+    "total_population": 2044,
+    "grid_count": 352,
+    "avg_population_per_grid": "5.81",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1556,
+    "kommunenavn": "Lesja",
+    "total_population": 2005,
+    "grid_count": 414,
+    "avg_population_per_grid": "4.84",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1706,
+    "kommunenavn": "Gildeskål",
+    "total_population": 2002,
+    "grid_count": 315,
+    "avg_population_per_grid": "6.36",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1779,
+    "kommunenavn": "Vardø",
+    "total_population": 1975,
+    "grid_count": 50,
+    "avg_population_per_grid": "39.50",
+    "shelter_count": 2,
+    "total_shelter_capacity": 410,
+    "people_per_shelter_place": "4.82"
+  },
+  {
+    "kommune_id": 1595,
+    "kommunenavn": "Sømna",
+    "total_population": 1961,
+    "grid_count": 349,
+    "avg_population_per_grid": "5.62",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1739,
+    "kommunenavn": "Lurøy",
+    "total_population": 1948,
+    "grid_count": 253,
+    "avg_population_per_grid": "7.70",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1707,
+    "kommunenavn": "Gáivuotna - Kåfjord - Kaivuono",
+    "total_population": 1944,
+    "grid_count": 273,
+    "avg_population_per_grid": "7.12",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1760,
+    "kommunenavn": "Rindal",
+    "total_population": 1927,
+    "grid_count": 300,
+    "avg_population_per_grid": "6.42",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1793,
+    "kommunenavn": "Sirdal",
+    "total_population": 1902,
+    "grid_count": 240,
+    "avg_population_per_grid": "7.93",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1776,
+    "kommunenavn": "Os",
+    "total_population": 1889,
+    "grid_count": 349,
+    "avg_population_per_grid": "5.41",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1718,
+    "kommunenavn": "Herøy",
+    "total_population": 1884,
+    "grid_count": 222,
+    "avg_population_per_grid": "8.49",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1722,
+    "kommunenavn": "Sørfold",
+    "total_population": 1848,
+    "grid_count": 238,
+    "avg_population_per_grid": "7.76",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1537,
+    "kommunenavn": "Rendalen",
+    "total_population": 1843,
+    "grid_count": 410,
+    "avg_population_per_grid": "4.50",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1583,
+    "kommunenavn": "Aurland",
+    "total_population": 1834,
+    "grid_count": 160,
+    "avg_population_per_grid": "11.46",
+    "shelter_count": 1,
+    "total_shelter_capacity": 40,
+    "people_per_shelter_place": "45.85"
+  },
+  {
+    "kommune_id": 1541,
+    "kommunenavn": "Storfjord - Omasvuotna - Omasvuono",
+    "total_population": 1826,
+    "grid_count": 283,
+    "avg_population_per_grid": "6.45",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1639,
+    "kommunenavn": "Hægebostad",
+    "total_population": 1776,
+    "grid_count": 278,
+    "avg_population_per_grid": "6.39",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1640,
+    "kommunenavn": "Nesna",
+    "total_population": 1770,
+    "grid_count": 165,
+    "avg_population_per_grid": "10.73",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1786,
+    "kommunenavn": "Åmli",
+    "total_population": 1740,
+    "grid_count": 321,
+    "avg_population_per_grid": "5.42",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1593,
+    "kommunenavn": "Masfjorden",
+    "total_population": 1686,
+    "grid_count": 298,
+    "avg_population_per_grid": "5.66",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1542,
+    "kommunenavn": "Hjartdal",
+    "total_population": 1637,
+    "grid_count": 307,
+    "avg_population_per_grid": "5.33",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1728,
+    "kommunenavn": "Tolga",
+    "total_population": 1601,
+    "grid_count": 257,
+    "avg_population_per_grid": "6.23",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1551,
+    "kommunenavn": "Vang",
+    "total_population": 1578,
+    "grid_count": 279,
+    "avg_population_per_grid": "5.66",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1529,
+    "kommunenavn": "Folldal",
+    "total_population": 1538,
+    "grid_count": 310,
+    "avg_population_per_grid": "4.96",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1784,
+    "kommunenavn": "Nissedal",
+    "total_population": 1484,
+    "grid_count": 261,
+    "avg_population_per_grid": "5.69",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1550,
+    "kommunenavn": "Dønna",
+    "total_population": 1446,
+    "grid_count": 281,
+    "avg_population_per_grid": "5.15",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1539,
+    "kommunenavn": "Grane",
+    "total_population": 1430,
+    "grid_count": 204,
+    "avg_population_per_grid": "7.01",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1747,
+    "kommunenavn": "Rollag",
+    "total_population": 1411,
+    "grid_count": 299,
+    "avg_population_per_grid": "4.72",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1842,
+    "kommunenavn": "Bindal",
+    "total_population": 1366,
+    "grid_count": 233,
+    "avg_population_per_grid": "5.86",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1811,
+    "kommunenavn": "Evenes - Evenášši",
+    "total_population": 1357,
+    "grid_count": 206,
+    "avg_population_per_grid": "6.59",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1847,
+    "kommunenavn": "Iveland",
+    "total_population": 1341,
+    "grid_count": 206,
+    "avg_population_per_grid": "6.51",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1796,
+    "kommunenavn": "Aremark",
+    "total_population": 1341,
+    "grid_count": 275,
+    "avg_population_per_grid": "4.88",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1814,
+    "kommunenavn": "Engerdal",
+    "total_population": 1319,
+    "grid_count": 300,
+    "avg_population_per_grid": "4.40",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1800,
+    "kommunenavn": "Lierne",
+    "total_population": 1311,
+    "grid_count": 284,
+    "avg_population_per_grid": "4.62",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1589,
+    "kommunenavn": "Ibestad",
+    "total_population": 1300,
+    "grid_count": 205,
+    "avg_population_per_grid": "6.34",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1702,
+    "kommunenavn": "Hyllestad",
+    "total_population": 1277,
+    "grid_count": 271,
+    "avg_population_per_grid": "4.71",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1648,
+    "kommunenavn": "Aarborte - Hattfjelldal",
+    "total_population": 1268,
+    "grid_count": 257,
+    "avg_population_per_grid": "4.93",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1649,
+    "kommunenavn": "Flakstad",
+    "total_population": 1264,
+    "grid_count": 163,
+    "avg_population_per_grid": "7.75",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1635,
+    "kommunenavn": "Fyresdal",
+    "total_population": 1255,
+    "grid_count": 249,
+    "avg_population_per_grid": "5.04",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1689,
+    "kommunenavn": "Lebesby",
+    "total_population": 1235,
+    "grid_count": 115,
+    "avg_population_per_grid": "10.74",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1783,
+    "kommunenavn": "Etnedal",
+    "total_population": 1229,
+    "grid_count": 322,
+    "avg_population_per_grid": "3.82",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1674,
+    "kommunenavn": "Høylandet",
+    "total_population": 1226,
+    "grid_count": 210,
+    "avg_population_per_grid": "5.84",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1598,
+    "kommunenavn": "Vega",
+    "total_population": 1206,
+    "grid_count": 225,
+    "avg_population_per_grid": "5.36",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1623,
+    "kommunenavn": "Valle",
+    "total_population": 1202,
+    "grid_count": 205,
+    "avg_population_per_grid": "5.86",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1719,
+    "kommunenavn": "Rødøy",
+    "total_population": 1153,
+    "grid_count": 235,
+    "avg_population_per_grid": "4.91",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1665,
+    "kommunenavn": "Kvænangen",
+    "total_population": 1130,
+    "grid_count": 251,
+    "avg_population_per_grid": "4.50",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1638,
+    "kommunenavn": "Bygland",
+    "total_population": 1125,
+    "grid_count": 192,
+    "avg_population_per_grid": "5.86",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1766,
+    "kommunenavn": "Flatanger",
+    "total_population": 1120,
+    "grid_count": 183,
+    "avg_population_per_grid": "6.12",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1788,
+    "kommunenavn": "Flå",
+    "total_population": 1115,
+    "grid_count": 188,
+    "avg_population_per_grid": "5.93",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1565,
+    "kommunenavn": "Ulvik",
+    "total_population": 1100,
+    "grid_count": 122,
+    "avg_population_per_grid": "9.02",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1767,
+    "kommunenavn": "Måsøy",
+    "total_population": 1096,
+    "grid_count": 97,
+    "avg_population_per_grid": "11.30",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1540,
+    "kommunenavn": "Dyrøy",
+    "total_population": 1069,
+    "grid_count": 213,
+    "avg_population_per_grid": "5.02",
+    "shelter_count": 1,
+    "total_shelter_capacity": 175,
+    "people_per_shelter_place": "6.11"
+  },
+  {
+    "kommune_id": 1590,
+    "kommunenavn": "Gratangen",
+    "total_population": 1062,
+    "grid_count": 176,
+    "avg_population_per_grid": "6.03",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1750,
+    "kommunenavn": "Beiarn",
+    "total_population": 1058,
+    "grid_count": 224,
+    "avg_population_per_grid": "4.72",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1768,
+    "kommunenavn": "Gamvik",
+    "total_population": 1051,
+    "grid_count": 65,
+    "avg_population_per_grid": "16.17",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1627,
+    "kommunenavn": "Bykle",
+    "total_population": 1027,
+    "grid_count": 115,
+    "avg_population_per_grid": "8.93",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1602,
+    "kommunenavn": "Loabák - Lavangen",
+    "total_population": 983,
+    "grid_count": 129,
+    "avg_population_per_grid": "7.62",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1624,
+    "kommunenavn": "Hasvik",
+    "total_population": 975,
+    "grid_count": 74,
+    "avg_population_per_grid": "13.18",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1700,
+    "kommunenavn": "Eidfjord",
+    "total_population": 967,
+    "grid_count": 99,
+    "avg_population_per_grid": "9.77",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1634,
+    "kommunenavn": "Moskenes",
+    "total_population": 967,
+    "grid_count": 74,
+    "avg_population_per_grid": "13.07",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1662,
+    "kommunenavn": "Åseral",
+    "total_population": 912,
+    "grid_count": 171,
+    "avg_population_per_grid": "5.33",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1584,
+    "kommunenavn": "Bokn",
+    "total_population": 893,
+    "grid_count": 97,
+    "avg_population_per_grid": "9.21",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1756,
+    "kommunenavn": "Berlevåg",
+    "total_population": 888,
+    "grid_count": 29,
+    "avg_population_per_grid": "30.62",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1801,
+    "kommunenavn": "Osen",
+    "total_population": 888,
+    "grid_count": 147,
+    "avg_population_per_grid": "6.04",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1660,
+    "kommunenavn": "Unjárga - Nesseby",
+    "total_population": 867,
+    "grid_count": 178,
+    "avg_population_per_grid": "4.87",
+    "shelter_count": 1,
+    "total_shelter_capacity": 90,
+    "people_per_shelter_place": "9.63"
+  },
+  {
+    "kommune_id": 1592,
+    "kommunenavn": "Loppa",
+    "total_population": 864,
+    "grid_count": 120,
+    "avg_population_per_grid": "7.20",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1694,
+    "kommunenavn": "Namsskogan",
+    "total_population": 807,
+    "grid_count": 146,
+    "avg_population_per_grid": "5.53",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1765,
+    "kommunenavn": "Tydal",
+    "total_population": 784,
+    "grid_count": 137,
+    "avg_population_per_grid": "5.72",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1827,
+    "kommunenavn": "Solund",
+    "total_population": 740,
+    "grid_count": 153,
+    "avg_population_per_grid": "4.84",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1697,
+    "kommunenavn": "Værøy",
+    "total_population": 676,
+    "grid_count": 47,
+    "avg_population_per_grid": "14.38",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1850,
+    "kommunenavn": "Leka",
+    "total_population": 591,
+    "grid_count": 126,
+    "avg_population_per_grid": "4.69",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1692,
+    "kommunenavn": "Kvitsøy",
+    "total_population": 570,
+    "grid_count": 32,
+    "avg_population_per_grid": "17.81",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1787,
+    "kommunenavn": "Fedje",
+    "total_population": 521,
+    "grid_count": 49,
+    "avg_population_per_grid": "10.63",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1682,
+    "kommunenavn": "Vevelstad",
+    "total_population": 470,
+    "grid_count": 91,
+    "avg_population_per_grid": "5.16",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1720,
+    "kommunenavn": "Træna",
+    "total_population": 463,
+    "grid_count": 27,
+    "avg_population_per_grid": "17.15",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1578,
+    "kommunenavn": "Røst",
+    "total_population": 458,
+    "grid_count": 48,
+    "avg_population_per_grid": "9.54",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1799,
+    "kommunenavn": "Raarvihke - Røyrvik",
+    "total_population": 443,
+    "grid_count": 73,
+    "avg_population_per_grid": "6.07",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1571,
+    "kommunenavn": "Modalen",
+    "total_population": 390,
+    "grid_count": 50,
+    "avg_population_per_grid": "7.80",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  },
+  {
+    "kommune_id": 1645,
+    "kommunenavn": "Utsira",
+    "total_population": 217,
+    "grid_count": 26,
+    "avg_population_per_grid": "8.35",
+    "shelter_count": 0,
+    "total_shelter_capacity": 0,
+    "people_per_shelter_place": null
+  }
+]

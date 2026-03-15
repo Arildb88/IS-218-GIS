@@ -1,0 +1,33 @@
+WITH kommune_befolkning AS (
+    SELECT
+        k.id,
+        k.kommunenavn,
+        SUM(b.poptot) AS total_befolkning
+    FROM kommune k
+    JOIN befolkningparuter250m b
+      ON ST_Intersects(b.omrade, k.geom)
+    GROUP BY k.id, k.kommunenavn
+),
+kommune_tilflukt AS (
+    SELECT
+        k.id,
+        SUM(t.plasser) AS total_plasser
+    FROM kommune k
+    JOIN tilfluktsrom t
+      ON ST_Intersects(t.geom, k.geom)
+    GROUP BY k.id
+)
+SELECT
+    kb.kommunenavn,
+    kb.total_befolkning,
+    COALESCE(kt.total_plasser, 0) AS total_plasser,
+    ROUND(
+        COALESCE(kt.total_plasser, 0)::numeric
+        / NULLIF(kb.total_befolkning, 0) * 100,
+        2
+    ) AS dekningsgrad_prosent,
+    kb.total_befolkning - COALESCE(kt.total_plasser, 0) AS underskudd
+FROM kommune_befolkning kb
+LEFT JOIN kommune_tilflukt kt
+  ON kb.id = kt.id
+ORDER BY dekningsgrad_prosent ASC NULLS FIRST, underskudd DESC;
