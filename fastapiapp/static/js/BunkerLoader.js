@@ -3,6 +3,8 @@ class BunkerLoader {
     this.map = map;
     this.link = link;
     this.GeoJson = null;
+    this.layerInstance = null;
+    this.state = true;
   }
 
   
@@ -13,7 +15,7 @@ class BunkerLoader {
       return res.json();
     });
     
-    L.geoJSON(this.GeoJson, {
+    this.layerInstance = L.geoJSON(this.GeoJson, {
       onEachFeature: (feature, layer) => {
         layer.bindPopup(
           `Romnr: ${feature.properties.romnr}<br>` +
@@ -22,7 +24,7 @@ class BunkerLoader {
           `Cords: ${feature.geometry.coordinates.join(',')}`
         );
       },
-      pointToLayer: (feature, latlng) => L.circleMarker(latlng, { radius: 6, color: 'red' })
+      pointToLayer: (feature, latlng) => L.marker(latlng, { icon: Le_Icón("bunker.png") })
     }).addTo(this.map);
     this.indexize();
     console.log(`[BunkerLoader.js] Loaded ${this.GeoJson.features.length} bunkers`)
@@ -80,6 +82,21 @@ class BunkerLoader {
       return (dLatA * dLatA + dLonA * dLonA) -
             (dLatB * dLatB + dLonB * dLonB);
     });
+  }
+
+  Toggle(bool = null) {
+      if (bool == null) {
+          this.state = !this.state;
+          bool = this.state;
+      }
+
+      if (bool) {
+          this.state = true;
+          this.layerInstance.addTo(this.map);
+      } else {
+          this.state = false;
+          this.layerInstance.removeFrom(this.map);
+      }
   }
 
 }
