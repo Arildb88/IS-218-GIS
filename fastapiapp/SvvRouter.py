@@ -33,8 +33,7 @@ def FetchRoute(start_coords, end_coords): #returnerer linestrings # FORVENtER LA
     status_tekst = ""
     length = 0
     while (len(segmenter) == 0 and radius < maxradius):
-        print(radius)
-        print(_GenReqLink(start_coords,end_coords, area=radius));
+        print(f"Route request, radius: {radius}")
         radius += 500
         response = requests.get(_GenReqLink(start_coords,end_coords, area=radius), headers=__headers)
         

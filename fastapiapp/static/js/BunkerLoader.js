@@ -24,7 +24,7 @@ class BunkerLoader {
           `Cords: ${feature.geometry.coordinates.join(',')}`
         );
       },
-      pointToLayer: (feature, latlng) => L.circleMarker(latlng, { radius: 6, color: 'red' })
+      pointToLayer: (feature, latlng) => L.marker(latlng, { icon: Le_Icón("bunker.png") })
     }).addTo(this.map);
     this.indexize();
     console.log(`[BunkerLoader.js] Loaded ${this.GeoJson.features.length} bunkers`)

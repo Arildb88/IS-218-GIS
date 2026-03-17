@@ -102,7 +102,7 @@ async def kommune_geojson(lat: float = Query(...), lon: float = Query(...)):
         ).execute()
 
         # Debug print
-        print("Supabase response:", response.data)
+        
 
         return response.data
 
