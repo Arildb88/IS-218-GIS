@@ -7,19 +7,56 @@ html, body {
 #test-controls {
   width: fit-content;
   height: fit-content;
-  display: inline-block;
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 6767;
-  position:fixed;
-  top:0;
-  left:50%;
-  transform:translate(-50%,0);
-  padding:10px;
+
+  /* layout + visual container */
+  display: block;
+  text-align: center;
+  padding: 10px 12px;
+  border-radius: 14px;
+  background: rgba(9, 20, 36, 0.326);
+  border: 1px solid rgba(0, 255, 255, 0.35);
+  backdrop-filter: blur(6px);
 }
 #test-controls button {
-  font-size:1.5em;
-  padding:5px;
-  
+  font-size: 1rem;
+  padding: 8px 12px;
+  margin: 0 4px;              /* small space between buttons */
+  border-radius: 10px;         /* rounded corners */
+  border: 1px solid #59b6ff;
+  background: linear-gradient(180deg, #1f3b66, #173152);
+  color: #eaf6ff;
+  cursor: pointer;
+  transition: transform 0.15s ease, background-color 0.2s ease, box-shadow 0.2s ease;
 }
+
+#test-controls #clearMap {
+   position: absolute;
+  right: 12px;
+  bottom: 10px;
+  margin: 0;
+  z-index: 2;
+  background: linear-gradient(180deg,rgb(172, 0, 0), rgb(128, 0, 0));
+}
+
+#test-controls button:hover {
+  background: linear-gradient(180deg, #27497d, #1b3b65);
+  box-shadow: 0 0 10px rgba(89, 182, 255, 0.45);
+}
+
+#test-controls button:active {
+  transform: translateY(1px);
+}
+
+/* toggle centered below buttons */
+#test-controls .toggle-container {
+  margin: 10px auto 0;
+}
+
 #route-information {
   width: fit-content;
   height: fit-content;
@@ -45,8 +82,7 @@ html, body {
 .toggle-container {
   position: relative;
   width: 140px;
-  height: 50px;
-  background: linear-gradient(135deg, #0ff, #f0f);
+  height: 35px;
   border-radius: 25px;
   cursor: pointer;
   display: flex;
@@ -54,9 +90,8 @@ html, body {
   padding: 5px;
   user-select: none;
   flex-shrink: 0;
-  box-shadow: 0 0 20px #0ff, 0 0 40px #f0f, inset 0 0 10px #fff;
   backdrop-filter: blur(6px);
-  border: 2px solid #00ffff;
+  border: 2px solid #000000;
   transition: all 0.4s ease-in-out;
   overflow: hidden;
 }
@@ -65,16 +100,11 @@ html, body {
 .toggle-slider {
   width: 50px;
   height: 40px;
-  background: linear-gradient(45deg, #ff00ff, #00ffff);
+  background: linear-gradient(45deg, #000000, #012a67);
   border-radius: 50%;
   transition: transform 0.4s cubic-bezier(0.75, 0, 0.25, 1), background 0.4s;
   position: absolute;
   left: 10px;
-  box-shadow:
-    0 0 15px #0ff,
-    0 0 30px #f0f,
-    0 0 60px #ff0,
-    inset 0 0 10px #fff;
   animation: pulse 2s infinite alternate;
 }
 
@@ -87,30 +117,14 @@ html, body {
   font-size: 14px;
   font-weight: bold;
   z-index:234234;
-  color: #0ff;
+  color: rgb(255, 255, 255);
   text-shadow: 0 0 5px #0ff, 0 0 10px #f0f, 0 0 20px #ff0;
   pointer-events: none;
   letter-spacing: 1px;
   font-family: 'Orbitron', sans-serif; /* cyberpunk font */
 }
 
-/* Neon pulse animation for slider */
-@keyframes pulse {
-  0% { box-shadow: 0 0 10px #ff0, 0 0 20px #f0f, 0 0 30px #0ff; }
-  50% { box-shadow: 0 0 20px #ff0, 0 0 40px #f0f, 0 0 60px #0ff; }
-  100% { box-shadow: 0 0 15px #ff0, 0 0 30px #f0f, 0 0 50px #0ff; }
-}
 
-/* Optional glitch effect on container when hovered */
-.toggle-container:hover {
-  animation: glitch 0.3s infinite;
-}
 
-@keyframes glitch {
-  0% { transform: translateX(0px) skewX(0deg); }
-  20% { transform: translateX(-2px) skewX(5deg); }
-  40% { transform: translateX(2px) skewX(-5deg); }
-  60% { transform: translateX(-1px) skewX(3deg); }
-  80% { transform: translateX(1px) skewX(-3deg); }
-  100% { transform: translateX(0px) skewX(0deg); }
-}
+
+
