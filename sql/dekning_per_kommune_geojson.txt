@@ -1,0 +1,30 @@
+CREATE OR REPLACE FUNCTION get_all_municipalities()
+RETURNS TABLE (
+    kommune_id bigint,
+    kommunenavn text,
+    total_population bigint,
+    grid_count bigint,
+    avg_population_per_grid numeric,
+    shelter_count bigint,
+    total_shelter_capacity bigint,
+    people_per_shelter_place numeric,
+    geom_geojson json
+) AS
+$$
+BEGIN
+    RETURN QUERY
+    SELECT
+        m.kommune_id::bigint,
+        m.kommunenavn,
+        m.total_population::bigint,
+        m.grid_count::bigint,
+        m.avg_population_per_grid,
+        m.shelter_count::bigint,
+        m.total_shelter_capacity::bigint,
+        m.people_per_shelter_place,
+        ST_AsGeoJSON(k.geom)::json AS geom_geojson
+    FROM municipality_population_shelter m
+    JOIN kommune k ON m.kommune_id = k.id
+    ORDER BY m.kommune_id;
+END;
+$$ LANGUAGE plpgsql STABLE;
