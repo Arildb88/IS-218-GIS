@@ -1,3 +1,15 @@
+Bilder som viser JupyterNotebook hvor all kode er kjørt.
+
+For å kunne kjøre JupyterNotebook filen, gjør følgende:
+- Installer eller åpne Anaconda Prompt
+- Naviger til /JupyterNotebook
+Kjør kommandoen for å lage miljø med de nødvendige tilleggs programmene installert.
+- conda env create -f environment.yml
+Kjør kommandoen for å aktivere/gå inn i miljøet du lagde
+- conda activate geo_env
+Kjør kommandoen og finn IS218_duckdb_geopandas_start filen
+- jupyter lab
+
 <img width="1328" height="943" alt="image" src="https://github.com/user-attachments/assets/f29a8b02-c46a-4ff7-9503-3ba0772026c4" />
 <img width="1318" height="931" alt="image" src="https://github.com/user-attachments/assets/941775a9-320c-4cba-bf4a-139497b16651" />
 <img width="1317" height="933" alt="image" src="https://github.com/user-attachments/assets/1a7e509b-7cda-4d00-9cec-22d204942579" />
