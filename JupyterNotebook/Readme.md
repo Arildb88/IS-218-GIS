@@ -15,6 +15,9 @@ Kjør kommandoen og finn IS218_Notebookfile.ipynb
 ```bash
 jupyter lab
 ```
+I JupyterNotebook filen:
+Kolonne 7: Husk å endre PATH til der du har lastet ned repo og til JupyterNotebook mappen
+
 
 <img width="1328" height="943" alt="image" src="https://github.com/user-attachments/assets/f29a8b02-c46a-4ff7-9503-3ba0772026c4" />
 <img width="1318" height="931" alt="image" src="https://github.com/user-attachments/assets/941775a9-320c-4cba-bf4a-139497b16651" />
