@@ -11,7 +11,7 @@ Kjør kommandoen for å aktivere/gå inn i miljøet du lagde
 ```bash
 conda activate geo_env
 ```
-Kjør kommandoen og finn IS218_duckdb_geopandas_start filen
+Kjør kommandoen og finn IS218_Notebookfile.ipynb
 ```bash
 jupyter lab
 ```
