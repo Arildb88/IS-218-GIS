@@ -89,7 +89,7 @@ py main.py
 - Legge til Layer for Nødaggregat
 - Legge til Layer for Nærmeste Sykehus, Politi, Brann
 
-
+## JupyterNotebook filen
 For å åpne JupyterNotebook: <br>
 Anaconda prompt: <br>
 Gå inn i mappen der du har klonet repo \JupyterNotebook hvor du har environment.yml
