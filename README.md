@@ -1,5 +1,6 @@
 # IS-218-GIS
 
+# Oppgave 1
 ## TLDR: System
 Systemet viser korteste rute til en tilfluktsrom fra brukerens posisjon, samt klikket posisjon. Lister opp nærmeste tilfluktsrom sortert etter distanse (luftlinje). Kan vise både varmekart over høyde og bruk av areal på kartet.
 
@@ -8,7 +9,7 @@ Systemet viser korteste rute til en tilfluktsrom fra brukerens posisjon, samt kl
 <img src="fastapiapp/static/api_ark1.png" alt="Api Map" width="500px">
 
 ## Video of the application
-https://github.com/user-attachments/assets/ffff3346-065e-40ad-a9b8-c8621c3541c3
+https://github.com/user-attachments/assets/3513ac36-6ad8-47c1-9ffd-15a8a180edb5
 
 ## Dependencies
 
@@ -89,7 +90,7 @@ py main.py
 - Legge til Layer for Nødaggregat
 - Legge til Layer for Nærmeste Sykehus, Politi, Brann
 
-
+# Oppgave 2
 ## JupyterNotebook 
 Bilder som viser JupyterNotebook hvor all kode er kjørt.
 
