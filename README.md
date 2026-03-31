@@ -120,3 +120,6 @@ Kolonne 7: Husk å endre PATH til der du har lastet ned repo og til JupyterNoteb
 
 [Link til notebook →](./JupyterNotebook/IS218_Notebookfile.ipynb)
 
+🔧 Videre forbedringer / Refleksjon
+- Forbedre frontend med kartlegende og bedre UX
+- Legge til watchme funksjon som oppdaterer din posisjon og beregner rute på ny
