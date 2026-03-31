@@ -23,6 +23,15 @@ class RouteManager {
         
         
     }
+
+    getLength() {
+        let props = this.geoJson.features[0].properties;
+        if (!isNaN(props[0])) {
+            return props[0];
+        } else {
+            return props[1];
+        }
+    }
 }
 
 function ClearMap() {

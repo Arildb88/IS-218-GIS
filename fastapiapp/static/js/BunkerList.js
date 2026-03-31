@@ -3,12 +3,12 @@ class BunkerList {
         this.userLat;
         this.userLon;
 
-        this.CurrentPositionMarker = L.marker([58,10]).addTo(map);
+        this.CurrentPositionMarker = null;
     }
 
     setMarkerPos() {
-        if (this.CurrentPositionMarker != null) {
-            this.CurrentPositionMarker = L.marker([this.userLat,this.userLon]).addTo(map);
+        if (this.CurrentPositionMarker == null) {
+            this.CurrentPositionMarker = L.marker([this.userLat,this.userLon],{ icon: Le_Icón("cat.png") }).addTo(map);
             
         } else {
             this.CurrentPositionMarker.setLatLng([this.userLat,this.userLon]);
