@@ -1,0 +1,56 @@
+-- WARNING: This schema is for context only and is not meant to be run.
+-- Table order and constraints may not be valid for execution.
+
+CREATE TABLE public.befolkningparuter250m (
+  objid bigint NOT NULL,
+  objtype character varying NOT NULL,
+  lokalid uuid NOT NULL,
+  navnerom text NOT NULL,
+  versjonid character varying NOT NULL,
+  oppdateringsdato timestamp with time zone NOT NULL,
+  datauttaksdato timestamp with time zone NOT NULL,
+  opphav character varying,
+  omrade USER-DEFINED,
+  ssbid250m bigint,
+  poptot integer,
+  statistikkar integer,
+  CONSTRAINT befolkningparuter250m_pkey PRIMARY KEY (objid)
+);
+CREATE TABLE public.kommune (
+  id integer NOT NULL DEFAULT nextval('kommune_id_seq'::regclass),
+  lokalid uuid,
+  navnerom text,
+  versjonid text,
+  datafangstdato timestamp without time zone,
+  oppdateringsdato timestamp without time zone,
+  datauttaksdato timestamp without time zone,
+  opphav text,
+  kommunenummer text,
+  kommunenavn text,
+  gyldigfra text,
+  gyldigtil text,
+  geom USER-DEFINED,
+  CONSTRAINT kommune_pkey PRIMARY KEY (id)
+);
+CREATE TABLE public.spatial_ref_sys (
+  srid integer NOT NULL CHECK (srid > 0 AND srid <= 998999),
+  auth_name character varying,
+  auth_srid integer,
+  srtext character varying,
+  proj4text character varying,
+  CONSTRAINT spatial_ref_sys_pkey PRIMARY KEY (srid)
+);
+CREATE TABLE public.tilfluktsrom (
+  id integer NOT NULL DEFAULT nextval('tilfluktsrom_id_seq'::regclass),
+  lokalid uuid,
+  navnerom text,
+  versjonid text,
+  datauttaksdato timestamp without time zone,
+  opphav text,
+  romnr integer,
+  plasser integer,
+  adresse text,
+  objtype text,
+  geom USER-DEFINED,
+  CONSTRAINT tilfluktsrom_pkey PRIMARY KEY (id)
+);

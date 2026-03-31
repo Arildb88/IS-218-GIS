@@ -106,3 +106,4 @@ JupyterNotebook filen ligger i JupyterNotebook mappen
 
 I JupyterNotebook filen:
 Kolonne 7: Husk å endre PATH til der du har lastet ned repo og til JupyterNotebook mappen
+- Legge til watchme funksjon som oppdaterer din posisjon og beregner rute på ny

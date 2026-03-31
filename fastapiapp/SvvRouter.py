@@ -28,13 +28,12 @@ _feilkoder = ['IKKE_FUNNET_SLUTTPUNKT', 'IKKE_FUNNET_STARTPUNKT']
 
 def FetchRoute(start_coords, end_coords): #returnerer linestrings # FORVENtER LAV TALL FØRST OGSÅ STOR TALL ex 8.93292, 58.34932
     segmenter = []
-    radius = 0;
+    radius = 500;
     maxradius = 10000+1
     status_tekst = ""
     length = 0
     while (len(segmenter) == 0 and radius < maxradius):
-        print(radius)
-        print(_GenReqLink(start_coords,end_coords, area=radius));
+        print(f"Route request, radius: {radius}")
         radius += 500
         response = requests.get(_GenReqLink(start_coords,end_coords, area=radius), headers=__headers)
         

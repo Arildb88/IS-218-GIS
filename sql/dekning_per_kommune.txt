@@ -1,0 +1,37 @@
+CREATE MATERIALIZED VIEW municipality_population_shelter AS
+WITH pop_stats AS (
+    SELECT
+        k.id AS kommune_id,
+        k.kommunenavn,
+        k.geom,  -- include geometry
+        COUNT(b.ssbid250m) AS grid_count,
+        SUM(b.poptot) AS total_population
+    FROM kommune k
+    LEFT JOIN befolkningparuter250m b
+      ON ST_Contains(k.geom, b.omrade)
+    GROUP BY k.id, k.kommunenavn, k.geom
+),
+shelter_stats AS (
+    SELECT
+        k.id AS kommune_id,
+        COUNT(t.id) AS shelter_count,
+        COALESCE(SUM(t.plasser),0) AS total_shelter_capacity
+    FROM kommune k
+    LEFT JOIN tilfluktsrom t
+      ON ST_Contains(k.geom, t.geom)
+    GROUP BY k.id
+)
+SELECT
+    p.kommune_id,
+    p.kommunenavn,
+    p.geom,  -- geometry included in final view
+    p.total_population,
+    p.grid_count,
+    ROUND(CAST(p.total_population AS numeric)/NULLIF(p.grid_count,0),2) AS avg_population_per_grid,
+    s.shelter_count,
+    s.total_shelter_capacity,
+    ROUND(CAST(p.total_population AS numeric)/NULLIF(s.total_shelter_capacity,0),2) AS people_per_shelter_place
+FROM pop_stats p
+LEFT JOIN shelter_stats s
+  ON p.kommune_id = s.kommune_id
+ORDER BY p.kommune_id;
