@@ -77,3 +77,4 @@ py main.py
 - Implementere PostGIS for mer avanserte romlige spørringer
 - Cache API-responser for bedre ytelse
 - Forbedre frontend med kartlegende og bedre UX
+- Legge til watchme funksjon som oppdaterer din posisjon og beregner rute på ny
