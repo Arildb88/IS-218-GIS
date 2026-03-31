@@ -1,5 +1,6 @@
 # IS-218-GIS
 
+# Oppgave 1
 ## TLDR: System
 Systemet viser korteste rute til en tilfluktsrom fra brukerens posisjon, samt klikket posisjon. Lister opp nærmeste tilfluktsrom sortert etter distanse (luftlinje). Kan vise både varmekart over høyde og bruk av areal på kartet.
 
@@ -89,7 +90,7 @@ py main.py
 - Legge til Layer for Nødaggregat
 - Legge til Layer for Nærmeste Sykehus, Politi, Brann
 
-
+# Oppgave 2
 ## JupyterNotebook 
 Bilder som viser JupyterNotebook hvor all kode er kjørt.
 
