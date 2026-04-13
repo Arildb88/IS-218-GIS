@@ -1,7 +1,7 @@
 class RouteInformation {
-    constructor(bunkerCords, bunkerName, cords, length, segments, time, _HTMLELEMENT = document.getElementById('route-information')) {
-        this.bunkerCords = bunkerCords;
-        this.bunkerName = bunkerName;
+    constructor(shelterCoords, shelterAddress, cords, length, segments, time, _HTMLELEMENT = document.getElementById('route-information')) {
+        this.shelterCoords = shelterCoords;
+        this.shelterAddress = shelterAddress;
         this.cords = cords;
         this.length = length;
         this.segments = segments;
@@ -30,13 +30,12 @@ class RouteInformation {
     UpdateInformation() {
         const header = "<h3>Route information</h3>";
 
-        // Remove everything except header
         this.container.innerHTML = header;
         
 
         const rows = [
-            ["Bunker Cords: ", this.bunkerCords],
-            ["Bunker Name: ", this.bunkerName],
+            ["Tilfluktsrom (koordinater): ", this.shelterCoords],
+            ["Adresse: ", this.shelterAddress],
             ["Cords: ", this.cords],
             ["Length: ", this.length],
             ["Segments: ", this.segments],

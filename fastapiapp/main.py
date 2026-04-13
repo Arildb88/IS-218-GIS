@@ -19,7 +19,7 @@ SUPABASE_KEY = os.getenv("SUPABASE_SERVICE_ROLE_KEY")
 url = "https://wfs.geonorge.no/skwms1/wfs.tilfluktsrom_offentlige?SERVICE=WFS&VERSION=2.0.0&REQUEST=GetFeature&TYPENAMES=app:Tilfluktsrom"
 _bunkers = FetchBunkers(url)
 _kommuneStatsMedBounds = '';
-with open("./data/stalin.json", encoding='utf-8') as f:
+with open("./data/kommune_dekning_lokal.json", encoding='utf-8') as f:
     _kommuneStatsMedBounds = json.load(f)
 
 app = FastAPI()
@@ -70,8 +70,8 @@ if __name__ == "__main__":
         port=8000,
         reload=True
     )
-@app.get("/alle-kommunister")
-async def alle_kommunister():
+@app.get("/api/kommunedekning")
+async def kommunedekning():
     """
     Returns GeoJSON + population/shelter stats for all municipalities.
     """
@@ -86,8 +86,8 @@ async def alle_kommunister():
 
     except Exception as e:
         return {"status": "error", "message": str(e)}
-@app.get("/alle-kommunister-local")
-async def alle_kommunister_local():
+@app.get("/api/kommunedekning/lokal")
+async def kommunedekning_lokal():
     return _kommuneStatsMedBounds
 
 @app.get("/kommune-geojson")

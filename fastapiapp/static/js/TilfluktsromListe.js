@@ -1,4 +1,4 @@
-class BunkerList {
+class TilfluktsromListe {
     constructor() {
         this.userLat;
         this.userLon;
@@ -23,7 +23,6 @@ class BunkerList {
     }
 
     async getUserPosition(pants = false) {
-        //console.log(pants)
         try {
             const position = await this.getPosition();
             this.userLat = position.coords.latitude;
@@ -33,23 +32,22 @@ class BunkerList {
             this.userLon = 7.9968452;
         }
 
-        console.log("[BunkerList.js] User Coords fetched");
+        console.log("[TilfluktsromListe.js] User Coords fetched");
 
         b.SortBunkersByDistance(this.userLat, this.userLon);
         b.ClosestBunker(this.userLat, this.userLon);
-        this.FillBunkerList();
+        this.fillTilfluktsromList();
         this.setMarkerPos();
 
         if (pants) {
             map.panTo([this.userLat, this.userLon]);
         }
     }
-    // {romnr: '776', plasser: '400', adresse: 'Trimv. 09 - Borre Idrettspark (off)', id: 0}
-    FillBunkerList(){
-        let html = "<h2>Bunkers</h2>"
+    fillTilfluktsromList(){
+        let html = "<h2>Tilfluktsrom</h2>"
         b.GeoJson.features.forEach((f) => {
             const props = f.properties;
-            html += `<div class="bunker-card">
+            html += `<div class="tilfluktsrom-kort">
                         <p>${props.adresse}</p>
                         <p>Distance: ${props.calculatedDistance} m</p>
                         <p>
@@ -57,17 +55,15 @@ class BunkerList {
                         </p>
                     </div>`
         })
-        document.getElementById('bunker-list').innerHTML = html;
+        document.getElementById('tilfluktsrom-liste').innerHTML = html;
     }
     async RTB(bid) {
         b.ClosestBunker(this.userLat,this.userLon);
         b.SortBunkersByDistance(this.userLat,this.userLon);
         let bunker = b.GetBunkerById(bid);
-        //console.log(bunker);
         let end_cords = [bunker.geometry.coordinates[1],bunker.geometry.coordinates[0]];
         
         let start_cords = [this.userLat,this.userLon];
-        //console.log(start_cords)
         let RM = new RouteManager(map);
         
 
