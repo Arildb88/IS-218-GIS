@@ -28,18 +28,18 @@ class RouteInformation {
     }
 
     UpdateInformation() {
-        const header = "<h3>Route information</h3>";
+        const header = "<h3>Ruteinformasjon</h3>";
 
         this.container.innerHTML = header;
         
 
         const rows = [
-            ["Tilfluktsrom (koordinater): ", this.shelterCoords],
-            ["Adresse: ", this.shelterAddress],
-            ["Cords: ", this.cords],
-            ["Length: ", this.length],
-            ["Segments: ", this.segments],
-            ["Routing Time: ", this.time]
+            ["Tilfluktsrom-koordinater: ", this.shelterCoords],
+            ["Navn på tilfluktsrom: ", this.shelterAddress],
+            ["Koordinater: ", this.cords],
+            ["Lengde: ", this.length],
+            ["Segmenter: ", this.segments],
+            ["Rutetid (s): ", this.time]
         ];
 
         rows.forEach(([label, value]) => {

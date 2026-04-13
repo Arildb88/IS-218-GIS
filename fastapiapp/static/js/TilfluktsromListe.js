@@ -49,9 +49,9 @@ class TilfluktsromListe {
             const props = f.properties;
             html += `<div class="tilfluktsrom-kort">
                         <p>${props.adresse}</p>
-                        <p>Distance: ${props.calculatedDistance} m</p>
+                        <p>Avstand: ${props.calculatedDistance} m</p>
                         <p>
-                            <button onclick="BL.RTB(${props.id})">Show Route</button>
+                            <button onclick="BL.RTB(${props.id})">Vis rute</button>
                         </p>
                     </div>`
         })

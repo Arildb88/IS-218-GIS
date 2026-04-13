@@ -17,7 +17,7 @@ class RouteManager {
             this.layer = L.geoJson(data).addTo(this.map)
             console.log('[RouteManager.js] Loaded route')
         } catch {
-            alert(data.ec)
+            alert('Rutefeil: ' + data.ec)
             console.log(`[RouteManager.js] Route failed: ${data.ec}`)
         }
         

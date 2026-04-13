@@ -44,8 +44,8 @@ class MunicipalityCoverage {
             `${municipality.kommunenavn}: ${
                 municipality.people_per_shelter_place !== null
                     ? municipality.people_per_shelter_place.toFixed(2)
-                    : "N/A"
-            } ppl per shelter`,
+                    : "–"
+            } pers./plass`,
             { permanent: false, direction: "top" }
         );
 
@@ -65,11 +65,11 @@ class MunicipalityCoverage {
         this.detailContainer.innerHTML = `
             <h3>${municipality.kommunenavn}</h3>
             
-            <span>People per shelter place: ${municipality.people_per_shelter_place !== null ? municipality.people_per_shelter_place.toFixed(2) : "N/A"}</span><br>
-            <span>Total population: ${municipality.total_population}</span><br>
-            <span>Shelter count: ${municipality.shelter_count}</span><br>
-            <span>Total shelter capacity: ${municipality.total_shelter_capacity}</span><br>
-            <span>Average population per grid: ${municipality.avg_population_per_grid}</span>
+            <span>Personer per plass i tilfluktsrom: ${municipality.people_per_shelter_place !== null ? municipality.people_per_shelter_place.toFixed(2) : "–"}</span><br>
+            <span>Befolkning totalt: ${municipality.total_population}</span><br>
+            <span>Antall tilfluktsrom: ${municipality.shelter_count}</span><br>
+            <span>Samlet kapasitet (plasser): ${municipality.total_shelter_capacity}</span><br>
+            <span>Gjennomsnittlig befolkning per rutenettcelle: ${municipality.avg_population_per_grid}</span>
             
         `;
     }
@@ -138,7 +138,7 @@ class MunicipalityCoverageLayer {
                     const pps = feature.properties.people_per_shelter_place;
                     const name = feature.properties.kommunenavn;
                     layer.bindTooltip(
-                        `${name}: ${pps !== null ? pps.toFixed(2) : "N/A"} ppl per shelter`,
+                        `${name}: ${pps !== null ? pps.toFixed(2) : "–"} pers./plass`,
                         { permanent: false, direction: "top" }
                     );
                 }
