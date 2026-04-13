@@ -97,8 +97,8 @@ py main.py
 Romlig analyse av tilfluktsromsdekning per kommune <br>
 Konvertering til GeoJSON for kartvisning
 
-### Individuell bunkerbelastning
-Analyse av hvor mange personer hver bunker kan håndtere <br>
+### Individuell tilfluktsrom-belastning
+Analyse av hvor mange personer hvert tilfluktsrom kan håndtere <br>
 Kapasitetsanalyse basert på befolkningsdekning
 
 ### Kontekstanalyse 
