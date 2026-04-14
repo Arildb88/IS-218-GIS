@@ -220,3 +220,10 @@ Kolonne 7: Husk å endre PATH til der du har lastet ned repo og til JupyterNoteb
 ## 🔧 Videre forbedringer / Refleksjon
 - Forbedre frontend med kartlegende og bedre UX
 - Legge til watchme funksjon som oppdaterer din posisjon og beregner rute på ny
+
+
+# Oppgave 3
+
+## Prosjektskisse
+
+<img src="fastapiapp\static\Prosjektskisse.png">
