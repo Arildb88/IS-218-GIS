@@ -1,24 +1,24 @@
-class Communism {
+class MunicipalityCoverage {
     constructor(map, detailContainer = document.getElementById("route-information")) {
-        this.Cummunists = [];
-        this.Dictators = [];
+        this.municipalityLayers = [];
+        this.municipalityRecords = [];
         this.map = map;
-        this.detailContainer = detailContainer; // HTML element to display details
+        this.detailContainer = detailContainer;
     }
 
-    async FetchAndAddCommunistToMap(MapClickEvent) {
-        const lat = MapClickEvent.latlng.lat;
-        const lng = MapClickEvent.latlng.lng;
+    async fetchAndAddMunicipalityCoverage(clickEvent) {
+        const lat = clickEvent.latlng.lat;
+        const lng = clickEvent.latlng.lng;
 
         const res = await fetch(`/kommune-geojson?lat=${lat}&lon=${lng}`);
-        const Stalin = await res.json();
+        const rows = await res.json();
 
-        if (!Stalin[0]) return; // safety check
+        if (!rows[0]) return;
 
-        const Lenin = Stalin[0];
-        const geoj = Lenin.geom_geojson;
+        const municipality = rows[0];
+        const geoj = municipality.geom_geojson;
 
-        this.Dictators.push(Lenin);
+        this.municipalityRecords.push(municipality);
 
         const getColor = (pps) => {
             if (pps === null || pps >= 100) return "red";
@@ -31,80 +31,78 @@ class Communism {
             return `rgb(${r},${g},0)`;
         };
 
-        const CommunistGeoJsonFC = L.geoJson(geoj, {
+        const municipalityGeoJsonLayer = L.geoJson(geoj, {
             style: () => ({
                 color: "black",
                 weight: 1,
-                fillColor: getColor(Lenin.people_per_shelter_place),
+                fillColor: getColor(municipality.people_per_shelter_place),
                 fillOpacity: 0.6
             })
         });
 
-        CommunistGeoJsonFC.bindTooltip(
-            `${Lenin.kommunenavn}: ${
-                Lenin.people_per_shelter_place !== null
-                    ? Lenin.people_per_shelter_place.toFixed(2)
-                    : "N/A"
-            } ppl per shelter`,
+        municipalityGeoJsonLayer.bindTooltip(
+            `${municipality.kommunenavn}: ${
+                municipality.people_per_shelter_place !== null
+                    ? municipality.people_per_shelter_place.toFixed(2)
+                    : "–"
+            } pers./plass`,
             { permanent: false, direction: "top" }
         );
 
-        // Add click event to display details
-        CommunistGeoJsonFC.on("click", () => {
-            this.showDetails(Lenin);
+        municipalityGeoJsonLayer.on("click", () => {
+            this.showDetails(municipality);
         });
 
-        this.Cummunists.push(CommunistGeoJsonFC);
-        CommunistGeoJsonFC.addTo(this.map);
+        this.municipalityLayers.push(municipalityGeoJsonLayer);
+        municipalityGeoJsonLayer.addTo(this.map);
 
-        // Optionally display details immediately after adding
-        this.showDetails(Lenin);
+        this.showDetails(municipality);
     }
 
-    showDetails(kim_jong_un) {
+    showDetails(municipality) {
         if (!this.detailContainer) return;
 
         this.detailContainer.innerHTML = `
-            <h3>${kim_jong_un.kommunenavn}</h3>
+            <h3>${municipality.kommunenavn}</h3>
             
-            <span>People per shelter place: ${kim_jong_un.people_per_shelter_place !== null ? kim_jong_un.people_per_shelter_place.toFixed(2) : "N/A"}</span><br>
-            <span>Total population: ${kim_jong_un.total_population}</span><br>
-            <span>Shelter count: ${kim_jong_un.shelter_count}</span><br>
-            <span>Total shelter capacity: ${kim_jong_un.total_shelter_capacity}</span><br>
-            <span>Average population per grid: ${kim_jong_un.avg_population_per_grid}</span>
+            <span>Personer per plass i tilfluktsrom: ${municipality.people_per_shelter_place !== null ? municipality.people_per_shelter_place.toFixed(2) : "–"}</span><br>
+            <span>Befolkning totalt: ${municipality.total_population}</span><br>
+            <span>Antall tilfluktsrom: ${municipality.shelter_count}</span><br>
+            <span>Samlet kapasitet (plasser): ${municipality.total_shelter_capacity}</span><br>
+            <span>Gjennomsnittlig befolkning per rutenettcelle: ${municipality.avg_population_per_grid}</span>
             
         `;
     }
 
     clear() {
-        this.Cummunists.forEach((commie) => commie.removeFrom(this.map));
-        this.Cummunists = [];
-        this.Dictators = [];
+        this.municipalityLayers.forEach((layer) => layer.removeFrom(this.map));
+        this.municipalityLayers = [];
+        this.municipalityRecords = [];
         if (this.detailContainer) this.detailContainer.innerHTML = "";
     }
 }
-class CommunistLayer {
-    constructor(map, endpoint = "/alle-kommunister-local") {
+
+class MunicipalityCoverageLayer {
+    constructor(map, endpoint = "/api/kommunedekning/lokal") {
         this.map = map;
         this.LayerInstance = L.geoJson();
         this.state = false;
         this.endpoint = endpoint;
-        this.fetched = false;   
+        this.fetched = false;
     }
 
     async fetchData() {
-        
-        bpk.disabled = true;
+        tilfluktsromPerKommuneBtn.disabled = true;
 
-        if (this.fetched) return; 
+        if (this.fetched) return;
         try {
             const res = await fetch(this.endpoint);
-            const dataList = await res.json(); // array of 300+ municipalities
+            const dataList = await res.json();
 
             const getColor = (pps) => {
                 const min = 1;
                 const max = 99;
-                if (pps === null) pps = max; // treat null as worst
+                if (pps === null) pps = max;
                 const val = Math.min(Math.max(pps, min), max);
                 const ratio = (val - min) / (max - min);
                 const r = Math.floor(255 * ratio);
@@ -112,7 +110,6 @@ class CommunistLayer {
                 return `rgb(${r},${g},0)`;
             };
 
-            // Build a proper GeoJSON FeatureCollection
             const featureCollection = {
                 type: "FeatureCollection",
                 features: dataList.map(item => ({
@@ -130,7 +127,6 @@ class CommunistLayer {
                 }))
             };
 
-            // Add feature collection to Leaflet
             this.LayerInstance = L.geoJson(featureCollection, {
                 style: (feature) => ({
                     color: "black",
@@ -142,16 +138,16 @@ class CommunistLayer {
                     const pps = feature.properties.people_per_shelter_place;
                     const name = feature.properties.kommunenavn;
                     layer.bindTooltip(
-                        `${name}: ${pps !== null ? pps.toFixed(2) : "N/A"} ppl per shelter`,
+                        `${name}: ${pps !== null ? pps.toFixed(2) : "–"} pers./plass`,
                         { permanent: false, direction: "top" }
                     );
                 }
             });
 
             this.fetched = true;
-            bpk.disabled = false;
+            tilfluktsromPerKommuneBtn.disabled = false;
         } catch (err) {
-            console.error("Failed to fetch CommunistLayer data:", err);
+            console.error("Failed to fetch MunicipalityCoverageLayer data:", err);
         }
     }
 

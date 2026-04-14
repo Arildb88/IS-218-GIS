@@ -97,8 +97,8 @@ py main.py
 Romlig analyse av tilfluktsromsdekning per kommune <br>
 Konvertering til GeoJSON for kartvisning
 
-### Individuell bunkerbelastning
-Analyse av hvor mange personer hver bunker kan håndtere <br>
+### Individuell tilfluktsrom-belastning
+Analyse av hvor mange personer hvert tilfluktsrom kan håndtere <br>
 Kapasitetsanalyse basert på befolkningsdekning
 
 ### Kontekstanalyse 
@@ -108,7 +108,7 @@ Romlig kontekst for hver tilflukstsrom
 Flere JavaScript-moduler for bedre funksjonsorganisering <br>
 Triangulator.js - mulig Delaunay-triangulering for dekkingsoptimalisering <br>
 RouteManager.js - forbedret ruteadministrasjon <br>
-BunkerLoader.js - dynamisk lastning av bunkere
+TilfluktsromLoader.js - dynamisk lasting av tilfluktsrom
 
 ## Video of the application
 https://github.com/user-attachments/assets/3513ac36-6ad8-47c1-9ffd-15a8a180edb5
