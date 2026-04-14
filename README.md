@@ -197,10 +197,6 @@ $$ LANGUAGE plpgsql STABLE;
 </details> 
 
 ## JupyterNotebook 
-Bilder som viser JupyterNotebook hvor all kode er kjørt.
-
-[Detaljert dokumentasjon for JupyterNotebook finner du her →](./JupyterNotebook/README.md)
-
 For å kunne kjøre JupyterNotebook filen, gjør følgende:
 - Installer eller åpne Anaconda Prompt
 - Naviger til /JupyterNotebook
