@@ -1,4 +1,4 @@
-class BunkerLoader {
+class TilfluktsromLoader {
   constructor(map, link) {
     this.map = map;
     this.link = link;
@@ -11,7 +11,7 @@ class BunkerLoader {
   async LoadFromServer() {
     this.GeoJson = await fetch("/api/bunkers")
     .then(res => {
-      if (!res.ok) throw new Error("Failed to fetch bunkers");
+      if (!res.ok) throw new Error("Failed to fetch tilfluktsrom");
       return res.json();
     });
     
@@ -27,7 +27,7 @@ class BunkerLoader {
       pointToLayer: (feature, latlng) => L.marker(latlng, { icon: Le_Icón("bunker.png") })
     }).addTo(this.map);
     this.indexize();
-    console.log(`[BunkerLoader.js] Loaded ${this.GeoJson.features.length} bunkers`)
+    console.log(`[TilfluktsromLoader.js] Loaded ${this.GeoJson.features.length} tilfluktsrom`)
   }
 
   indexize() {
@@ -37,22 +37,21 @@ class BunkerLoader {
     }
   }
 
-  ClosestBunker(lat, lon) { // O(n) linear time complexity
+  ClosestBunker(lat, lon) {
     if (!this.GeoJson || !this.GeoJson.features || this.GeoJson.features.length === 0) return null;
 
     let closest = null;
     let minDist = Infinity;
 
     this.GeoJson.features.forEach(feature => {
-      const [bLon, bLat] = feature.geometry.coordinates; // GeoJSON: [lon, lat]
+      const [bLon, bLat] = feature.geometry.coordinates;
 
-      // Simple Euclidean distance on degrees (not perfect on globe, but fine for small areas)
       const dLat = lat - bLat;
       const dLon = lon - bLon;
       const dist = Math.sqrt(dLat * dLat + dLon * dLon);
 
-      const latMeters = dLat * 111320; // convert latitude difference to meters
-      const lonMeters = dLon * 111320 * Math.cos(bLat * Math.PI / 180); // convert longitude difference to meters
+      const latMeters = dLat * 111320;
+      const lonMeters = dLon * 111320 * Math.cos(bLat * Math.PI / 180);
       const distMeters = Math.sqrt(latMeters * latMeters + lonMeters * lonMeters);
       feature.properties.calculatedDistance = distMeters.toFixed();
       if (dist < minDist) {
@@ -61,7 +60,7 @@ class BunkerLoader {
       }
     });
 
-    return closest; // Returns the GeoJSON feature of the closest bunker
+    return closest;
   }
   GetBunkerById(id) {
     return this.GeoJson.features.find(

@@ -1,5 +1,21 @@
 # IS-218-GIS
 
+Gruppen har laget en Main gren for hele prosjektet og ikke fordelt ut de ulike oppgavene i forskjellige grener. README.MD er konstruert slik at det er oversiktlig hva som er gjort i Oppgave 1, Oppgave 2.
+
+# Oppgave 1
+README ble oppdatert slik at den ble mer oversiktlig og forståelig.
+
+# Oppgave 2
+Gruppen har endret på UI for å gjøre løsningen mer brukervennlig og innoativt for brukeren. Prosjektet ble videreutviklet med mer avanserte geografiske analyser. Dette inkluderer dekningsanalyse per kommune, hvor vi sammenlignet befolkning mot kapasitet i tilfluktsrom. Denne analysen visualiseres i kartet ved Grønn, Rød og Orange farger på kommunen. Vi benyttet SQL og materialiserte views for å aggregere og strukturere dataene, samt at dette ble visualisert i kartet.
+
+Dokumentasjon i den romlige analysen i JupyterNotebook er oppdatert slik at den forklarer mer hva som blir gjort i cellene og hva resultatet forteller.
+
+# Oppgave 3
+Gruppen skrev en prosjektskisse for hånd og brukte ChatGPT til å lage en prosjektskisse ved å legge ved bilder av vår løsning. ChatGPT lagde noen dupliseringer som vi ikke registrerte. Gruppen endret teksten til å kun omhandle tilfluktsrom og ikke blande bunkere og tilfluktsrom, samt at det ble endret til å kun være en blokk med Datakilder i prosjektskissen.
+
+
+# README.MD
+
 # Oppgave 1
 ## TLDR: System
 Systemet viser korteste rute til en tilfluktsrom fra brukerens posisjon, samt klikket posisjon. Lister opp nærmeste tilfluktsrom sortert etter distanse (luftlinje). Kan vise både varmekart over høyde og bruk av areal på kartet.
@@ -97,8 +113,8 @@ py main.py
 Romlig analyse av tilfluktsromsdekning per kommune <br>
 Konvertering til GeoJSON for kartvisning
 
-### Individuell tilfluktsrom-belastning
-Analyse av hvor mange personer hvert tilfluktsrom kan håndtere <br>
+### Individuell bunkerbelastning
+Analyse av hvor mange personer hver bunker kan håndtere <br>
 Kapasitetsanalyse basert på befolkningsdekning
 
 ### Kontekstanalyse 
@@ -197,6 +213,10 @@ $$ LANGUAGE plpgsql STABLE;
 </details> 
 
 ## JupyterNotebook 
+Bilder som viser JupyterNotebook hvor all kode er kjørt.
+
+[Detaljert dokumentasjon for JupyterNotebook finner du her →](./JupyterNotebook/README.md)
+
 For å kunne kjøre JupyterNotebook filen, gjør følgende:
 - Installer eller åpne Anaconda Prompt
 - Naviger til /JupyterNotebook
@@ -222,8 +242,12 @@ Kolonne 7: Husk å endre PATH til der du har lastet ned repo og til JupyterNoteb
 - Legge til watchme funksjon som oppdaterer din posisjon og beregner rute på ny
 
 
-# Oppgave 3
 
-## Prosjektskisse
 
-<img src="fastapiapp\static\Prosjektskisse.png">
+
+
+
+
+
+
+

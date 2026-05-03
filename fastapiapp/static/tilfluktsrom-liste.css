@@ -1,4 +1,4 @@
-#bunker-list {
+#tilfluktsrom-liste {
   position: fixed;
   top: 0;
   right: 0;
@@ -18,41 +18,36 @@
   backdrop-filter: blur(6px);
 }
 
-/* Title stays fixed */
-#bunker-list h2 {
+#tilfluktsrom-liste h2 {
   margin: 0 0 12px 0;
   padding-bottom: 8px;
   border-bottom: 1px solid rgba(255,255,255,0.2);
   font-size: 1.2rem;
 }
 
-/* Scrollable content */
-#bunker-list .bunker-card {
+#tilfluktsrom-liste .tilfluktsrom-kort {
   background: rgba(255,255,255,0.08);
   border-radius: 8px;
   padding: 12px;
   margin-bottom: 12px;
 }
 
-/* Make cards container scrollable */
-#bunker-list {
+#tilfluktsrom-liste {
   overflow: hidden;
 }
 
-#bunker-list .bunker-card-container {
+#tilfluktsrom-liste .tilfluktsrom-kort-container {
   overflow-y: auto;
   flex: 1;
   padding-right: 6px;
 }
 
-/* Card text */
-.bunker-card p {
+.tilfluktsrom-kort p {
   margin: 4px 0;
   font-size: 0.9rem;
 }
 
-/* Button styling */
-.bunker-card button {
+.tilfluktsrom-kort button {
   margin-top: 8px;
   padding: 8px 12px;
 
@@ -66,6 +61,6 @@
   transition: background 0.2s ease;
 }
 
-.bunker-card button:hover {
+.tilfluktsrom-kort button:hover {
   background: #ffd633;
 }

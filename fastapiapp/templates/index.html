@@ -1,25 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="no">
 <head>
   <meta charset="UTF-8" />
   <title>GIS OPPGAVE</title>
 
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
    <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.css" />
-  <link rel="stylesheet" href="/static/style.css" />
-  <link rel="stylesheet" href="/static/bunker-list.css" />
+  <link rel="stylesheet" href="/static/style.css?v=3" />
+  <link rel="stylesheet" href="/static/tilfluktsrom-liste.css?v=3" />
 </head>
 <body>
   <div id="test-controls">
-    <button onclick="AreaLayer.Toggle()"> Areas</button>
-	<button onclick="toggleTonerLayer();">Mapstyle</button>
-    <button onclick="b.Toggle()">Bunkers</button>
-    <button id="bpk" onclick="StalinTheDictator.Toggle()">Bunker per Kommune</button>
-    <button id="clearMap" onclick="ClearMap();communism.clear()">Clear Map</button>
+    <button onclick="AreaLayer.Toggle()">Arealbruk</button>
+	<button onclick="toggleTonerLayer();">Kartstil</button>
+    <button onclick="b.Toggle()">Tilfluktsrom</button>
+    <button id="btn-tilfluktsrom-per-kommune" onclick="municipalityCoverageLayer.Toggle()">Tilfluktsrom per Kommune</button>
+    <button id="clearMap" onclick="ClearMap();municipalityCoverage.clear()">Tøm kart</button>
     <div class="toggle-container" id="modeToggle">
       <div class="toggle-labels">
         <span>Info</span>
-        <span>Route</span>
+        <span>Rute</span>
       </div>
       <div class="toggle-slider" id="toggleSlider"></div>
     </div>
@@ -27,17 +27,17 @@
   <div id="map"></div>
   
   <div id="route-information">
-    <h3>Route information</h3>
-    <p>Bunker Cords: <text></text></p>
-    <p>Bunker Name: <text></text></p>
-    <p>Cords: <text></text></p>
-    <p>Length: <text></text></p>
-    <p>Segments: <text></text></p>
-    <p>Routing Time: <text></text>s</p>
+    <h3>Ruteinformasjon</h3>
+    <p>Tilfluktsrom-koordinater: <text></text></p>
+    <p>Navn på tilfluktsrom: <text></text></p>
+    <p>Koordinater: <text></text></p>
+    <p>Lengde: <text></text></p>
+    <p>Segmenter: <text></text></p>
+    <p>Rutetid (s): <text></text></p>
   </div>
 
-  <div id="bunker-list">
-    <h2>Loading. . .</h2>
+  <div id="tilfluktsrom-liste">
+    <h2>Laster …</h2>
     
   </div>
 
@@ -64,34 +64,34 @@
   
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script src="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.js"></script>
-  <script src="/static/app.js"></script>
-  <script src="/static/js/WmsLayer.js"></script>
-  <script src="/static/js/WmsLayerUniversal.js"></script>
-  <script src="/static/js/WfsLayer.js"></script>
-  <script src="/static/js/BunkerLoader.js"></script>
-  <script src="/static/js/RouteManager.js"></script>
-  <script src="/static/js/RouteInformation.js"></script>
-  <script src="/static/js/BunkerList.js"></script>
-  <script src="/static/js/RoutePicker.js"></script>
-  <script src="/static/js/Triangulator.js"></script>
-  <script src="/static/js/Communism.js"></script>
-  <script src="/static/js/Icons.js"></script>
+  <script src="/static/app.js?v=3"></script>
+  <script src="/static/js/WmsLayer.js?v=3"></script>
+  <script src="/static/js/WmsLayerUniversal.js?v=3"></script>
+  <script src="/static/js/WfsLayer.js?v=3"></script>
+  <script src="/static/js/TilfluktsromLoader.js?v=3"></script>
+  <script src="/static/js/RouteManager.js?v=3"></script>
+  <script src="/static/js/RouteInformation.js?v=3"></script>
+  <script src="/static/js/TilfluktsromListe.js?v=3"></script>
+  <script src="/static/js/RoutePicker.js?v=3"></script>
+  <script src="/static/js/Triangulator.js?v=3"></script>
+  <script src="/static/js/MunicipalityCoverage.js?v=3"></script>
+  <script src="/static/js/Icons.js?v=3"></script>
   
   <script>
 	function proxyize(url) {
 		return 'proxy?url=' + encodeURIComponent(url);
 	}	
-  bpk = document.getElementById('bpk');
-  bpk.disable = true;
+  var tilfluktsromPerKommuneBtn = document.getElementById('btn-tilfluktsrom-per-kommune');
+  tilfluktsromPerKommuneBtn.disabled = true;
   RUN_ROUTING = false;
 
   var RIP = false;
   
 	var wfsUrl = proxyize("https://wfs.geonorge.no/skwms1/wfs.tilfluktsrom_offentlige?SERVICE=WFS&VERSION=2.0.0&REQUEST=GetFeature&TYPENAMES=app:Tilfluktsrom")
-	const b = new BunkerLoader(map, wfsUrl);
-	const BL = new BunkerList();
+	const b = new TilfluktsromLoader(map, wfsUrl);
+	const BL = new TilfluktsromListe();
 
-  const StalinTheDictator = new CommunistLayer(map)
+  const municipalityCoverageLayer = new MunicipalityCoverageLayer(map)
   
 	
 	window.onload = async () => {
@@ -99,7 +99,7 @@
 		map.panTo([58.1483,7.9918])
 
     await b.LoadFromServer();
-    StalinTheDictator.fetchData();
+    municipalityCoverageLayer.fetchData();
     BL.getUserPosition(panTo=true);
 
 	}
@@ -107,24 +107,23 @@
 
   const AreaLayer = new WmsLayer(map, "https://wms.geonorge.no/skwms1/wms.arealbruk");
   const HeightMapLayer = new WmsLayer(map,'https://wms.geonorge.no/skwms1/wms.hoyde-dtm-lokal-hoyde-farge');
-  const communism = new Communism(map);
+  const municipalityCoverage = new MunicipalityCoverage(map);
 
   _Routes = [];
   _Clickies = [];
   map.on('click', async function(e) {
     let TimerStart = new Date();
     if (RIP == true) {
-      alert("ROUTING IN PROGRESS")
+      alert("RUTEBEREGNING PÅGÅR")
       throw "Routing in progress";
     }
     RM = new RouteManager(map);
     
-    // e.latlng is a Leaflet LatLng object
     const lat = e.latlng.lat;
     const lon = e.latlng.lng;
 
     if (mode == 'info') {
-      communism.FetchAndAddCommunistToMap(e);
+      municipalityCoverage.fetchAndAddMunicipalityCoverage(e);
     }
     
 
@@ -167,7 +166,7 @@
 
       } catch (e) {
         RIP = false;
-        alert('Route failed to routize ' + e)
+        alert('Rute kunne ikke beregnes: ' + e)
       }
       
       RIP = false;
